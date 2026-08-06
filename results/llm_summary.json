@@ -1,0 +1,347 @@
+{
+  "status": "COMPLETE",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "models_requested": [
+    "anthropic/claude-sonnet-4.5",
+    "openai/gpt-4o",
+    "meta-llama/llama-3.3-70b-instruct"
+  ],
+  "models_used": [
+    "anthropic/claude-sonnet-4.5",
+    "openai/gpt-4o",
+    "meta-llama/llama-3.3-70b-instruct"
+  ],
+  "model_id_mapping": {
+    "anthropic/claude-sonnet-4.5": "anthropic/claude-sonnet-4.5",
+    "openai/gpt-4o": "openai/gpt-4o",
+    "meta-llama/llama-3.3-70b-instruct": "meta-llama/llama-3.3-70b-instruct"
+  },
+  "temperature": 0,
+  "max_tokens": 400,
+  "n_sequences": 60,
+  "n_models": 3,
+  "n_rows": 180,
+  "n_failed_calls": 12,
+  "failures": [
+    {
+      "anum": "A007204",
+      "stratum": "clean",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "ValueError(\"no JSON object in response: 'Looking at this sequence, let me analyze the differences and patterns.\\\\n\\\\nFirst differences:\\\\n24, 144, 456, 1056, 2040, 3504, 5544, 8256, 11736, 16080, 21384, 27744, 35256, 43016, 54120, 65664, 78744, 93456, 109896\\\\n\\\\nSecond differences:\\\\n120, 31'\")"
+    },
+    {
+      "anum": "A007589",
+      "stratum": "clean",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "ValueError(\"no JSON object in response: 'Looking at this sequence, let me analyze the differences:\\\\n\\\\nFirst differences: 1, 19, 30, 42, 78, 114, 150, 186, 222, 258, 294, 330, 366, 382, 438, 474, 510, 546, 582\\\\n\\\\nSecond differences: 18, 11, 12, 36, 36, 36, 36, 36, 36, 36, 36, 36, 16, 5'\")"
+    },
+    {
+      "anum": "A027903",
+      "stratum": "clean",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "ValueError('no JSON object in response: \"Looking at this sequence, I\\'ll analyze the differences to find a pattern.\\\\n\\\\nFirst differences:\\\\n8, 34, 78, 140, 220, 318, 434, 568, 720, 890, 1078, 1284, 1508, 1750, 2010, 2288, 2584, 2898, 3230\\\\n\\\\nSecond differences:\\\\n26, 44, 62, 80, 98, 116, 1\"')"
+    },
+    {
+      "anum": "A015243",
+      "stratum": "revising",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "ValueError(\"no JSON object in response: 'Looking at this sequence, I need to find the pattern by examining differences.\\\\n\\\\nFirst differences:\\\\n-7, -13, -7, 11, 41, 83, 137, 203, 281, 371, 473, 587, 713, 851, 1001, 1163, 1337, 1523, 1721\\\\n\\\\nSecond differences:\\\\n-6, 6, 18, 30, 42, 54, 66,'\")"
+    },
+    {
+      "anum": "A024381",
+      "stratum": "revising",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "ValueError('no JSON object in response: \"Looking at this sequence, I\\'ll analyze the differences to find a pattern.\\\\n\\\\nFirst differences:\\\\n26-1=25, 107-26=81, 276-107=169, 565-276=289, 1006-565=441, 1631-1006=625, 2472-1631=841, 3561-2472=1089, 4930-3561=1369, 6611-4930=1681, 8636-661\"')"
+    },
+    {
+      "anum": "A030533",
+      "stratum": "revising",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "ValueError(\"no JSON object in response: 'Looking at this sequence, let me analyze the differences and patterns.\\\\n\\\\nFirst differences: 0, 4, 1, 9, 4, 16, 9, 25, 16, 36, 25, 49, 36, 64, 49, 81, 64, 100, 81\\\\n\\\\nI notice the first differences alternate between perfect squares:\\\\n- Odd positi'\")"
+    },
+    {
+      "anum": "A025839",
+      "stratum": "wilderness",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "JSONDecodeError('Extra data: line 1 column 4 (char 3)')"
+    },
+    {
+      "anum": "A029446",
+      "stratum": "wilderness",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "ValueError(\"no JSON object in response: 'Looking at this sequence, I need to identify the pattern.\\\\n\\\\nLet me examine the positions of 1s and 0s:\\\\n- Position 1: 1\\\\n- Positions 2-9: 0 (eight 0s)\\\\n- Positions 10-13: 1 (four 1s)\\\\n- Positions 14-18: 0 (five 0s)\\\\n- Positions 19-20: 1 (two 1s s'\")"
+    },
+    {
+      "anum": "A032886",
+      "stratum": "wilderness",
+      "model": "anthropic/claude-sonnet-4.5",
+      "error": "JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')"
+    },
+    {
+      "anum": "A015243",
+      "stratum": "revising",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "error": "JSONDecodeError(\"Expecting ',' delimiter: line 1 column 23 (char 22)\")"
+    },
+    {
+      "anum": "A027656",
+      "stratum": "revising",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "error": "ValueError(\"no JSON object in response: 'None'\")"
+    },
+    {
+      "anum": "A035585",
+      "stratum": "wilderness",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "error": "ValueError(\"no JSON object in response: 'None'\")"
+    }
+  ],
+  "prompt_file": "results/llm_prompt.txt",
+  "sample_file": "results/llm_sample.txt",
+  "aggregates": {
+    "by_model": {
+      "anthropic/claude-sonnet-4.5": {
+        "by_stratum": {
+          "clean": {
+            "n": 20,
+            "n_scored": 17,
+            "n_failed": 3,
+            "exact_accuracy": "12/17 (70.5882%)",
+            "partial_accuracy": "13/17 (76.4706%)",
+            "mean_confidence": 4.647058823529412,
+            "confabulation_rate": "3/17 (17.6471%)",
+            "abstention_rate": "2/17 (11.7647%)",
+            "recognition_rate": "10/17 (58.8235%)",
+            "exact_accuracy_recognized": "8/10 (80.0000%)",
+            "exact_accuracy_not_recognized": "4/7 (57.1429%)",
+            "n_recognized": 10,
+            "n_not_recognized": 7,
+            "n_recognition_unknown": 0
+          },
+          "revising": {
+            "n": 20,
+            "n_scored": 17,
+            "n_failed": 3,
+            "exact_accuracy": "13/17 (76.4706%)",
+            "partial_accuracy": "14/17 (82.3529%)",
+            "mean_confidence": 5.0,
+            "confabulation_rate": "4/17 (23.5294%)",
+            "abstention_rate": "0/17 (0.0000%)",
+            "recognition_rate": "8/17 (47.0588%)",
+            "exact_accuracy_recognized": "5/8 (62.5000%)",
+            "exact_accuracy_not_recognized": "8/9 (88.8889%)",
+            "n_recognized": 8,
+            "n_not_recognized": 9,
+            "n_recognition_unknown": 0
+          },
+          "wilderness": {
+            "n": 20,
+            "n_scored": 17,
+            "n_failed": 3,
+            "exact_accuracy": "7/17 (41.1765%)",
+            "partial_accuracy": "12/17 (70.5882%)",
+            "mean_confidence": 3.176470588235294,
+            "confabulation_rate": "2/17 (11.7647%)",
+            "abstention_rate": "11/17 (64.7059%)",
+            "recognition_rate": "4/17 (23.5294%)",
+            "exact_accuracy_recognized": "3/4 (75.0000%)",
+            "exact_accuracy_not_recognized": "4/13 (30.7692%)",
+            "n_recognized": 4,
+            "n_not_recognized": 13,
+            "n_recognition_unknown": 0,
+            "hypothesis_wilderness": {
+              "mean_confidence": 3.176470588235294,
+              "exact_accuracy": "7/17 (41.1765%)",
+              "holds_if": "mean confidence high (>=3.5) AND exact accuracy low (<0.25)",
+              "holds": false,
+              "hedges_if": "abstention high (>=0.5) OR mean confidence low (<3.0)",
+              "hedges": true
+            }
+          }
+        },
+        "contamination_clean": {
+          "n_exact": 12,
+          "n_exact_recognized": 8,
+          "frac_exact_from_recognition": "8/12 (66.6667%)",
+          "note": "If most clean correctness is recognized=true, the benchmark measures recall more than reasoning."
+        }
+      },
+      "openai/gpt-4o": {
+        "by_stratum": {
+          "clean": {
+            "n": 20,
+            "n_scored": 20,
+            "n_failed": 0,
+            "exact_accuracy": "8/20 (40.0000%)",
+            "partial_accuracy": "14/20 (70.0000%)",
+            "mean_confidence": 3.9,
+            "confabulation_rate": "9/20 (45.0000%)",
+            "abstention_rate": "5/20 (25.0000%)",
+            "recognition_rate": "11/20 (55.0000%)",
+            "exact_accuracy_recognized": "4/11 (36.3636%)",
+            "exact_accuracy_not_recognized": "4/9 (44.4444%)",
+            "n_recognized": 11,
+            "n_not_recognized": 9,
+            "n_recognition_unknown": 0
+          },
+          "revising": {
+            "n": 20,
+            "n_scored": 20,
+            "n_failed": 0,
+            "exact_accuracy": "5/20 (25.0000%)",
+            "partial_accuracy": "10/20 (50.0000%)",
+            "mean_confidence": 3.75,
+            "confabulation_rate": "10/20 (50.0000%)",
+            "abstention_rate": "6/20 (30.0000%)",
+            "recognition_rate": "11/20 (55.0000%)",
+            "exact_accuracy_recognized": "2/11 (18.1818%)",
+            "exact_accuracy_not_recognized": "3/9 (33.3333%)",
+            "n_recognized": 11,
+            "n_not_recognized": 9,
+            "n_recognition_unknown": 0
+          },
+          "wilderness": {
+            "n": 20,
+            "n_scored": 20,
+            "n_failed": 0,
+            "exact_accuracy": "7/20 (35.0000%)",
+            "partial_accuracy": "11/20 (55.0000%)",
+            "mean_confidence": 2.45,
+            "confabulation_rate": "1/20 (5.0000%)",
+            "abstention_rate": "19/20 (95.0000%)",
+            "recognition_rate": "1/20 (5.0000%)",
+            "exact_accuracy_recognized": "0/1 (0.0000%)",
+            "exact_accuracy_not_recognized": "7/19 (36.8421%)",
+            "n_recognized": 1,
+            "n_not_recognized": 19,
+            "n_recognition_unknown": 0,
+            "hypothesis_wilderness": {
+              "mean_confidence": 2.45,
+              "exact_accuracy": "7/20 (35.0000%)",
+              "holds_if": "mean confidence high (>=3.5) AND exact accuracy low (<0.25)",
+              "holds": false,
+              "hedges_if": "abstention high (>=0.5) OR mean confidence low (<3.0)",
+              "hedges": true
+            }
+          }
+        },
+        "contamination_clean": {
+          "n_exact": 8,
+          "n_exact_recognized": 4,
+          "frac_exact_from_recognition": "4/8 (50.0000%)",
+          "note": "If most clean correctness is recognized=true, the benchmark measures recall more than reasoning."
+        }
+      },
+      "meta-llama/llama-3.3-70b-instruct": {
+        "by_stratum": {
+          "clean": {
+            "n": 20,
+            "n_scored": 20,
+            "n_failed": 0,
+            "exact_accuracy": "5/20 (25.0000%)",
+            "partial_accuracy": "8/20 (40.0000%)",
+            "mean_confidence": 4.25,
+            "confabulation_rate": "13/20 (65.0000%)",
+            "abstention_rate": "7/20 (35.0000%)",
+            "recognition_rate": "6/20 (30.0000%)",
+            "exact_accuracy_recognized": "5/6 (83.3333%)",
+            "exact_accuracy_not_recognized": "0/14 (0.0000%)",
+            "n_recognized": 6,
+            "n_not_recognized": 14,
+            "n_recognition_unknown": 0
+          },
+          "revising": {
+            "n": 20,
+            "n_scored": 18,
+            "n_failed": 2,
+            "exact_accuracy": "2/18 (11.1111%)",
+            "partial_accuracy": "2/18 (11.1111%)",
+            "mean_confidence": 3.611111111111111,
+            "confabulation_rate": "6/18 (33.3333%)",
+            "abstention_rate": "13/18 (72.2222%)",
+            "recognition_rate": "5/18 (27.7778%)",
+            "exact_accuracy_recognized": "0/5 (0.0000%)",
+            "exact_accuracy_not_recognized": "2/13 (15.3846%)",
+            "n_recognized": 5,
+            "n_not_recognized": 13,
+            "n_recognition_unknown": 0
+          },
+          "wilderness": {
+            "n": 20,
+            "n_scored": 19,
+            "n_failed": 1,
+            "exact_accuracy": "3/19 (15.7895%)",
+            "partial_accuracy": "7/19 (36.8421%)",
+            "mean_confidence": 2.6842105263157894,
+            "confabulation_rate": "4/19 (21.0526%)",
+            "abstention_rate": "17/19 (89.4737%)",
+            "recognition_rate": "1/19 (5.2632%)",
+            "exact_accuracy_recognized": "0/1 (0.0000%)",
+            "exact_accuracy_not_recognized": "3/18 (16.6667%)",
+            "n_recognized": 1,
+            "n_not_recognized": 18,
+            "n_recognition_unknown": 0,
+            "hypothesis_wilderness": {
+              "mean_confidence": 2.6842105263157894,
+              "exact_accuracy": "3/19 (15.7895%)",
+              "holds_if": "mean confidence high (>=3.5) AND exact accuracy low (<0.25)",
+              "holds": false,
+              "hedges_if": "abstention high (>=0.5) OR mean confidence low (<3.0)",
+              "hedges": true
+            }
+          }
+        },
+        "contamination_clean": {
+          "n_exact": 5,
+          "n_exact_recognized": 5,
+          "frac_exact_from_recognition": "5/5 (100.0000%)",
+          "note": "If most clean correctness is recognized=true, the benchmark measures recall more than reasoning."
+        }
+      }
+    },
+    "agreement_across_models": {
+      "clean": {
+        "n_with_3_models": 17,
+        "unanimous_next_three": "4/17 (23.5294%)",
+        "majority_next_three": "9/17 (52.9412%)"
+      },
+      "revising": {
+        "n_with_3_models": 16,
+        "unanimous_next_three": "1/16 (6.2500%)",
+        "majority_next_three": "5/16 (31.2500%)"
+      },
+      "wilderness": {
+        "n_with_3_models": 16,
+        "unanimous_next_three": "4/16 (25.0000%)",
+        "majority_next_three": "9/16 (56.2500%)"
+      }
+    }
+  },
+  "hypothesis_per_model": {
+    "anthropic/claude-sonnet-4.5": {
+      "mean_confidence": 3.176470588235294,
+      "exact_accuracy": "7/17 (41.1765%)",
+      "holds_if": "mean confidence high (>=3.5) AND exact accuracy low (<0.25)",
+      "holds": false,
+      "hedges_if": "abstention high (>=0.5) OR mean confidence low (<3.0)",
+      "hedges": true
+    },
+    "openai/gpt-4o": {
+      "mean_confidence": 2.45,
+      "exact_accuracy": "7/20 (35.0000%)",
+      "holds_if": "mean confidence high (>=3.5) AND exact accuracy low (<0.25)",
+      "holds": false,
+      "hedges_if": "abstention high (>=0.5) OR mean confidence low (<3.0)",
+      "hedges": true
+    },
+    "meta-llama/llama-3.3-70b-instruct": {
+      "mean_confidence": 2.6842105263157894,
+      "exact_accuracy": "3/19 (15.7895%)",
+      "holds_if": "mean confidence high (>=3.5) AND exact accuracy low (<0.25)",
+      "holds": false,
+      "hedges_if": "abstention high (>=0.5) OR mean confidence low (<3.0)",
+      "hedges": true
+    }
+  },
+  "hypothesis_text": "Confidence stays high in wilderness while accuracy collapses (model does not know it has no theory; MDL does)."
+}

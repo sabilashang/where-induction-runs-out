@@ -1,0 +1,252 @@
+{
+  "title": "Limitations / disclosed future work \u2014 measured facts",
+  "generated_by": "experiments/build_limitations_facts.py",
+  "paper_note": "Do not edit paper/main.tex in this step; material only.",
+  "1_configurations_attempted_and_abandoned": {
+    "oeis_60_strict": {
+      "status": "CALIBRATED_500",
+      "calibration": true,
+      "rows_completed_calibration": 500,
+      "rows_target_full": 20000,
+      "wall_seconds": 1116.5567138999995,
+      "cpu_seconds_sum_workers": 3006.171875,
+      "rows_per_hour_wall": 1612.0990341035292,
+      "rows_per_hour_cpu": 598.7681592556979,
+      "projected_total_hours_wall_20000": 12.406185709999995,
+      "projected_total_hours_cpu_20000": 33.40190972222222,
+      "projected_hours_arithmetic_wall": "rows_per_hour_wall = 500 / (1116.5567138999995/3600) = 1612.0990341035292; projected_hours_wall_20000 = 20000 / rows_per_hour_wall = 12.406185709999995",
+      "projected_hours_arithmetic_cpu": "rows_per_hour_cpu = 500 / (3006.171875/3600) = 598.7681592556979; projected_hours_cpu_20000 = 20000 / rows_per_hour_cpu = 33.40190972222222",
+      "n_jobs": 8,
+      "cpu_count": 8,
+      "reason_note": "Throughput from awake 500-seq calibration; earlier 550/53min figure discarded.",
+      "sources": [
+        "results/oeis_60_calibration.json",
+        "experiments/run_oeis_calibration.py"
+      ]
+    },
+    "oeis_60_loose": {
+      "status": "NOT_STARTED",
+      "rows_completed": 0,
+      "rows_target": 20000,
+      "wall_seconds": "not measured",
+      "rows_per_hour": "not measured",
+      "projected_total_hours": "not measured",
+      "reason_stopped": "strict already projects >> 2h; kill rule applies",
+      "cost_class_justification": "Same frozen params and 20000-sequence workload as oeis_60_strict; strict alone projected ~32 hours, so loose was not started.",
+      "sources": [
+        "results/oeis_60_timing.json"
+      ]
+    },
+    "oeis_full_strict": {
+      "status": "KILLED_INCOMPLETE",
+      "rows_completed": 250,
+      "rows_target": 20000,
+      "frac": "250/20000",
+      "wall_seconds": 2820.928362607956,
+      "wall_hours": 0.7835912118355434,
+      "timestamp_created": "2026-08-02T01:31:01",
+      "timestamp_last_write": "2026-08-02T02:18:02",
+      "rows_per_hour": 319.04390481151654,
+      "projected_total_hours": 62.687296946843475,
+      "projected_hours_arithmetic": "rows_per_hour = 250 / (2820.928362607956/3600) = 319.04390481151654; projected_total_hours = 20000 / rows_per_hour = 62.687296946843475",
+      "reason_stopped": "Abandoned: full-length (--no-truncate) 20000-sequence run incomplete; wall time from partial CSV timestamps already projects far beyond the 2-hour kill budget used for later scoped runs.",
+      "partial_csv_retained": "results/oeis_full_strict.csv",
+      "meta_json": "not present",
+      "sources": [
+        "results/oeis_full_strict.csv",
+        "file st_ctime/st_mtime of results/oeis_full_strict.csv"
+      ]
+    },
+    "oeis_full_loose": {
+      "status": "not started",
+      "rows_completed": 0,
+      "rows_target": 20000,
+      "wall_seconds": "not measured",
+      "rows_per_hour": "not measured",
+      "projected_total_hours": "not measured",
+      "reason_stopped": "Not started: same cost class as oeis_full_strict (full OEIS term lists + revision_spectrum over all prefixes), which was already incomplete and projected intractable.",
+      "csv_present": false,
+      "sources": [
+        "absence of results/oeis_full_loose.csv",
+        "results/oeis_full_strict.csv (sibling incomplete run)"
+      ]
+    },
+    "oeis_60_strict_UNRELIABLE_DISCARDED": {
+      "status": "KILLED_INCOMPLETE",
+      "rows_completed": 550,
+      "rows_target": 20000,
+      "frac": "550/20000",
+      "wall_seconds": 3165.744499,
+      "wall_minutes": 52.762408316666665,
+      "created": "2026-08-02T03:36:28",
+      "last_write": "2026-08-02T04:29:13",
+      "rows_per_hour": 625.445294345594,
+      "projected_total_hours": 31.977217161616164,
+      "projected_hours_arithmetic": "rows_per_hour = 550 / (3165.744499/3600) = 625.445294345594; projected_total_hours = 20000 / rows_per_hour = 31.977217161616164",
+      "reason_stopped": "projected wall time >> 2 hours",
+      "partial_csv_retained": "results/oeis_60_strict.csv",
+      "sources": [
+        "results/oeis_60_timing.json",
+        "results/oeis_60_strict.csv",
+        "results/oeis_60_strict.log"
+      ],
+      "discarded": true,
+      "discard_reason": "Machine sleep during the timed window inflated wall elapsed; superseded by results/oeis_60_calibration.json",
+      "superseded_by": "results/oeis_60_calibration.json"
+    }
+  },
+  "2_why_intractable": {
+    "statement": "guess_prec cost grows with term count and integer magnitude; revision_spectrum re-solves from scratch at every prefix; the Task 2(a) speedup (3.06x sum / 2.57x median / 3.58x p90 on the Task-1 profile set) was insufficient to make 20000-sequence full-length (or even terms=60) runs tractable within the compute budget.",
+    "task2a_speedup": {
+      "speedup_sum": 3.060488386540027,
+      "speedup_median": 2.5651902971102722,
+      "speedup_p90": 3.5832188126761118,
+      "baseline_sum_s": 91.00144279998494,
+      "after_sum_s": 29.734287899999117,
+      "source": "results/profile_speedup_task2a.json"
+    },
+    "spectrum_behavior_source": "revspec/core.py:revision_spectrum",
+    "sources": [
+      "results/profile_speedup_task2a.json",
+      "results/task2_optimization_report.json",
+      "results/oeis_60_timing.json",
+      "revspec/core.py"
+    ]
+  },
+  "3_what_we_report_instead": {
+    "mixed_length_complete": {
+      "path": "results/oeis_results.csv",
+      "n_processed": 20000,
+      "n_holonomic_true_full_operator": 4169,
+      "pct_revise_true_holonomic": "367/4169 (8.8031%)",
+      "conservation_sum": 20000,
+      "source": "results/holonomic_denominator_summary.json"
+    },
+    "fixed_30_complete": {
+      "path": "results/oeis_fixed30.csv",
+      "n_processed": 20000,
+      "n_holonomic_true_full_operator": 2780,
+      "pct_revise_true_holonomic": "315/2780 (11.3309%)",
+      "conservation_sum": 20000,
+      "source": "results/holonomic_denominator_summary.json"
+    },
+    "length_dependence_table": {
+      "path": "results/oeis_length_bins.csv",
+      "note": "Revision rate rises with n_terms bin; confound disclosed and quantified. Rates in this table were computed under the earlier n_d-present denominator (see results/oeis_summary.json era); true-holonomic recomputation is in results/holonomic_denominator_oeis_results_by_nterms.csv.",
+      "bins": [
+        {
+          "nbin": "(19, 22]",
+          "n": 850,
+          "rev_rate": 0.0552941176470588,
+          "exact_rate": 0.92
+        },
+        {
+          "nbin": "(22, 25]",
+          "n": 585,
+          "rev_rate": 0.1042735042735042,
+          "exact_rate": 0.8700854700854701
+        },
+        {
+          "nbin": "(25, 28]",
+          "n": 479,
+          "rev_rate": 0.127348643006263,
+          "exact_rate": 0.8475991649269311
+        },
+        {
+          "nbin": "(28, 31]",
+          "n": 378,
+          "rev_rate": 0.119047619047619,
+          "exact_rate": 0.8650793650793651
+        },
+        {
+          "nbin": "(31, 34]",
+          "n": 3912,
+          "rev_rate": 0.5593047034764826,
+          "exact_rate": 0.416922290388548
+        }
+      ],
+      "sources": [
+        "results/oeis_length_bins.csv",
+        "results/holonomic_denominator_oeis_results_by_nterms.csv"
+      ]
+    }
+  },
+  "4_task2b_negative_result": {
+    "status": "REVERTED",
+    "finding": "Skipping the full re-solve when the standing hypothesis still annihilates the new term CHANGES which hypothesis is selected. This is a real finding about MDL selection under growing prefixes (a cheaper newly eligible (r,d) can appear when neqs crosses ncols+slack), not an implementation bug.",
+    "affected_sequences": [
+      {
+        "name": "triangular",
+        "anum": "A000217",
+        "n_struct_rev_baseline": 1,
+        "n_struct_rev_with_task2b_skip": 0,
+        "baseline_source": "results/regimes_pre_task2.csv",
+        "change_source": "results/task2_optimization_report.json"
+      },
+      {
+        "name": "oblong",
+        "anum": "A002378",
+        "n_struct_rev_baseline": 1,
+        "n_struct_rev_with_task2b_skip": 0,
+        "baseline_source": "results/regimes_pre_task2.csv",
+        "change_source": "results/task2_optimization_report.json"
+      }
+    ],
+    "observation_quoted_from_report": "Changes classical answers. Standing hyp that still annihilates is NOT always MDL-optimal: a cheaper newly-eligible (r,d) can appear when neqs crosses ncols+slack. Observed: triangular/oblong n_struct_rev 1\u00e2\u2020\u20190; POLY mean n_d and corrs moved.",
+    "action_taken": "revision_spectrum restored to full re-solve every prefix",
+    "sources": [
+      "results/task2_optimization_report.json",
+      "results/regimes_pre_task2.csv"
+    ]
+  },
+  "5_the_1887_split": {
+    "n": 1887,
+    "i_truncation_artifact": {
+      "count": 29,
+      "frac": "29/1887",
+      "pct": 1.5368309485956544,
+      "pct_rounded_display": "1.54%"
+    },
+    "ii_genuine_ge40": {
+      "count": 1698,
+      "frac": "1698/1887",
+      "pct": 89.98410174880763,
+      "pct_rounded_display": "89.98%"
+    },
+    "iii_undetermined_lt40": {
+      "count": 160,
+      "frac": "160/1887",
+      "pct": 8.479067302596714,
+      "pct_rounded_display": "8.48%"
+    },
+    "conservation": 1887,
+    "terms_distribution_for_1698_genuine": {
+      "n": 1698,
+      "min": 40,
+      "median": 67.0,
+      "mean": 68.99469964664311,
+      "max": 136
+    },
+    "sources": [
+      "results/truncation_1887_summary.json",
+      "results/truncation_1887.csv",
+      "experiments/run_truncation_1887.py"
+    ]
+  },
+  "6_compute_environment": {
+    "cpu_count": 8,
+    "cpu_count_source": "multiprocessing.cpu_count() at build time",
+    "ram_gb": 15.793769836425781,
+    "ram_source": "psutil.virtual_memory().total at build time",
+    "parallel": true,
+    "parallel_mechanism": "concurrent.futures.ProcessPoolExecutor",
+    "parallel_source": "experiments/run_oeis.py",
+    "oeis_60_strict_jobs_flag": "not recorded in results/oeis_60_strict.log; experiments/run_oeis.py defaults --jobs to os.cpu_count()",
+    "oeis_runner_default_jobs": "os.cpu_count() or 1",
+    "oeis_runner_default_jobs_source": "experiments/run_oeis.py"
+  },
+  "timing_note": {
+    "text": "The earlier oeis_60_strict timing (550 rows / ~53 min wall) is discarded as unreliable due to machine sleep. Use oeis_60_calibration.json.",
+    "source": "results/oeis_60_calibration.json"
+  }
+}

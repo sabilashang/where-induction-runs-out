@@ -1,0 +1,9 @@
+scale,L_lit_full,n_d,n_id,n_x,order,degree,L_H,n_rev,n_struct_rev,regime
+1,759,7,7,5,2,0,22,1,0,identification-limited
+10,969,7,7,4,2,0,26,1,0,identification-limited
+100,1187,7,7,3,2,0,32,1,0,identification-limited
+1000,1403,7,7,3,2,0,38,1,0,identification-limited
+100000,1845,7,7,3,2,0,52,1,0,identification-limited
+10000000,2285,7,7,3,2,0,66,1,0,identification-limited
+1000000000,2719,7,7,3,2,0,78,1,0,identification-limited
+1000000000000,3377,7,7,3,2,0,98,1,0,identification-limited

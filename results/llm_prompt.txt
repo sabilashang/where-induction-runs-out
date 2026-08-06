@@ -1,0 +1,8 @@
+Here are the first 20 terms of an integer sequence:
+<terms>
+Respond in JSON only, no prose:
+{"next_three": [a,b,c],
+ "formula": "closed form or recurrence, or exactly NO_FORMULA_FOUND",
+ "confidence": 1-5,
+ "recognized": true/false,
+ "name_if_recognized": "..."}

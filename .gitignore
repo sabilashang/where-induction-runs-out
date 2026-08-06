@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.blg
+paper/*.bbl
+paper/*.synctex.gz
+*_backup.tex

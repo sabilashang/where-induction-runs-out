@@ -1,0 +1,103 @@
+{
+  "strict": {
+    "setting": "strict_leading=True",
+    "n_total": 61,
+    "n_fitted": 46,
+    "exact": 41,
+    "exact_frac": "41/46",
+    "within1": 46,
+    "within1_frac": "46/46",
+    "mae": 0.10869565217391304,
+    "corr_struct": 0.832586670822961,
+    "corr_growth": -0.098102744954766,
+    "mean_L_H_by_class": {
+      "CFIN": 23.625,
+      "POLY": 38.93333333333333,
+      "PREC": 33.86666666666667
+    },
+    "n_structural_revisers": 2,
+    "reviser_names": [
+      "triangular",
+      "oblong"
+    ],
+    "reviser_anums": [
+      "A000217",
+      "A002378"
+    ],
+    "fibonacci_n_d": 7.0,
+    "fibonacci_L_H": 22.0
+  },
+  "loose": {
+    "setting": "strict_leading=False",
+    "n_total": 61,
+    "n_fitted": 46,
+    "exact": 41,
+    "exact_frac": "41/46",
+    "within1": 46,
+    "within1_frac": "46/46",
+    "mae": 0.10869565217391304,
+    "corr_struct": 0.8546821770230112,
+    "corr_growth": -0.016726546350330912,
+    "mean_L_H_by_class": {
+      "CFIN": 23.625,
+      "POLY": 33.06666666666667,
+      "PREC": 33.86666666666667
+    },
+    "n_structural_revisers": 2,
+    "reviser_names": [
+      "cubes",
+      "square pyramidal"
+    ],
+    "reviser_anums": [
+      "A000578",
+      "A000330"
+    ],
+    "fibonacci_n_d": 7.0,
+    "fibonacci_L_H": 22.0
+  },
+  "invariant": [
+    "n_fitted",
+    "exact",
+    "within1",
+    "mae",
+    "n_structural_revisers",
+    "fibonacci_n_d",
+    "fibonacci_L_H"
+  ],
+  "not_invariant": [
+    {
+      "key": "corr_struct",
+      "strict": 0.832586670822961,
+      "loose": 0.8546821770230112
+    },
+    {
+      "key": "corr_growth",
+      "strict": -0.098102744954766,
+      "loose": -0.016726546350330912
+    },
+    {
+      "key": "reviser_anums",
+      "strict": [
+        "A000217",
+        "A002378"
+      ],
+      "loose": [
+        "A000578",
+        "A000330"
+      ]
+    },
+    {
+      "key": "mean_L_H_by_class",
+      "strict": {
+        "CFIN": 23.625,
+        "POLY": 38.93333333333333,
+        "PREC": 33.86666666666667
+      },
+      "loose": {
+        "CFIN": 23.625,
+        "POLY": 33.06666666666667,
+        "PREC": 33.86666666666667
+      }
+    }
+  ]
+}

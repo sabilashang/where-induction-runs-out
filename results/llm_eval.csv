@@ -1,0 +1,1422 @@
+anum,stratum,model,model_requested,n_terms_available,prompt_terms,truth_next_three,pred_next_three,n_terms_correct,exact_correct,partial_correct,formula,confidence,recognized,name_if_recognized,abstention,confabulation,raw_response,error,failed
+A001641,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,36,20,"[134642, 236283, 414645]","[134651, 236408, 414846]",0,False,False,"a(n) = a(n-1) + a(n-2) + a(n-3) for n ≥ 4, with a(1)=1, a(2)=3, a(3)=4",5,True,Tribonacci-like sequence or Narayana's cows sequence variant,False,True,"```json
+{
+  ""next_three"": [134651, 236408, 414846],
+  ""formula"": ""a(n) = a(n-1) + a(n-2) + a(n-3) for n ≥ 4, with a(1)=1, a(2)=3, a(3)=4"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Tribonacci-like sequence or Narayana's cows sequence variant""
+}
+```",,False
+A005004,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,57,20,"[58, 62, 64]","[58, 62, 64]",3,True,True,"a(n) = floor(n * (3 + sqrt(5))/2) for n ≥ 1, or equivalently: positions of 1's in the Wythoff sequence complement",5,True,Lower Wythoff sequence complement (or Beatty sequence for (3+sqrt(5))/2),False,False,"```json
+{
+  ""next_three"": [58, 62, 64],
+  ""formula"": ""a(n) = floor(n * (3 + sqrt(5))/2) for n ≥ 1, or equivalently: positions of 1's in the Wythoff sequence complement"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Lower Wythoff sequence complement (or Beatty sequence for (3+sqrt(5))/2)""
+}
+```",,False
+A007179,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,35,20,"[523776, 1048576, 2096128]","[522752, 1048576, 2096128]",2,False,True,a(n) = 2^n if n is odd; a(n) = 2^(n+1) - 2^(n/2+1) if n is even,5,True,Interleaved powers of 2 and even perfect numbers (partial),False,True,"```json
+{
+  ""next_three"": [522752, 1048576, 2096128],
+  ""formula"": ""a(n) = 2^n if n is odd; a(n) = 2^(n+1) - 2^(n/2+1) if n is even"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Interleaved powers of 2 and even perfect numbers (partial)""
+}
+```",,False
+A007204,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,34,20,"[707281, 855625, 1026169]",,0,False,False,,,,,False,False,"Looking at this sequence, let me analyze the differences and patterns.
+
+First differences:
+24, 144, 456, 1056, 2040, 3504, 5544, 8256, 11736, 16080, 21384, 27744, 35256, 43016, 54120, 65664, 78744, 93456, 109896
+
+Second differences:
+120, 312, 600, 984, 1464, 2040, 2712, 3480, 4344, 5304, 6360, 7512, 8760, 10104, 11544, 13080, 14712, 16440
+
+Third differences:
+192, 288, 384, 480, 576, 672, 768, 864, 960, 1056, 1152, 1248, 1344, 1440, 1536, 1632, 1728
+
+Fourth differences:
+96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96
+
+The constant fourth difference of 96 indicates a degree-4 polynomial.
+
+Testing if these are perfect squares:
+- 1 = 1²
+- 25 = 5²
+- 169 = 13²
+- 625 = 25²
+- 1681 = 41²
+- 3721 = 61²
+
+The square roots are: 1, 5, 13, 25, 41, 61, 85, 113, 145, 181, 221, 265, 313, ","ValueError(""no JSON object in response: 'Looking at this sequence, let me analyze the differences and patterns.\\n\\nFirst differences:\\n24, 144, 456, 1056, 2040, 3504, 5544, 8256, 11736, 16080, 21384, 27744, 35256, 43016, 54120, 65664, 78744, 93456, 109896\\n\\nSecond differences:\\n120, 31'"")",True
+A007589,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,36,20,"[5660, 6314, 7004]",,0,False,False,,,,,False,False,"Looking at this sequence, let me analyze the differences:
+
+First differences: 1, 19, 30, 42, 78, 114, 150, 186, 222, 258, 294, 330, 366, 382, 438, 474, 510, 546, 582
+
+Second differences: 18, 11, 12, 36, 36, 36, 36, 36, 36, 36, 36, 36, 16, 56, 36, 36, 36, 36
+
+Let me recalculate more carefully:
+
+First differences: 1, 19, 30, 42, 78, 114, 150, 186, 222, 258, 294, 330, 366, 402, 438, 474, 510, 546, 582
+
+Second differences: 18, 11, 12, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36
+
+After the initial irregularity, second differences stabilize at 36.
+
+Testing if this fits a quadratic form for n ≥ 3:
+The pattern suggests a(n) = 18n² - 18n + 20 for n ≥ 3
+
+Checking: 
+- a(3) = 18(9) - 18(3) + 20 = 162 - 54 + 20 = 128... doesn't match 50
+
+Let me try: a(n) = 18n² - 54n + 86 for n ≥ 1
+- a(","ValueError(""no JSON object in response: 'Looking at this sequence, let me analyze the differences:\\n\\nFirst differences: 1, 19, 30, 42, 78, 114, 150, 186, 222, 258, 294, 330, 366, 382, 438, 474, 510, 546, 582\\n\\nSecond differences: 18, 11, 12, 36, 36, 36, 36, 36, 36, 36, 36, 36, 16, 5'"")",True
+A010851,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,65,20,"[12, 12, 12]","[12, 12, 12]",3,True,True,a(n) = 12,5,True,Constant sequence,False,False,"```json
+{
+  ""next_three"": [12, 12, 12],
+  ""formula"": ""a(n) = 12"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Constant sequence""
+}
+```",,False
+A014616,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,56,20,"[142, 154, 167]","[142, 154, 167]",3,True,True,"a(n) = floor(n*(n+3)/2) + 1 for n ≥ 1, or a(n) = a(n-1) + floor((n+2)/2) with a(1) = 2",5,False,None,False,False,"```json
+{
+  ""next_three"": [142, 154, 167],
+  ""formula"": ""a(n) = floor(n*(n+3)/2) + 1 for n ≥ 1, or a(n) = a(n-1) + floor((n+2)/2) with a(1) = 2"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""None""
+}
+```",,False
+A015221,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,41,20,"[23821, 25585, 31395]","[23409, 25311, 30745]",0,False,False,a(n) = (2n-1) * (n^2 - n + 1),5,False,NO_STANDARD_NAME,False,True,"```json
+{
+  ""next_three"": [23409, 25311, 30745],
+  ""formula"": ""a(n) = (2n-1) * (n^2 - n + 1)"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""NO_STANDARD_NAME""
+}
+```",,False
+A016934,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,41,20,"[14884, 16384, 17956]","[14884, 16384, 17956]",3,True,True,(2n)^2 for n >= 1,5,True,Squares of even numbers,False,False,"```json
+{
+  ""next_three"": [14884, 16384, 17956],
+  ""formula"": ""(2n)^2 for n >= 1"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Squares of even numbers""
+}
+```",,False
+A017437,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,54,20,"[224, 235, 246]","[224, 235, 246]",3,True,True,"a(n) = 11n + 4 - 11 = 11n - 7, or equivalently a(n) = 11(n-1) + 4 for n ≥ 1",5,True,Arithmetic sequence with first term 4 and common difference 11,False,False,"```json
+{
+  ""next_three"": [224, 235, 246],
+  ""formula"": ""a(n) = 11n + 4 - 11 = 11n - 7, or equivalently a(n) = 11(n-1) + 4 for n ≥ 1"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Arithmetic sequence with first term 4 and common difference 11""
+}
+```",,False
+A021226,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,99,20,"[4, 5, 0]","[4, 5, 0]",3,True,True,"a(n) = 0 if n ≡ 0, 1, 4 (mod 3); a(n) = 4 if n ≡ 2 (mod 3); a(n) = 5 if n ≡ 0 (mod 3) for n ≥ 3, or equivalently: a(n) = [0, 0, 4, 5] repeated with period 3 starting from n=2",5,False,,False,False,"```json
+{
+  ""next_three"": [4, 5, 0],
+  ""formula"": ""a(n) = 0 if n ≡ 0, 1, 4 (mod 3); a(n) = 4 if n ≡ 2 (mod 3); a(n) = 5 if n ≡ 0 (mod 3) for n ≥ 3, or equivalently: a(n) = [0, 0, 4, 5] repeated with period 3 starting from n=2"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A022119,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,37,20,"[136897, 221504, 358401]","[136897, 221504, 358401]",3,True,True,"a(n) = a(n-1) + a(n-2) for n ≥ 3, with a(1) = 2, a(2) = 19",5,True,Fibonacci-like sequence with initial terms 2 and 19,False,False,"```json
+{
+  ""next_three"": [136897, 221504, 358401],
+  ""formula"": ""a(n) = a(n-1) + a(n-2) for n ≥ 3, with a(1) = 2, a(2) = 19"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Fibonacci-like sequence with initial terms 2 and 19""
+}
+```",,False
+A022353,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,37,20,"[128535, 207974, 336509]","[128535, 207974, 336509]",3,True,True,"a(0)=0, a(1)=19, a(n) = a(n-1) + a(n-2) for n≥2",5,True,"Fibonacci sequence with a(0)=0, a(1)=19 (19 times the standard Fibonacci sequence)",False,False,"```json
+{
+  ""next_three"": [128535, 207974, 336509],
+  ""formula"": ""a(0)=0, a(1)=19, a(n) = a(n-1) + a(n-2) for n≥2"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Fibonacci sequence with a(0)=0, a(1)=19 (19 times the standard Fibonacci sequence)""
+}
+```",,False
+A022851,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,59,20,"[57, 59, 62]","[57, 59, 62]",3,True,True,a(n) = floor(n * 17/6),5,True,Beatty sequence for 17/6,False,False,"```json
+{
+  ""next_three"": [57, 59, 62],
+  ""formula"": ""a(n) = floor(n * 17/6)"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Beatty sequence for 17/6""
+}
+```",,False
+A026385,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,34,20,"[47172, 82325, 143675]","[47111, 82216, 143484]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [47111, 82216, 143484],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A026950,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,31,20,"[107421875, 224609375, 585937500]","[107421875, 224609375, 585937500]",3,True,True,a(n) = (5^n * (2 + (-1)^n)) / 4,5,False,Powers of 5 with alternating pattern,False,False,"```json
+{
+  ""next_three"": [107421875, 224609375, 585937500],
+  ""formula"": ""a(n) = (5^n * (2 + (-1)^n)) / 4"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""Powers of 5 with alternating pattern""
+}
+```",,False
+A027903,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,39,20,"[25620, 29568, 33902]",,0,False,False,,,,,False,False,"Looking at this sequence, I'll analyze the differences to find a pattern.
+
+First differences:
+8, 34, 78, 140, 220, 318, 434, 568, 720, 890, 1078, 1284, 1508, 1750, 2010, 2288, 2584, 2898, 3230
+
+Second differences:
+26, 44, 62, 80, 98, 116, 134, 152, 170, 188, 206, 224, 242, 260, 278, 296, 314, 332
+
+Third differences:
+18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18
+
+The third differences are constant (18), indicating a cubic polynomial.
+
+Using polynomial fitting, I find:
+a(n) = 3n³ + 2n² + n
+
+Verification:
+- a(0) = 0 ✓
+- a(1) = 3 + 2 + 1 = 6... ✗
+
+Let me recalculate. Actually, the formula is:
+a(n) = n(n+1)(3n+2)/2
+
+Verification:
+- a(1) = 1·2·5/2 = 5... still not matching
+
+After more careful analysis:
+a(n) = n(n+1)(n+2) + n(n+1)(n-1)
+
+This simplifies to: a(n) = n(n²+3n+2) = n³ + 3n² +","ValueError('no JSON object in response: ""Looking at this sequence, I\'ll analyze the differences to find a pattern.\\n\\nFirst differences:\\n8, 34, 78, 140, 220, 318, 434, 568, 720, 890, 1078, 1284, 1508, 1750, 2010, 2288, 2584, 2898, 3230\\n\\nSecond differences:\\n26, 44, 62, 80, 98, 116, 1""')",True
+A028346,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,41,20,"[16302, 20020, 24388]","[16293, 20016, 24408]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [16293, 20016, 24408],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}
+```",,False
+A031711,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,34,20,"[480291, 527120, 576127]","[480291, 527120, 576127]",3,True,True,a(n) = 1091*n^2 - 0*n + 0 = 1091*n^2,5,False,1091 times the square numbers,False,False,"```json
+{
+  ""next_three"": [480291, 527120, 576127],
+  ""formula"": ""a(n) = 1091*n^2 - 0*n + 0 = 1091*n^2"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""1091 times the square numbers""
+}
+```",,False
+A034525,clean,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,52,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,a(n) = 0,5,True,Zero sequence,False,False,"```json
+{
+  ""next_three"": [0, 0, 0],
+  ""formula"": ""a(n) = 0"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Zero sequence""
+}
+```",,False
+A000574,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,38,20,"[74382, 91080, 110630]","[74382, 90978, 110319]",1,False,True,"C(n+4, 5) + C(n+3, 4) where C denotes binomial coefficient, or equivalently: n(n+1)(n+2)(n+3)(n+8)/120",5,False,None,False,True,"```json
+{
+  ""next_three"": [74382, 90978, 110319],
+  ""formula"": ""C(n+4, 5) + C(n+3, 4) where C denotes binomial coefficient, or equivalently: n(n+1)(n+2)(n+3)(n+8)/120"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""None""
+}
+```",,False
+A004467,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,33,20,"[14650, 16961, 19503]","[14649, 16959, 19500]",0,False,False,a(n) = n*(n+1)*(2*n+1)/2,5,True,Hexagonal pyramidal numbers,False,True,"```json
+{
+  ""next_three"": [14649, 16959, 19500],
+  ""formula"": ""a(n) = n*(n+1)*(2*n+1)/2"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Hexagonal pyramidal numbers""
+}
+```",,False
+A005585,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,38,20,"[95634, 118910, 146510]","[95238, 117306, 142506]",0,False,False,"C(n+4, 5) + C(n+3, 5) = (n+4)(n+3)(n+2)(n+1)n/120 + (n+3)(n+2)(n+1)n(n-1)/120",5,True,Sum of two consecutive binomial coefficients with k=5,False,True,"```json
+{
+  ""next_three"": [95238, 117306, 142506],
+  ""formula"": ""C(n+4, 5) + C(n+3, 5) = (n+4)(n+3)(n+2)(n+1)n/120 + (n+3)(n+2)(n+1)n(n-1)/120"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Sum of two consecutive binomial coefficients with k=5""
+}
+```",,False
+A005920,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,42,20,"[13461, 15499, 17733]","[13461, 15499, 17733]",3,True,True,a(n) = n*(n+1)*(2*n+1)/2,5,True,Hexagonal pyramidal numbers,False,False,"```json
+{
+  ""next_three"": [13461, 15499, 17733],
+  ""formula"": ""a(n) = n*(n+1)*(2*n+1)/2"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Hexagonal pyramidal numbers""
+}
+```",,False
+A005945,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,41,20,"[23010, 26691, 30745]","[23011, 26696, 30765]",0,False,False,n^2 * (n^2 - 1) / 2,5,True,Tetrahedral pyramidal numbers or sum of first n tetrahedral numbers minus n,False,True,"```json
+{
+  ""next_three"": [23011, 26696, 30765],
+  ""formula"": ""n^2 * (n^2 - 1) / 2"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Tetrahedral pyramidal numbers or sum of first n tetrahedral numbers minus n""
+}
+```",,False
+A010008,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,42,20,"[7202, 7940, 8714]","[7202, 7940, 8714]",3,True,True,a(n) = 3*n^3 + 6*n^2 - 8*n,5,False,None,False,False,"```json
+{
+  ""next_three"": [7202, 7940, 8714],
+  ""formula"": ""a(n) = 3*n^3 + 6*n^2 - 8*n"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""None""
+}
+```",,False
+A014380,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,81,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,"a(n) = 1 if n ≤ 7, else 0",5,False,Not a standard sequence,False,False,"```json
+{
+  ""next_three"": [0, 0, 0],
+  ""formula"": ""a(n) = 1 if n ≤ 7, else 0"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""Not a standard sequence""
+}
+```",,False
+A015238,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,42,20,"[14800, 17199, 19844]","[14800, 17199, 19844]",3,True,True,a(n) = n^4 - 2*n^2,5,False,None,False,False,"```json
+{
+  ""next_three"": [14800, 17199, 19844],
+  ""formula"": ""a(n) = n^4 - 2*n^2"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""None""
+}
+```",,False
+A015243,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,34,20,"[12400, 14553, 16940]",,0,False,False,,,,,False,False,"Looking at this sequence, I need to find the pattern by examining differences.
+
+First differences:
+-7, -13, -7, 11, 41, 83, 137, 203, 281, 371, 473, 587, 713, 851, 1001, 1163, 1337, 1523, 1721
+
+Second differences:
+-6, 6, 18, 30, 42, 54, 66, 78, 90, 102, 114, 126, 138, 150, 162, 174, 186, 198
+
+Third differences:
+12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12
+
+The third differences are constant at 12, indicating this is a cubic polynomial.
+
+For a cubic with third difference = 12, we have a(n) = 2n³ + bn² + cn + d
+
+Using the first few terms to solve:
+- a(0) = 0: d = 0
+- a(1) = -7: 2 + b + c = -7
+- a(2) = -20: 16 + 4b + 2c = -20
+- a(3) = -27: 54 + 9b + 3c = -27
+
+Solving: b = -9, c = 0, d = 0
+
+Formula: a(n) = 2n³ - 9n²
+
+Verification:
+- a(20) = 2(8000) - 9(400) = 16000 - 3600 ","ValueError(""no JSON object in response: 'Looking at this sequence, I need to find the pattern by examining differences.\\n\\nFirst differences:\\n-7, -13, -7, 11, 41, 83, 137, 203, 281, 371, 473, 587, 713, 851, 1001, 1163, 1337, 1523, 1721\\n\\nSecond differences:\\n-6, 6, 18, 30, 42, 54, 66,'"")",True
+A016379,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,81,20,"[1, 1, 0]","[1, 1, 0]",3,True,True,a(n) = round(sin(2πn/5)),5,True,"Periodic sequence with period 5: repeating [1, 1, 0, 0, 0, -1, -1, 0, 0, 0]",False,False,"```json
+{
+  ""next_three"": [1, 1, 0],
+  ""formula"": ""a(n) = round(sin(2πn/5))"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Periodic sequence with period 5: repeating [1, 1, 0, 0, 0, -1, -1, 0, 0, 0]""
+}
+```",,False
+A016814,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,44,20,"[6561, 7225, 7921]","[6561, 7225, 7921]",3,True,True,(2n-1)^2 for n ≥ 1,5,True,Squares of odd numbers,False,False,"```json
+{
+  ""next_three"": [6561, 7225, 7921],
+  ""formula"": ""(2n-1)^2 for n ≥ 1"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Squares of odd numbers""
+}
+```",,False
+A024215,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,40,20,"[27111, 31207, 35696]","[27111, 31207, 35696]",3,True,True,n*(n+1)*(2*n^2+2*n+3)/6,5,False,,False,False,"```json
+{
+  ""next_three"": [27111, 31207, 35696],
+  ""formula"": ""n*(n+1)*(2*n^2+2*n+3)/6"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A024381,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,37,20,"[47621, 54846, 62767]",,0,False,False,,,,,False,False,"Looking at this sequence, I'll analyze the differences to find a pattern.
+
+First differences:
+26-1=25, 107-26=81, 276-107=169, 565-276=289, 1006-565=441, 1631-1006=625, 2472-1631=841, 3561-2472=1089, 4930-3561=1369, 6611-4930=1681, 8636-6611=2025, 11037-8636=2401, 13846-11037=2809, 17095-13846=3249, 20816-17095=3721, 25041-20816=4225, 29802-25041=4761, 35131-29802=5329, 41060-35131=5929
+
+These are: 25, 81, 169, 289, 441, 625, 841, 1089, 1369, 1681, 2025, 2401, 2809, 3249, 3721, 4225, 4761, 5329, 5929
+
+I notice these are perfect squares of odd numbers:
+5²=25, 9²=81, 13²=169, 17²=289, 21²=441, 25²=625, 29²=841, 33²=1089, 37²=1369, 41²=1681, 45²=2025, 49²=2401, 53²=2809, 57²=3249, 61²=3721, 65²=4225, 69²=4761, 73²=5329, 77²=5929","ValueError('no JSON object in response: ""Looking at this sequence, I\'ll analyze the differences to find a pattern.\\n\\nFirst differences:\\n26-1=25, 107-26=81, 276-107=169, 565-276=289, 1006-565=441, 1631-1006=625, 2472-1631=841, 3561-2472=1089, 4930-3561=1369, 6611-4930=1681, 8636-661""')",True
+A026057,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,46,20,"[2050, 2338, 2651]","[2050, 2338, 2651]",3,True,True,a(n) = (n^3 - 9*n^2 + 20*n)/2,5,False,None,False,False,"```json
+{
+  ""next_three"": [2050, 2338, 2651],
+  ""formula"": ""a(n) = (n^3 - 9*n^2 + 20*n)/2"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""None""
+}
+```",,False
+A026061,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,48,20,"[1987, 2210, 2448]","[1987, 2210, 2448]",3,True,True,a(n) = (n+1)(2n^2 + 7n + 11)/2,5,False,Unknown,False,False,"```json
+{
+  ""next_three"": [1987, 2210, 2448],
+  ""formula"": ""a(n) = (n+1)(2n^2 + 7n + 11)/2"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""Unknown""
+}
+```",,False
+A027656,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,86,20,"[11, 0, 12]","[11, 0, 12]",3,True,True,"a(n) = (n+1)/2 if n is odd, 0 if n is even",5,False,Interleaved sequence of positive integers and zeros,False,False,"```json
+{
+  ""next_three"": [11, 0, 12],
+  ""formula"": ""a(n) = (n+1)/2 if n is odd, 0 if n is even"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""Interleaved sequence of positive integers and zeros""
+}
+```",,False
+A028552,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,51,20,"[460, 504, 550]","[460, 504, 550]",3,True,True,n^2 + 3*n,5,True,"Pronic numbers plus twice triangular numbers, or n(n+3)",False,False,"```json
+{
+  ""next_three"": [460, 504, 550],
+  ""formula"": ""n^2 + 3*n"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Pronic numbers plus twice triangular numbers, or n(n+3)""
+}
+```",,False
+A028896,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,44,20,"[1260, 1386, 1518]","[1260, 1386, 1518]",3,True,True,n(n+1)(n+2),5,True,"Oblong numbers multiplied by (n+2), or triple factorial-related sequence",False,False,"```json
+{
+  ""next_three"": [1260, 1386, 1518],
+  ""formula"": ""n(n+1)(n+2)"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Oblong numbers multiplied by (n+2), or triple factorial-related sequence""
+}
+```",,False
+A030533,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,45,20,"[791, 891, 1035]",,0,False,False,,,,,False,False,"Looking at this sequence, let me analyze the differences and patterns.
+
+First differences: 0, 4, 1, 9, 4, 16, 9, 25, 16, 36, 25, 49, 36, 64, 49, 81, 64, 100, 81
+
+I notice the first differences alternate between perfect squares:
+- Odd positions: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81 (squares: 0², 1², 2², 3², 4², 5², 6², 7², 8², 9²)
+- Even positions: 4, 9, 16, 25, 36, 49, 64, 81, 100 (squares: 2², 3², 4², 5², 6², 7², 8², 9², 10²)
+
+This gives us a recurrence pattern:
+- a(2n-1) = a(2n-2) + (n-1)²
+- a(2n) = a(2n-1) + (n+1)²
+
+For n=11 (term 21): a(21) = a(20) + 10² = 670 + 100 = 770
+For n=11 (term 22): a(22) = a(21) + 12² = 770 + 144 = 914
+For n=12 (term 23): a(23) = a(22) + 11² = 914 + 121 = 1035
+
+The closed form for even indices is: a(2n) = (4n³ + ","ValueError(""no JSON object in response: 'Looking at this sequence, let me analyze the differences and patterns.\\n\\nFirst differences: 0, 4, 1, 9, 4, 16, 9, 25, 16, 36, 25, 49, 36, 64, 49, 81, 64, 100, 81\\n\\nI notice the first differences alternate between perfect squares:\\n- Odd positi'"")",True
+A034721,revising,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,37,20,"[25481, 29562, 34057]","[25481, 29562, 34057]",3,True,True,a(n) = (n^4 + 6n^3 + 11n^2 + 6n)/2,5,False,None,False,False,"```json
+{
+  ""next_three"": [25481, 29562, 34057],
+  ""formula"": ""a(n) = (n^4 + 6n^3 + 11n^2 + 6n)/2"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": ""None""
+}
+```",,False
+A000030,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,133,20,"[2, 2, 2]","[2, 2, 2]",3,True,True,a(n) = number of digits in n,5,True,A055642 (Number of digits in decimal representation of n),False,False,"```json
+{
+  ""next_three"": [2, 2, 2],
+  ""formula"": ""a(n) = number of digits in n"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""A055642 (Number of digits in decimal representation of n)""
+}
+```",,False
+A004721,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,74,20,"[1, 3, 4]","[21, 22, 23]",0,False,False,a(n) = n mod 20,5,True,Non-negative integers modulo 20,False,True,"```json
+{
+  ""next_three"": [21, 22, 23],
+  ""formula"": ""a(n) = n mod 20"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Non-negative integers modulo 20""
+}
+```",,False
+A005929,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,105,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,"a(n) = 2 if n=1, 4 if n≡1 (mod 6) and n>1, 0 otherwise",4,False,Unknown,False,False,"```json
+{
+  ""next_three"": [0, 0, 0],
+  ""formula"": ""a(n) = 2 if n=1, 4 if n≡1 (mod 6) and n>1, 0 otherwise"",
+  ""confidence"": 4,
+  ""recognized"": false,
+  ""name_if_recognized"": ""Unknown""
+}
+```",,False
+A011851,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,47,20,"[3100, 4069, 5266]","[3100, 4064, 5254]",1,False,True,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [3100, 4064, 5254],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A014912,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,81,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,NO_FORMULA_FOUND,4,False,,True,False,"```json
+{
+  ""next_three"": [0, 0, 0],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 4,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A017822,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,41,20,"[329, 475, 685]","[329, 475, 685]",3,True,True,"a(n) = a(n-1) + a(n-3) + a(n-6) for n >= 6, with a(0)=1, a(1)=0, a(2)=0, a(3)=1, a(4)=1, a(5)=1",5,True,A000929 - Number of partitions of n into parts with distinct multiplicities,False,False,"```json
+{
+  ""next_three"": [329, 475, 685],
+  ""formula"": ""a(n) = a(n-1) + a(n-3) + a(n-6) for n >= 6, with a(0)=1, a(1)=0, a(2)=0, a(3)=1, a(4)=1, a(5)=1"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""A000929 - Number of partitions of n into parts with distinct multiplicities""
+}
+```",,False
+A017849,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,54,20,"[6, 10, 12]","[5, 7, 8]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [5, 7, 8],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A023391,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,50,20,"[57, 64, 81]","[57, 63, 70]",1,False,True,NO_FORMULA_FOUND,3,False,,True,False,"```json
+{
+  ""next_three"": [57, 63, 70],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 3,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A025839,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,70,20,"[3, 3, 3]",,0,False,False,,,,,False,False,"Looking at this sequence, I need to identify the pattern.
+
+Let me examine the terms: 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 2, 1, 1, 2, 2, 2, 2, 2, 2
+
+Let me check if this relates to partitions. Specifically, let me check if a(n) counts partitions of n into parts where the smallest part appears exactly once.
+
+- a(0) = 1: {} (empty partition)
+- a(1) = 0: no valid partitions
+- a(2) = 0: no valid partitions  
+- a(3) = 1: {1,2}
+- a(4) = 0: no valid partitions
+- a(5) = 1: {1,4} or {2,3}
+- a(6) = 1: {1,5}, {1,2,3}
+- a(7) = 0: checking...
+- a(8) = 1: {1,7}, {1,2,5}, {1,3,4}
+
+Actually, this matches OEIS A034296: number of partitions of n into distinct parts with smallest part = 1.
+
+Let me verify:
+- a(11) = 1: {1,2,3,5}, {1,2,4,4} - wait, need distinct parts
+- a(11) = 1: only {1,2,3,5}
+- a(12) = 2: {1,2,3,6}, {1,2,4,5}
+
+This appears to match! The next terms would be:",JSONDecodeError('Extra data: line 1 column 4 (char 3)'),True
+A028846,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,64,20,"[111, 112, 114]","[111, 112, 114]",3,True,True,"Numbers whose decimal representation uses only the digits 1, 2, 4, and 8",5,True,"Numbers with digits from {1, 2, 4, 8}",False,False,"```json
+{
+  ""next_three"": [111, 112, 114],
+  ""formula"": ""Numbers whose decimal representation uses only the digits 1, 2, 4, and 8"",
+  ""confidence"": 5,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Numbers with digits from {1, 2, 4, 8}""
+}
+```",,False
+A029419,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,71,20,"[1, 3, 1]","[1, 2, 1]",2,False,True,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [1, 2, 1],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}
+```",,False
+A029446,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,82,20,"[2, 2, 2]",,0,False,False,,,,,False,False,"Looking at this sequence, I need to identify the pattern.
+
+Let me examine the positions of 1s and 0s:
+- Position 1: 1
+- Positions 2-9: 0 (eight 0s)
+- Positions 10-13: 1 (four 1s)
+- Positions 14-18: 0 (five 0s)
+- Positions 19-20: 1 (two 1s so far)
+
+Let me check if this relates to digit properties. Looking at the decimal representations:
+- 1: has one digit '1'
+- 2-9: don't contain the digit '1'
+- 10-13: all contain the digit '1' (10, 11, 12, 13)
+- 14-18: don't contain the digit '1'
+- 19-20: don't contain... wait, let me reconsider.
+
+Actually, checking if the position n contains the digit '1':
+- n=1: yes → 1
+- n=2-9: no → 0
+- n=10,11,12,13: yes → 1
+- n=14-18: no → 0
+- n=19: contains '1' → should be 1 ✓
+- n=20: no '1' → should be 0, but sequence shows 1 ✗
+
+Let me try another approach - checking if n contains digit '0' or '1':
+- n=1: contains 1 → 1
+- n=2-9: neither → 0
+- n=10: contains both 0 and 1 → 1
+- n=19: contains 1 → 1
+- n=20","ValueError(""no JSON object in response: 'Looking at this sequence, I need to identify the pattern.\\n\\nLet me examine the positions of 1s and 0s:\\n- Position 1: 1\\n- Positions 2-9: 0 (eight 0s)\\n- Positions 10-13: 1 (four 1s)\\n- Positions 14-18: 0 (five 0s)\\n- Positions 19-20: 1 (two 1s s'"")",True
+A031077,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,47,20,"[236, 263, 290]","[236, 263, 290]",3,True,True,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [236, 263, 290],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A032572,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,78,20,"[4, 4, 4]","[3, 3, 3]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [3, 3, 3],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A032846,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,57,20,"[30, 31, 37]","[30, 31, 32]",2,False,True,NO_FORMULA_FOUND,4,False,,True,True,"Looking at the sequence: 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 15, 19, 20, 21, 22, 23, 28, 29
+
+Let me analyze the gaps:
+- 1-7 (consecutive)
+- gap at 8, 9
+- 10-15 (consecutive)
+- gap at 16, 17, 18
+- 19-23 (consecutive)
+- gap at 24, 25, 26, 27
+- 28, 29...
+
+The pattern shows:
+- 7 terms, skip 2
+- 6 terms, skip 3
+- 5 terms, skip 4
+- Continuing: 4 terms, skip 5
+
+So after 29: 30, 31, 32 (4 terms total including 29), then skip 5 (33-37), then 38, 39, 40...
+
+```json
+{
+  ""next_three"": [30, 31, 32],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 4,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}
+```",,False
+A032886,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,59,20,"[39, 42, 43]",,0,False,False,,,,,False,False,"Looking at this sequence, I need to identify the pattern.
+
+Let me examine the differences and structure:
+- 1-7: consecutive integers
+- Gap at 8-13
+- 14-15: two consecutive
+- Gap at 16-20
+- 21-23: three consecutive
+- Gap at 24-27
+- 28-31: four consecutive
+- Gap at 32-34
+- 35-38: four consecutive
+
+Let me check if these are numbers that avoid certain digit patterns. Looking at the numbers that are missing:
+- Missing: 8, 9, 10, 11, 12, 13 (contain 8, 9, 0, 1 with certain patterns)
+- Missing: 16, 17, 18, 19, 20 (contain 6, 7, 8, 9, 0)
+- Missing: 24, 25, 26, 27 (contain 4, 5, 6, 7)
+- Missing: 32, 33, 34 (contain 2, 3, 4)
+
+Actually, these appear to be numbers whose digits are all ≤ 7 when written in base 10, OR numbers that can be expressed using only digits {0,1,2,3,4,5,6,7}.
+
+Wait, let me reconsider: these look like numbers that either:
+1. Are ≤ 7, OR
+2. Have all digits in {1,2,3,7} when looking at the teens and twenties pattern
+
+Let me check another approach - these might be numbers that avoid digits 8 and 9, and also avoid 0 except in specific positions.
+
+After 38, continuing the pattern of numbers avoiding certain digits",JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)'),True
+A032985,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,56,20,"[40, 41, 42]","[40, 41, 42]",3,True,True,First 7 terms are 1-7; then groups of 4 consecutive integers starting at 12+9(k-1) for k≥1,4,False,N/A,False,False,"Looking at the sequence: 1, 2, 3, 4, 5, 6, 7, 12, 13, 14, 15, 21, 22, 23, 24, 30, 31, 32, 33, 39
+
+I notice a pattern:
+- 1-7 (7 terms)
+- gap
+- 12-15 (4 terms)
+- gap
+- 21-24 (4 terms)
+- gap
+- 30-33 (4 terms)
+- gap
+- 39...
+
+The starting points are: 1, 12, 21, 30, 39 (differences of 11, 9, 9, 9...)
+
+After the first group of 7, we have groups of 4 consecutive integers starting at 12, 21, 30, 39, which follow the pattern 12 + 9k.
+
+The next group should start at 39 and continue: 39, 40, 41, 42.
+
+```json
+{
+  ""next_three"": [40, 41, 42],
+  ""formula"": ""First 7 terms are 1-7; then groups of 4 consecutive integers starting at 12+9(k-1) for k≥1"",
+  ""confidence"": 4,
+  ""recognized"": false,
+  ""name_if_recognized"": ""N/A""
+}
+```",,False
+A034402,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,52,20,"[9, 10, 17]","[9, 8, 14]",1,False,True,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [9, 8, 14],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A035585,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,59,20,"[19, 23, 25]","[14, 15, 18]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"```json
+{
+  ""next_three"": [14, 15, 18],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": null
+}
+```",,False
+A035591,wilderness,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,59,20,"[23, 24, 24]","[20, 21, 22]",0,False,False,NO_FORMULA_FOUND,1,False,,True,False,"```json
+{
+  ""next_three"": [20, 21, 22],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 1,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}
+```",,False
+A001641,clean,openai/gpt-4o,openai/gpt-4o,36,20,"[134642, 236283, 414645]","[134447, 235563, 412736]",0,False,False,a(n) = a(n-1) + a(n-2) + a(n-3),4,True,Tribonacci-like sequence,False,True,"{
+    ""next_three"": [134447, 235563, 412736],
+    ""formula"": ""a(n) = a(n-1) + a(n-2) + a(n-3)"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Tribonacci-like sequence""
+}",,False
+A005004,clean,openai/gpt-4o,openai/gpt-4o,57,20,"[58, 62, 64]","[60, 62, 66]",1,False,True,a(n) = 2n - 1 + floor(n/2),4,True,OEIS A005408,False,True,"{
+    ""next_three"": [60, 62, 66],
+    ""formula"": ""a(n) = 2n - 1 + floor(n/2)"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""OEIS A005408""
+}",,False
+A007179,clean,openai/gpt-4o,openai/gpt-4o,35,20,"[523776, 1048576, 2096128]","[523776, 1048576, 2096128]",3,True,True,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [523776, 1048576, 2096128],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A007204,clean,openai/gpt-4o,openai/gpt-4o,34,20,"[707281, 855625, 1026169]","[707281, 849625, 1016065]",1,False,True,n^4,5,True,Fourth Powers,False,True,"{
+    ""next_three"": [707281, 849625, 1016065],
+    ""formula"": ""n^4"",
+    ""confidence"": 5,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Fourth Powers""
+}",,False
+A007589,clean,openai/gpt-4o,openai/gpt-4o,36,20,"[5660, 6314, 7004]","[5650, 6284, 6954]",0,False,False,a_n = n^3 - n^2,4,True,Centered Hexagonal Numbers,False,True,"{
+  ""next_three"": [5650, 6284, 6954],
+  ""formula"": ""a_n = n^3 - n^2"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Centered Hexagonal Numbers""
+}",,False
+A010851,clean,openai/gpt-4o,openai/gpt-4o,65,20,"[12, 12, 12]","[12, 12, 12]",3,True,True,NO_FORMULA_FOUND,5,False,,True,False,"{
+  ""next_three"": [12, 12, 12],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 5,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A014616,clean,openai/gpt-4o,openai/gpt-4o,56,20,"[142, 154, 167]","[142, 154, 167]",3,True,True,a_n = a_{n-1} + n + 1,4,False,,False,False,"{
+    ""next_three"": [142, 154, 167],
+    ""formula"": ""a_n = a_{n-1} + n + 1"",
+    ""confidence"": 4,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A015221,clean,openai/gpt-4o,openai/gpt-4o,41,20,"[23821, 25585, 31395]","[23751, 25585, 31055]",1,False,True,NO_FORMULA_FOUND,3,False,,True,False,"{
+  ""next_three"": [23751, 25585, 31055],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 3,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A016934,clean,openai/gpt-4o,openai/gpt-4o,41,20,"[14884, 16384, 17956]","[14641, 15876, 17161]",0,False,False,n^2 * (n+1)^2,4,True,Squares of Triangular Numbers,False,True,"{
+    ""next_three"": [14641, 15876, 17161],
+    ""formula"": ""n^2 * (n+1)^2"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Squares of Triangular Numbers""
+}",,False
+A017437,clean,openai/gpt-4o,openai/gpt-4o,54,20,"[224, 235, 246]","[224, 235, 246]",3,True,True,a_n = 4 + 11(n-1),4,False,,False,False,"{
+  ""next_three"": [224, 235, 246],
+  ""formula"": ""a_n = 4 + 11(n-1)"",
+  ""confidence"": 4,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A021226,clean,openai/gpt-4o,openai/gpt-4o,99,20,"[4, 5, 0]","[4, 5, 0]",3,True,True,a(n) = (n % 3 == 0) ? 0 : ((n % 3 == 1) ? 4 : 5),4,True,"Periodic sequence with period [0, 4, 5]",False,False,"{
+    ""next_three"": [4, 5, 0],
+    ""formula"": ""a(n) = (n % 3 == 0) ? 0 : ((n % 3 == 1) ? 4 : 5)"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Periodic sequence with period [0, 4, 5]""
+}",,False
+A022119,clean,openai/gpt-4o,openai/gpt-4o,37,20,"[136897, 221504, 358401]","[136897, 221504, 358401]",3,True,True,a_n = a_{n-1} + a_{n-2} + a_{n-3},4,True,Tribonacci sequence,False,False,"{
+  ""next_three"": [136897, 221504, 358401],
+  ""formula"": ""a_n = a_{n-1} + a_{n-2} + a_{n-3}"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Tribonacci sequence""
+}",,False
+A022353,clean,openai/gpt-4o,openai/gpt-4o,37,20,"[128535, 207974, 336509]","[128535, 207974, 336509]",3,True,True,a(n) = a(n-1) + a(n-2) + a(n-3),4,True,Tribonacci sequence,False,False,"{
+  ""next_three"": [128535, 207974, 336509],
+  ""formula"": ""a(n) = a(n-1) + a(n-2) + a(n-3)"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Tribonacci sequence""
+}",,False
+A022851,clean,openai/gpt-4o,openai/gpt-4o,59,20,"[57, 59, 62]","[57, 60, 63]",1,False,True,a_n = 3n - 3 + (n mod 3),4,False,,False,True,"{
+  ""next_three"": [57, 60, 63],
+  ""formula"": ""a_n = 3n - 3 + (n mod 3)"",
+  ""confidence"": 4,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A026385,clean,openai/gpt-4o,openai/gpt-4o,34,20,"[47172, 82325, 143675]","[47089, 82078, 142153]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [47089, 82078, 142153],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A026950,clean,openai/gpt-4o,openai/gpt-4o,31,20,"[107421875, 224609375, 585937500]","[109375000, 231445312, 585937500]",1,False,True,a(n) = 5 * a(n-1) + 125 * a(n-2) - 375 * a(n-3),4,False,,False,True,"{
+  ""next_three"": [109375000, 231445312, 585937500],
+  ""formula"": ""a(n) = 5 * a(n-1) + 125 * a(n-2) - 375 * a(n-3)"",
+  ""confidence"": 4,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A027903,clean,openai/gpt-4o,openai/gpt-4o,39,20,"[25620, 29568, 33902]","[25628, 29580, 33906]",0,False,False,a_n = n^3 + n^2 + n,4,True,Cubic Sequence,False,True,"{
+  ""next_three"": [25628, 29580, 33906],
+  ""formula"": ""a_n = n^3 + n^2 + n"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Cubic Sequence""
+}",,False
+A028346,clean,openai/gpt-4o,openai/gpt-4o,41,20,"[16302, 20020, 24388]","[16268, 19908, 24108]",0,False,False,a(n) = a(n-1) + (n^2 + n),4,True,Pentagonal Pyramidal Numbers,False,True,"{
+  ""next_three"": [16268, 19908, 24108],
+  ""formula"": ""a(n) = a(n-1) + (n^2 + n)"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Pentagonal Pyramidal Numbers""
+}",,False
+A031711,clean,openai/gpt-4o,openai/gpt-4o,34,20,"[480291, 527120, 576127]","[480291, 527848, 577483]",1,False,True,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [480291, 527848, 577483],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A034525,clean,openai/gpt-4o,openai/gpt-4o,52,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,a_n = 0 for all n,5,True,Zero Sequence,False,False,"{
+    ""next_three"": [0, 0, 0],
+    ""formula"": ""a_n = 0 for all n"",
+    ""confidence"": 5,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Zero Sequence""
+}",,False
+A000574,revising,openai/gpt-4o,openai/gpt-4o,38,20,"[74382, 91080, 110630]","[74466, 91206, 110775]",0,False,False,a(n) = n * (n + 1) * (n + 2) / 6,4,True,Tetrahedral numbers,False,True,"{
+    ""next_three"": [74466, 91206, 110775],
+    ""formula"": ""a(n) = n * (n + 1) * (n + 2) / 6"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Tetrahedral numbers""
+}",,False
+A004467,revising,openai/gpt-4o,openai/gpt-4o,33,20,"[14650, 16961, 19503]","[14841, 17323, 20016]",0,False,False,a(n) = n^3 + n^2,4,True,Centered hexagonal numbers,False,True,"{
+    ""next_three"": [14841, 17323, 20016],
+    ""formula"": ""a(n) = n^3 + n^2"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Centered hexagonal numbers""
+}",,False
+A005585,revising,openai/gpt-4o,openai/gpt-4o,38,20,"[95634, 118910, 146510]","[95577, 118503, 145359]",0,False,False,a(n) = n * (n + 1) * (n + 2) / 6,4,True,Tetrahedral numbers,False,True,"{
+  ""next_three"": [95577, 118503, 145359],
+  ""formula"": ""a(n) = n * (n + 1) * (n + 2) / 6"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Tetrahedral numbers""
+}",,False
+A005920,revising,openai/gpt-4o,openai/gpt-4o,42,20,"[13461, 15499, 17733]","[13251, 15182, 17240]",0,False,False,a_n = n^3 + n^2 + n,4,True,Cubic Sequence,False,True,"{
+    ""next_three"": [13251, 15182, 17240],
+    ""formula"": ""a_n = n^3 + n^2 + n"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Cubic Sequence""
+}",,False
+A005945,revising,openai/gpt-4o,openai/gpt-4o,41,20,"[23010, 26691, 30745]","[23010, 26609, 30501]",1,False,True,n^3 - n,4,True,Centered Hexagonal Numbers,False,True,"{
+  ""next_three"": [23010, 26609, 30501],
+  ""formula"": ""n^3 - n"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Centered Hexagonal Numbers""
+}",,False
+A010008,revising,openai/gpt-4o,openai/gpt-4o,42,20,"[7202, 7940, 8714]","[7202, 7940, 8714]",3,True,True,a_n = 3n^2 + 16n - 18,4,False,NO_NAME_FOUND,False,False,"{
+    ""next_three"": [7202, 7940, 8714],
+    ""formula"": ""a_n = 3n^2 + 16n - 18"",
+    ""confidence"": 4,
+    ""recognized"": false,
+    ""name_if_recognized"": ""NO_NAME_FOUND""
+}",,False
+A014380,revising,openai/gpt-4o,openai/gpt-4o,81,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,NO_FORMULA_FOUND,4,False,,True,False,"{
+    ""next_three"": [0, 0, 0],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 4,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A015238,revising,openai/gpt-4o,openai/gpt-4o,42,20,"[14800, 17199, 19844]","[14800, 17275, 20024]",1,False,True,a(n) = n^3 - n^2,4,True,Cubic Sequence,False,True,"{
+  ""next_three"": [14800, 17275, 20024],
+  ""formula"": ""a(n) = n^3 - n^2"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Cubic Sequence""
+}",,False
+A015243,revising,openai/gpt-4o,openai/gpt-4o,34,20,"[12400, 14553, 16940]","[12300, 14353, 16640]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{
+  ""next_three"": [12300, 14353, 16640],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A016379,revising,openai/gpt-4o,openai/gpt-4o,81,20,"[1, 1, 0]","[-1, -1, 0]",1,False,True,NO_FORMULA_FOUND,3,False,,True,False,"{
+  ""next_three"": [-1, -1, 0],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 3,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A016814,revising,openai/gpt-4o,openai/gpt-4o,44,20,"[6561, 7225, 7921]","[6561, 7225, 7921]",3,True,True,n^2 where n is an odd integer starting from 1,5,True,Squares of odd numbers,False,False,"{
+    ""next_three"": [6561, 7225, 7921],
+    ""formula"": ""n^2 where n is an odd integer starting from 1"",
+    ""confidence"": 5,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Squares of odd numbers""
+}",,False
+A024215,revising,openai/gpt-4o,openai/gpt-4o,40,20,"[27111, 31207, 35696]","[27101, 31076, 35344]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [27101, 31076, 35344],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A024381,revising,openai/gpt-4o,openai/gpt-4o,37,20,"[47621, 54846, 62767]","[47601, 54822, 62737]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [47601, 54822, 62737],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A026057,revising,openai/gpt-4o,openai/gpt-4o,46,20,"[2050, 2338, 2651]","[2049, 2334, 2643]",0,False,False,a(n) = n^3 - n^2 - n,4,True,Centered hexagonal numbers,False,True,"{
+    ""next_three"": [2049, 2334, 2643],
+    ""formula"": ""a(n) = n^3 - n^2 - n"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Centered hexagonal numbers""
+}",,False
+A026061,revising,openai/gpt-4o,openai/gpt-4o,48,20,"[1987, 2210, 2448]","[1988, 2202, 2430]",0,False,False,a_n = n^3 + n^2 + n + 20,4,False,,False,True,"{
+    ""next_three"": [1988, 2202, 2430],
+    ""formula"": ""a_n = n^3 + n^2 + n + 20"",
+    ""confidence"": 4,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A027656,revising,openai/gpt-4o,openai/gpt-4o,86,20,"[11, 0, 12]","[11, 0, 12]",3,True,True,"a(n) = n/2 if n is even, 0 if n is odd",4,False,,False,False,"{
+  ""next_three"": [11, 0, 12],
+  ""formula"": ""a(n) = n/2 if n is even, 0 if n is odd"",
+  ""confidence"": 4,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A028552,revising,openai/gpt-4o,openai/gpt-4o,51,20,"[460, 504, 550]","[460, 504, 550]",3,True,True,n^2 + n - 2,4,True,Centered square numbers,False,False,"{
+    ""next_three"": [460, 504, 550],
+    ""formula"": ""n^2 + n - 2"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Centered square numbers""
+}",,False
+A028896,revising,openai/gpt-4o,openai/gpt-4o,44,20,"[1260, 1386, 1518]","[1260, 1404, 1554]",1,False,True,n * (n + 1) * 3,4,True,Triangular numbers multiplied by 3,False,True,"{
+  ""next_three"": [1260, 1404, 1554],
+  ""formula"": ""n * (n + 1) * 3"",
+  ""confidence"": 4,
+  ""recognized"": true,
+  ""name_if_recognized"": ""Triangular numbers multiplied by 3""
+}",,False
+A030533,revising,openai/gpt-4o,openai/gpt-4o,45,20,"[791, 891, 1035]","[795, 884, 1010]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [795, 884, 1010],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A034721,revising,openai/gpt-4o,openai/gpt-4o,37,20,"[25481, 29562, 34057]","[25481, 29466, 33757]",1,False,True,a(n) = n^3 + n^2,4,True,Centered hexagonal numbers,False,True,"{
+    ""next_three"": [25481, 29466, 33757],
+    ""formula"": ""a(n) = n^3 + n^2"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Centered hexagonal numbers""
+}",,False
+A000030,wilderness,openai/gpt-4o,openai/gpt-4o,133,20,"[2, 2, 2]","[1, 1, 1]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [1, 1, 1],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A004721,wilderness,openai/gpt-4o,openai/gpt-4o,74,20,"[1, 3, 4]","[20, 21, 22]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [20, 21, 22],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A005929,wilderness,openai/gpt-4o,openai/gpt-4o,105,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [0, 0, 0],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A011851,wilderness,openai/gpt-4o,openai/gpt-4o,47,20,"[3100, 4069, 5266]","[3100, 4075, 5278]",1,False,True,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [3100, 4075, 5278],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A014912,wilderness,openai/gpt-4o,openai/gpt-4o,81,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [0, 0, 0],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A017822,wilderness,openai/gpt-4o,openai/gpt-4o,41,20,"[329, 475, 685]","[328, 472, 679]",0,False,False,a(n) = a(n-1) + a(n-2) + a(n-3) for n > 3,4,True,Tribonacci sequence,False,True,"{
+    ""next_three"": [328, 472, 679],
+    ""formula"": ""a(n) = a(n-1) + a(n-2) + a(n-3) for n > 3"",
+    ""confidence"": 4,
+    ""recognized"": true,
+    ""name_if_recognized"": ""Tribonacci sequence""
+}",,False
+A017849,wilderness,openai/gpt-4o,openai/gpt-4o,54,20,"[6, 10, 12]","[4, 4, 4]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [4, 4, 4],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A023391,wilderness,openai/gpt-4o,openai/gpt-4o,50,20,"[57, 64, 81]","[57, 63, 70]",1,False,True,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [57, 63, 70],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A025839,wilderness,openai/gpt-4o,openai/gpt-4o,70,20,"[3, 3, 3]","[3, 3, 3]",3,True,True,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [3, 3, 3],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A028846,wilderness,openai/gpt-4o,openai/gpt-4o,64,20,"[111, 112, 114]","[111, 112, 114]",3,True,True,NO_FORMULA_FOUND,3,False,,True,False,"{
+  ""next_three"": [111, 112, 114],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 3,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A029419,wilderness,openai/gpt-4o,openai/gpt-4o,71,20,"[1, 3, 1]","[2, 1, 1]",1,False,True,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [2, 1, 1],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A029446,wilderness,openai/gpt-4o,openai/gpt-4o,82,20,"[2, 2, 2]","[1, 1, 1]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [1, 1, 1],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A031077,wilderness,openai/gpt-4o,openai/gpt-4o,47,20,"[236, 263, 290]","[236, 264, 292]",1,False,True,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [236, 264, 292],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A032572,wilderness,openai/gpt-4o,openai/gpt-4o,78,20,"[4, 4, 4]","[3, 3, 3]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [3, 3, 3],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A032846,wilderness,openai/gpt-4o,openai/gpt-4o,57,20,"[30, 31, 37]","[30, 31, 37]",3,True,True,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [30, 31, 37],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A032886,wilderness,openai/gpt-4o,openai/gpt-4o,59,20,"[39, 42, 43]","[39, 42, 43]",3,True,True,NO_FORMULA_FOUND,2,False,,True,False,"{
+  ""next_three"": [39, 42, 43],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A032985,wilderness,openai/gpt-4o,openai/gpt-4o,56,20,"[40, 41, 42]","[40, 41, 42]",3,True,True,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [40, 41, 42],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A034402,wilderness,openai/gpt-4o,openai/gpt-4o,52,20,"[9, 10, 17]","[6, 9, 13]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{
+    ""next_three"": [6, 9, 13],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 3,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A035585,wilderness,openai/gpt-4o,openai/gpt-4o,59,20,"[19, 23, 25]","[11, 12, 17]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{
+  ""next_three"": [11, 12, 17],
+  ""formula"": ""NO_FORMULA_FOUND"",
+  ""confidence"": 2,
+  ""recognized"": false,
+  ""name_if_recognized"": """"
+}",,False
+A035591,wilderness,openai/gpt-4o,openai/gpt-4o,59,20,"[23, 24, 24]","[19, 19, 20]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{
+    ""next_three"": [19, 19, 20],
+    ""formula"": ""NO_FORMULA_FOUND"",
+    ""confidence"": 2,
+    ""recognized"": false,
+    ""name_if_recognized"": """"
+}",,False
+A001641,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,36,20,"[134642, 236283, 414645]","[133626, 234401, 408027]",0,False,False,"F(n) = F(n-1) + F(n-2) + 1, F(1) = 1, F(2) = 3",4,False,,False,True,"{""next_three"": [133626, 234401, 408027], 
+ ""formula"": ""F(n) = F(n-1) + F(n-2) + 1, F(1) = 1, F(2) = 3"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A005004,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,57,20,"[58, 62, 64]","[58, 60, 64]",2,False,True,NO_FORMULA_FOUND,4,False,,True,True,"{""next_three"": [58, 60, 64], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A007179,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,35,20,"[523776, 1048576, 2096128]","[523776, 1048576, 2096128]",3,True,True,2^n*(2^n-1),5,True,Powers of 2 times one less than powers of 2,False,False,"{""next_three"": [523776, 1048576, 2096128], 
+ ""formula"": ""2^n*(2^n-1)"", 
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""Powers of 2 times one less than powers of 2""}",,False
+A007204,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,34,20,"[707281, 855625, 1026169]","[737281, 930625, 1157625]",0,False,False,a(n) = n^4 + n^2 + 1 or a(n) = (n^2 + n + 1)^2 - n^2,5,False,,False,True,"{""next_three"": [737281, 930625, 1157625], 
+""formula"": ""a(n) = n^4 + n^2 + 1 or a(n) = (n^2 + n + 1)^2 - n^2"", 
+""confidence"": 5, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A007589,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,36,20,"[5660, 6314, 7004]","[5716, 6426, 7172]",0,False,False,a(n) = n^2 + 10n - 10,5,False,,False,True,"{""next_three"": [5716, 6426, 7172], 
+ ""formula"": ""a(n) = n^2 + 10n - 10"", 
+ ""confidence"": 5, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A010851,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,65,20,"[12, 12, 12]","[12, 12, 12]",3,True,True,a_n = 12,5,True,Constant Sequence,False,False,"{""next_three"": [12, 12, 12], 
+ ""formula"": ""a_n = 12"", 
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""Constant Sequence""}",,False
+A014616,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,56,20,"[142, 154, 167]","[142, 155, 169]",1,False,True,a(n) = n^2 + n + 1,4,False,,False,True,"{""next_three"": [142, 155, 169], 
+ ""formula"": ""a(n) = n^2 + n + 1"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A015221,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,41,20,"[23821, 25585, 31395]","[21845, 23621, 29639]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [21845, 23621, 29639], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A016934,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,41,20,"[14884, 16384, 17956]","[14984, 16656, 18496]",0,False,False,"n^2 + (n-1)^2 + (n-2)^2 + ... + 1^2 = n*(n+1)*(2n+1)/6, but simpler: n^4",5,True,fourth powers,False,True,"{""next_three"": [14984, 16656, 18496], 
+ ""formula"": ""n^2 + (n-1)^2 + (n-2)^2 + ... + 1^2 = n*(n+1)*(2n+1)/6, but simpler: n^4"",
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""fourth powers""}",,False
+A017437,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,54,20,"[224, 235, 246]","[224, 235, 246]",3,True,True,11n - 7,5,True,Arithmetic Sequence,False,False,"{""next_three"": [224, 235, 246], 
+ ""formula"": ""11n - 7"", 
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""Arithmetic Sequence""}",,False
+A021226,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,99,20,"[4, 5, 0]","[4, 5, 0]",3,True,True,NO_FORMULA_FOUND,5,True,repeating pattern,True,False,"{""next_three"": [4, 5, 0], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""repeating pattern""}",,False
+A022119,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,37,20,"[136897, 221504, 358401]","[136497, 220898, 357395]",0,False,False,"F(n) = F(n-1) + F(n-2) where F(1) = 2, F(2) = 19, or approximately NO_FORMULA_FOUND for a simple closed form",4,False,,False,True,"{""next_three"": [136497, 220898, 357395], 
+ ""formula"": ""F(n) = F(n-1) + F(n-2) where F(1) = 2, F(2) = 19, or approximately NO_FORMULA_FOUND for a simple closed form"",
+ ""confidence"": 4,
+ ""recognized"": false,
+ ""name_if_recognized"": """"}",,False
+A022353,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,37,20,"[128535, 207974, 336509]","[127435, 206575, 334010]",0,False,False,"F(n) = F(n-1) + F(n-2) + 1, F(1) = 19, F(2) = 19",4,False,,False,True,"{""next_three"": [127435, 206575, 334010], 
+""formula"": ""F(n) = F(n-1) + F(n-2) + 1, F(1) = 19, F(2) = 19"", 
+""confidence"": 4, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A022851,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,59,20,"[57, 59, 62]","[57, 60, 63]",1,False,True,NO_FORMULA_FOUND,4,False,,True,True,"{""next_three"": [57, 60, 63], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A026385,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,34,20,"[47172, 82325, 143675]","[47324, 82386, 144317]",0,False,False,"F(n) = F(n-1) + F(n-2) + 1, F(1) = 1, F(2) = 1",5,False,,False,True,"{""next_three"": [47324, 82386, 144317], 
+""formula"": ""F(n) = F(n-1) + F(n-2) + 1, F(1) = 1, F(2) = 1"", 
+""confidence"": 5, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A026950,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,31,20,"[107421875, 224609375, 585937500]","[85196875, 180703125, 382812500]",0,False,False,5^n - 5^(n-1) + 5^(n-2),5,False,none,False,True,"{""next_three"": [85196875, 180703125, 382812500], 
+ ""formula"": ""5^n - 5^(n-1) + 5^(n-2)"", 
+ ""confidence"": 5, 
+ ""recognized"": false, 
+ ""name_if_recognized"": ""none""}",,False
+A027903,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,39,20,"[25620, 29568, 33902]","[25520, 29480, 33840]",0,False,False,NO_FORMULA_FOUND,4,False,,True,True,"{""next_three"": [25520, 29480, 33840], 
+""formula"": ""NO_FORMULA_FOUND"", 
+""confidence"": 4, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A028346,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,41,20,"[16302, 20020, 24388]","[17136, 21612, 26628]",0,False,False,NO_FORMULA_FOUND,4,False,,True,True,"{""next_three"": [17136, 21612, 26628], 
+""formula"": ""NO_FORMULA_FOUND"", 
+""confidence"": 4, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A031711,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,34,20,"[480291, 527120, 576127]","[480483, 527504, 576693]",0,False,False,NO_FORMULA_FOUND,1,False,,True,False,"{""next_three"": [480483, 527504, 576693],
+ ""formula"": ""NO_FORMULA_FOUND"",
+ ""confidence"": 1,
+ ""recognized"": false,
+ ""name_if_recognized"": """"}",,False
+A034525,clean,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,52,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,a_n = 0,5,True,Constant sequence,False,False,"{""next_three"": [0, 0, 0], 
+ ""formula"": ""a_n = 0"", 
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""Constant sequence""}",,False
+A000574,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,38,20,"[74382, 91080, 110630]","[75309, 93870, 116799]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [75309, 93870, 116799],
+""formula"": ""NO_FORMULA_FOUND"",
+""confidence"": 2,
+""recognized"": false,
+""name_if_recognized"": """"}",,False
+A004467,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,33,20,"[14650, 16961, 19503]","[16529, 20817, 25425]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{""next_three"": [16529, 20817, 25425], 
+""formula"": ""NO_FORMULA_FOUND"", 
+""confidence"": 3, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A005585,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,38,20,"[95634, 118910, 146510]","[95322, 118591, 144860]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{""next_three"": [95322, 118591, 144860], 
+""formula"": ""NO_FORMULA_FOUND"", 
+""confidence"": 3, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A005920,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,42,20,"[13461, 15499, 17733]","[13650, 15966, 18569]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{""next_three"": [13650, 15966, 18569], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 3, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A005945,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,41,20,"[23010, 26691, 30745]","[23675, 28090, 32939]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{""next_three"": [23675, 28090, 32939], 
+""formula"": ""NO_FORMULA_FOUND"", 
+""confidence"": 3, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A010008,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,42,20,"[7202, 7940, 8714]","[7810, 9152, 10550]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [7810, 9152, 10550],
+ ""formula"": ""NO_FORMULA_FOUND"",
+ ""confidence"": 2,
+ ""recognized"": false,
+ ""name_if_recognized"": """"}",,False
+A014380,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,81,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,NO_FORMULA_FOUND,5,False,,True,False,"{""next_three"": [0, 0, 0], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 5, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A015238,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,42,20,"[14800, 17199, 19844]","[16600, 20787, 25200]",0,False,False,n^3 - n,5,True,Cubic Number Sequence,False,True,"{""next_three"": [16600, 20787, 25200], 
+ ""formula"": ""n^3 - n"", 
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""Cubic Number Sequence""}",,False
+A015243,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,34,20,"[12400, 14553, 16940]",,0,False,False,,,,,False,False,"{""next_three"": [10469 + 10469 - 7225 + 245, 10469 + 1573 + 448 + 729, 10469 + 2873 + 1100 + 108],
+ ""formula"": ""a(n) = n^3 - 3n^2 + 2n"",
+ ""confidence"": 5,
+ ""recognized"": true,
+ ""name_if_recognized"": ""Cubic Sequence""}","JSONDecodeError(""Expecting ',' delimiter: line 1 column 23 (char 22)"")",True
+A016379,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,81,20,"[1, 1, 0]","[1, 1, 0]",3,True,True,NO_FORMULA_FOUND,4,False,,True,False,"{""next_three"": [1, 1, 0], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A016814,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,44,20,"[6561, 7225, 7921]","[6661, 7441, 8281]",0,False,False,n^2 = a_n,5,True,Square Numbers,False,True,"{""next_three"": [6661, 7441, 8281], 
+""formula"": ""n^2 = a_n"", 
+""confidence"": 5, 
+""recognized"": true, 
+""name_if_recognized"": ""Square Numbers""}",,False
+A024215,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,40,20,"[27111, 31207, 35696]","[27110, 31201, 35675]",0,False,False,NO_FORMULA_FOUND,4,False,,True,True,"{""next_three"": [27110, 31201, 35675], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A024381,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,37,20,"[47621, 54846, 62767]","[47699, 54970, 62895]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{""next_three"": [47699, 54970, 62895], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 3, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A026057,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,46,20,"[2050, 2338, 2651]","[2066, 2371, 2704]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{""next_three"": [2066, 2371, 2704], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 3, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A026061,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,48,20,"[1987, 2210, 2448]","[2177, 2588, 3013]",0,False,False,NO_FORMULA_FOUND,3,False,,True,False,"{""next_three"": [2177, 2588, 3013], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 3, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A027656,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,86,20,"[11, 0, 12]",,0,False,False,,,,,False,False,None,"ValueError(""no JSON object in response: 'None'"")",True
+A028552,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,51,20,"[460, 504, 550]","[458, 500, 544]",0,False,False,2n^2 + 2n,5,True,Quadratic Sequence,False,True,"{""next_three"": [458, 500, 544], 
+ ""formula"": ""2n^2 + 2n"", 
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""Quadratic Sequence""}",,False
+A028896,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,44,20,"[1260, 1386, 1518]","[1266, 1398, 1536]",0,False,False,6*n*(n+1),5,True,Triangular numbers multiplied by 6,False,True,"{""next_three"": [1266, 1398, 1536], 
+ ""formula"": ""6*n*(n+1)"", 
+ ""confidence"": 5, 
+ ""recognized"": true, 
+ ""name_if_recognized"": ""Triangular numbers multiplied by 6""}",,False
+A030533,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,45,20,"[791, 891, 1035]","[805, 919, 1091]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [805, 919, 1091], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A034721,revising,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,37,20,"[25481, 29562, 34057]","[26411, 31017, 35723]",0,False,False,"closed form or recurrence, or exactly NO_FORMULA_FOUND",5,True,Fibonacci sequence with a twist,False,True,"{""next_three"": [26411, 31017, 35723],
+ ""formula"": ""closed form or recurrence, or exactly NO_FORMULA_FOUND"",
+ ""confidence"": 5,
+ ""recognized"": true,
+ ""name_if_recognized"": ""Fibonacci sequence with a twist""}",,False
+A000030,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,133,20,"[2, 2, 2]","[1, 1, 1]",0,False,False,NO_FORMULA_FOUND,5,False,...,True,True,"{""next_three"": [1, 1, 1],
+ ""formula"": ""NO_FORMULA_FOUND"",
+ ""confidence"": 5,
+ ""recognized"": false,
+ ""name_if_recognized"": ""...""}",,False
+A004721,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,74,20,"[1, 3, 4]","[20, 21, 22]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [20, 21, 22], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A005929,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,105,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,NO_FORMULA_FOUND,4,False,,True,False,"{""next_three"": [0, 0, 0], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A011851,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,47,20,"[3100, 4069, 5266]","[2641, 3137, 3649]",0,False,False,"closed form or recurrence, or exactly NO_FORMULA_FOUND",5,True,Fibonacci sequence,False,True,"{""next_three"": [2641, 3137, 3649],
+ ""formula"": ""closed form or recurrence, or exactly NO_FORMULA_FOUND"",
+ ""confidence"": 5,
+ ""recognized"": true,
+ ""name_if_recognized"": ""Fibonacci sequence""}",,False
+A014912,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,81,20,"[0, 0, 0]","[0, 0, 0]",3,True,True,NO_FORMULA_FOUND,4,False,,True,False,"{""next_three"": [0, 0, 0], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A017822,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,41,20,"[329, 475, 685]","[328, 474, 686]",0,False,False,"F(n) = F(n-1) + F(n-2) + 1, F(1) = 1, F(2) = 0",4,False,,False,True,"{""next_three"": [328, 474, 686],
+ ""formula"": ""F(n) = F(n-1) + F(n-2) + 1, F(1) = 1, F(2) = 0"",
+ ""confidence"": 4,
+ ""recognized"": false,
+ ""name_if_recognized"": """"}",,False
+A017849,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,54,20,"[6, 10, 12]","[4, 3, 2]",0,False,False,NO_FORMULA_FOUND,2,False,...,True,False,"{""next_three"": [4, 3, 2],
+ ""formula"": ""NO_FORMULA_FOUND"",
+ ""confidence"": 2,
+ ""recognized"": false,
+ ""name_if_recognized"": ""...""}",,False
+A023391,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,50,20,"[57, 64, 81]","[56, 62, 69]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [56, 62, 69], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A025839,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,70,20,"[3, 3, 3]","[2, 2, 3]",1,False,True,NO_FORMULA_FOUND,4,False,,True,True,"{""next_three"": [2, 2, 3], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 4, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A028846,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,64,20,"[111, 112, 114]","[91, 92, 94]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [91, 92, 94], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A029419,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,71,20,"[1, 3, 1]","[1, 1, 1]",2,False,True,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [1, 1, 1], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A029446,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,82,20,"[2, 2, 2]","[1, 1, 0]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [1, 1, 0], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A031077,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,47,20,"[236, 263, 290]","[218, 227, 236]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [218, 227, 236], 
+""formula"": ""NO_FORMULA_FOUND"", 
+""confidence"": 2, 
+""recognized"": false, 
+""name_if_recognized"": """"}",,False
+A032572,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,78,20,"[4, 4, 4]","[3, 3, 3]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [3, 3, 3], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A032846,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,57,20,"[30, 31, 37]","[30, 31, 32]",2,False,True,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [30, 31, 32], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A032886,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,59,20,"[39, 42, 43]","[39, 40, 41]",1,False,True,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [39, 40, 41], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A032985,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,56,20,"[40, 41, 42]","[40, 41, 42]",3,True,True,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [40, 41, 42], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A034402,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,52,20,"[9, 10, 17]","[8, 12, 19]",0,False,False,NO_FORMULA_FOUND,2,False,,True,False,"{""next_three"": [8, 12, 19], 
+ ""formula"": ""NO_FORMULA_FOUND"", 
+ ""confidence"": 2, 
+ ""recognized"": false, 
+ ""name_if_recognized"": """"}",,False
+A035585,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,59,20,"[19, 23, 25]",,0,False,False,,,,,False,False,None,"ValueError(""no JSON object in response: 'None'"")",True
+A035591,wilderness,meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,59,20,"[23, 24, 24]","[58, 365, 730]",0,False,False,NO_FORMULA_FOUND,1,False,,True,False,"{""next_three"": [58, 365, 730],
+ ""formula"": ""NO_FORMULA_FOUND"",
+ ""confidence"": 1,
+ ""recognized"": false,
+ ""name_if_recognized"": """"}",,False

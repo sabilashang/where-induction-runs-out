@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or paper, please cite it as below."
+title: "Where Induction Runs Out: Description-Length Difficulty and the Memorisation Gap in Integer-Sequence Benchmarks"
+authors:
+  - given-names: "Sabilashan"
+    family-names: "Ganeshan"
+    email: "sabilashanganeshan@gmail.com"
+type: software
+# Fill identifiers after Zenodo deposit:
+# identifiers:
+#   - type: doi
+#     value: 10.5281/zenodo.XXXXXXX
+# doi: 10.5281/zenodo.XXXXXXX
+version: "1.0.0"
+date-released: "2026-08-02"
+license: MIT
+repository-code: "https://github.com/sabilashang/where-induction-runs-out"
+abstract: >-
+  Minimum description length revision spectra over P-recursive (holonomic)
+  recurrences on integer sequences, with OEIS-scale wilderness statistics and
+  a three-model LLM evaluation stratified by MDL regime.
+keywords:
+  - minimum description length
+  - holonomic sequences
+  - OEIS
+  - inductive inference
+  - language models

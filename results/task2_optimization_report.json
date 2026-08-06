@@ -1,0 +1,32 @@
+{
+  "task2a_mod_p_rational_reconstruction": {
+    "status": "IMPLEMENTED",
+    "code": "revspec/core.py:_candidate_integer_nullvectors + guess_prec",
+    "mechanism": "GF(p) RREF for pivot structure/dimension; Wang rational reconstruction to integer nullvectors; exact Q Gauss-Jordan only if dim_p>0 and no reconstructed vector verifies",
+    "classical_invariants": {
+      "guess_prec_vs_exact_Q_mismatches_strict": "0/61",
+      "guess_prec_vs_exact_Q_mismatches_loose": "0/61",
+      "Fibonacci_n_d": 7,
+      "Fibonacci_L_H": 22,
+      "strict_struct_rev_total": 2,
+      "strict_revisers": [
+        "triangular",
+        "oblong"
+      ]
+    },
+    "speedup_on_task1_profile_set": {
+      "speedup_sum": 3.060488386540027,
+      "speedup_median": 2.5651902971102722,
+      "speedup_p90": 3.5832188126761118,
+      "baseline_sum_s": 91.00144279998494,
+      "after_sum_s": 29.734287899999117,
+      "source": "results/profile_speedup_task2a.json"
+    }
+  },
+  "task2b_spectrum_skip_when_standing_annihilates": {
+    "status": "REVERTED",
+    "reason": "Changes classical answers. Standing hyp that still annihilates is NOT always MDL-optimal: a cheaper newly-eligible (r,d) can appear when neqs crosses ncols+slack. Observed: triangular/oblong n_struct_rev 1\u00e2\u2020\u20190; POLY mean n_d and corrs moved.",
+    "user_rule": "If anything moves, stop.",
+    "action": "revision_spectrum restored to full re-solve every prefix"
+  }
+}
