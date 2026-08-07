@@ -1,5 +1,7 @@
 # Where Induction Runs Out
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830332.svg)](https://doi.org/10.5281/zenodo.21830332)
+
 Code, classical/OEIS results, and paper source for *Where Induction Runs Out:
 Description-Length Difficulty and the Memorisation Gap in Integer-Sequence
 Benchmarks.*
@@ -137,19 +139,23 @@ bounds (\(r\le 6\), \(d\le 4\)), encoding sensitivity
 
 ## Citation
 
-Ganeshan, S. (2026). *Where Induction Runs Out: Description-Length Difficulty
-and the Memorisation Gap in Integer-Sequence Benchmarks.*
+Ganeshan, S. (2026). Where Induction Runs Out: Description-Length
+Difficulty and the Memorisation Gap in Integer-Sequence Benchmarks.
+Zenodo. https://doi.org/10.5281/zenodo.21830332
 
 ```bibtex
 @software{where_induction_runs_out,
-  title = {Where Induction Runs Out},
+  title = {Where Induction Runs Out: Description-Length Difficulty
+           and the Memorisation Gap in Integer-Sequence Benchmarks},
   author = {Ganeshan, Sabilashan},
   year = {2026},
-  note = {Fill DOI after Zenodo deposit; see CITATION.cff},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.21830332},
+  url = {https://doi.org/10.5281/zenodo.21830332},
 }
 ```
 
-Also see `CITATION.cff` (CFF 1.2.0; placeholder DOI).
+Also see `CITATION.cff` (CFF 1.2.0).
 
 ## Licenses
 

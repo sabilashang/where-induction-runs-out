@@ -6,11 +6,10 @@ authors:
     family-names: "Ganeshan"
     email: "sabilashanganeshan@gmail.com"
 type: software
-# Fill identifiers after Zenodo deposit:
-# identifiers:
-#   - type: doi
-#     value: 10.5281/zenodo.XXXXXXX
-# doi: 10.5281/zenodo.XXXXXXX
+doi: 10.5281/zenodo.21830332
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21830332
 version: "1.0.0"
 date-released: "2026-08-02"
 license: MIT
