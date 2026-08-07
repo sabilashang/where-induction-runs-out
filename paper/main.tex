@@ -387,8 +387,7 @@ full length}. A recurrence fitted to some prefix but absent at full length is a
 distinct phenomenon (\S\ref{sec:wilderness}) and never enters this denominator;
 conflating the two inflates the revision rate roughly fivefold.
 
-Second, binning the mixed-length run (\texttt{oeis\_results.csv}; a different
-population) by available terms gives true-holonomic revision rates
+Second, binning the mixed-length run (\texttt{oeis\_results.csv}; a different population) by available terms gives true-holonomic revision rates
 $4.2\%$ ($20$--$22$), $6.1\%$ ($23$--$25$), $9.3\%$ ($26$--$28$),
 $5.7\%$ ($29$--$31$) and $12.0\%$ ($32$--$34$).
 The dependence is real but modest---far milder than an $n_d$-present
@@ -890,9 +889,8 @@ before.
 \paragraph{Reproducibility.} All code, the corpus generator, every model
 response, and scripts regenerating each number, table and figure are released at
 \url{https://github.com/sabilashang/where-induction-runs-out}.
-% Fill in the archived DOI after the Zenodo deposit, and mirror it into
-% CITATION.cff (which carries the same placeholder).
-An archived release is deposited at Zenodo (DOI to follow).
+An archived release is deposited at Zenodo,
+\url{https://doi.org/10.5281/zenodo.21830332}.
 The classical pipeline runs in under two minutes on a laptop with no GPU.
 
 \paragraph{Acknowledgements.} AI assistance (Claude, Cursor) was used for
@@ -926,8 +924,8 @@ compression ratio, and ``revisions'' the total structural revisions.}
 \includegraphics[width=\textwidth]{figures/fig_atlas.pdf}
 \caption{MDL curves for representative sequences, three per ground-truth class.
 Solid: the MDL codelength $L(n)$. Dashed: the verbatim cost $\Llit(n)$. Dotted
-vertical: the discovery point $\nd$. Both axes are logarithmic in the vertical
-direction. Non-holonomic sequences (rightmost column) never separate from the
+vertical: the discovery point $\nd$. The vertical axis is logarithmic.
+Non-holonomic sequences (rightmost column) never separate from the
 verbatim cost, which is what having no theory looks like.}
 \label{fig:atlas}
 \end{figure}
