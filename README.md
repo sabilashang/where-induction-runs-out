@@ -1,6 +1,7 @@
 # Where Induction Runs Out
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830332.svg)](https://doi.org/10.5281/zenodo.21830332)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830532.svg)](https://doi.org/10.5281/zenodo.21830532)
 
 Code, classical/OEIS results, and paper source for *Where Induction Runs Out:
 Description-Length Difficulty and the Memorisation Gap in Integer-Sequence
@@ -141,7 +142,10 @@ bounds (\(r\le 6\), \(d\le 4\)), encoding sensitivity
 
 Ganeshan, S. (2026). Where Induction Runs Out: Description-Length
 Difficulty and the Memorisation Gap in Integer-Sequence Benchmarks.
-Zenodo. https://doi.org/10.5281/zenodo.21830332
+Zenodo.
+
+- Paper: https://doi.org/10.5281/zenodo.21830332
+- Software: https://doi.org/10.5281/zenodo.21830532
 
 ```bibtex
 @software{where_induction_runs_out,
