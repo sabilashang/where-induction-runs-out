@@ -1,0 +1,317 @@
+{
+  "seed": 0,
+  "n_per_stratum": 20,
+  "n_total": 60,
+  "sources": {
+    "clean": "results/oeis_fixed30.csv holonomic & n_struct_rev==0",
+    "revising": "results/oeis_fixed30.csv holonomic & n_struct_rev>=1",
+    "wilderness": "results/truncation_1887.csv class==genuine_spurious & n_terms>=40"
+  },
+  "pool_sizes": {
+    "clean": 2465,
+    "revising": 315,
+    "wilderness": 1698
+  },
+  "rows": [
+    {
+      "anum": "A001641",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A005004",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A007179",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A007204",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A007589",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A010851",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A014616",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A015221",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A016934",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A017437",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A021226",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A022119",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A022353",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A022851",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A026385",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A026950",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A027903",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A028346",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A031711",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A034525",
+      "stratum": "clean",
+      "stratum_id": 1
+    },
+    {
+      "anum": "A000574",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A004467",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A005585",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A005920",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A005945",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A010008",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A014380",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A015238",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A015243",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A016379",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A016814",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A024215",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A024381",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A026057",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A026061",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A027656",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A028552",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A028896",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A030533",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A034721",
+      "stratum": "revising",
+      "stratum_id": 2
+    },
+    {
+      "anum": "A000030",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A004721",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A005929",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A011851",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A014912",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A017822",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A017849",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A023391",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A025839",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A028846",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A029419",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A029446",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A031077",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A032572",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A032846",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A032886",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A032985",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A034402",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A035585",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    },
+    {
+      "anum": "A035591",
+      "stratum": "wilderness",
+      "stratum_id": 3
+    }
+  ]
+}

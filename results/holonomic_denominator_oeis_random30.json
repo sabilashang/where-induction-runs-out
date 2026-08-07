@@ -1,0 +1,32 @@
+{
+  "name": "oeis_random30",
+  "path": "results/oeis_random30.csv",
+  "n_processed": 20000,
+  "n_holonomic": 1688,
+  "n_prefix_only": 1765,
+  "n_no_fit": 16547,
+  "n_errored": 0,
+  "conservation_sum": 20000,
+  "conservation_ok": true,
+  "pct_holonomic_str": "1688/20000 (8.4400%)",
+  "pct_prefix_only_str": "1765/20000 (8.8250%)",
+  "pct_no_fit_str": "16547/20000 (82.7350%)",
+  "pct_errored_str": "0/20000 (0.0000%)",
+  "n_revise": 214,
+  "pct_revise_among_true_holonomic_str": "214/1688 (12.6777%)",
+  "exact": 1418,
+  "within1": 1554,
+  "exact_str": "1418/1688 (84.0047%)",
+  "within1_str": "1554/1688 (92.0616%)",
+  "mae": 0.48578199052132703,
+  "mae_revisers": 2.957943925233645,
+  "mae_non_revisers": 0.12686567164179105,
+  "n_revisers_for_mae": 214,
+  "n_non_revisers_for_mae": 1474,
+  "artifacts": {
+    "crosstab": "results/holonomic_denominator_oeis_random30_crosstab.csv",
+    "by_nterms": "results/holonomic_denominator_oeis_random30_by_nterms.csv",
+    "by_params": "results/holonomic_denominator_oeis_random30_by_params.csv",
+    "struct_rev_dist": "results/holonomic_denominator_oeis_random30_struct_rev_dist.csv"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "script": "experiments/run_truncation_1887.py",
+  "list": "results/list_1887.txt",
+  "n": 1887,
+  "conservation": 1887,
+  "classes": {
+    "i_truncation_artifact": {
+      "count": 29,
+      "frac": "29/1887",
+      "pct": 1.5368309485956544
+    },
+    "ii_genuine_ge40": {
+      "count": 1698,
+      "frac": "1698/1887",
+      "pct": 89.98410174880763,
+      "label": "genuine_spurious (no operator at full length, n_terms >= 40)"
+    },
+    "iii_undetermined_lt40": {
+      "count": 160,
+      "frac": "160/1887",
+      "pct": 8.479067302596714
+    },
+    "error": {
+      "count": 0,
+      "frac": "0/1887"
+    }
+  },
+  "plain_language": "Truncation artifacts do NOT dominate. 1698/1887 (89.98%) remain unfittable at full length with >=40 terms.",
+  "outputs": [
+    "results/truncation_1887.csv",
+    "results/truncation_1887_summary.json"
+  ]
+}

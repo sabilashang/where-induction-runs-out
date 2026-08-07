@@ -1,0 +1,215 @@
+models_requested ['anthropic/claude-sonnet-4.5', 'openai/gpt-4o', 'meta-llama/llama-3.3-70b-instruct']
+models_used ['anthropic/claude-sonnet-4.5', 'openai/gpt-4o', 'meta-llama/llama-3.3-70b-instruct']
+mapping {'anthropic/claude-sonnet-4.5': 'anthropic/claude-sonnet-4.5', 'openai/gpt-4o': 'openai/gpt-4o', 'meta-llama/llama-3.3-70b-instruct': 'meta-llama/llama-3.3-70b-instruct'}
+  1/180 A001641 clean anthropic/claude-sonnet-4.5 exact=False conf=5 recog=True fail=False
+  2/180 A005004 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  3/180 A007179 clean anthropic/claude-sonnet-4.5 exact=False conf=5 recog=True fail=False
+LOGGED_FAILURE 4/180 A007204 anthropic/claude-sonnet-4.5: ValueError("no JSON object in response: 'Looking at this sequence, let me analyze the differences and patterns.\\n\\nFirst differences:\\n24, 144, 456, 1056, 2040, 3504, 5544, 8256, 11736, 16080, 21384, 27744, 35256, 43016, 54120, 65664, 78744, 93456, 109896\\n\\nSecond differences:\\n120, 31'")
+  4/180 A007204 clean anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+LOGGED_FAILURE 5/180 A007589 anthropic/claude-sonnet-4.5: ValueError("no JSON object in response: 'Looking at this sequence, let me analyze the differences:\\n\\nFirst differences: 1, 19, 30, 42, 78, 114, 150, 186, 222, 258, 294, 330, 366, 382, 438, 474, 510, 546, 582\\n\\nSecond differences: 18, 11, 12, 36, 36, 36, 36, 36, 36, 36, 36, 36, 16, 5'")
+  5/180 A007589 clean anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+  6/180 A010851 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  7/180 A014616 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  8/180 A015221 clean anthropic/claude-sonnet-4.5 exact=False conf=5 recog=False fail=False
+  9/180 A016934 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  10/180 A017437 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  11/180 A021226 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  12/180 A022119 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  13/180 A022353 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  14/180 A022851 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  15/180 A026385 clean anthropic/claude-sonnet-4.5 exact=False conf=2 recog=False fail=False
+  16/180 A026950 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+LOGGED_FAILURE 17/180 A027903 anthropic/claude-sonnet-4.5: ValueError('no JSON object in response: "Looking at this sequence, I\'ll analyze the differences to find a pattern.\\n\\nFirst differences:\\n8, 34, 78, 140, 220, 318, 434, 568, 720, 890, 1078, 1284, 1508, 1750, 2010, 2288, 2584, 2898, 3230\\n\\nSecond differences:\\n26, 44, 62, 80, 98, 116, 1"')
+  17/180 A027903 clean anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+  18/180 A028346 clean anthropic/claude-sonnet-4.5 exact=False conf=2 recog=False fail=False
+  19/180 A031711 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  20/180 A034525 clean anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  21/180 A000574 revising anthropic/claude-sonnet-4.5 exact=False conf=5 recog=False fail=False
+  22/180 A004467 revising anthropic/claude-sonnet-4.5 exact=False conf=5 recog=True fail=False
+  23/180 A005585 revising anthropic/claude-sonnet-4.5 exact=False conf=5 recog=True fail=False
+  24/180 A005920 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  25/180 A005945 revising anthropic/claude-sonnet-4.5 exact=False conf=5 recog=True fail=False
+  26/180 A010008 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  27/180 A014380 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  28/180 A015238 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+LOGGED_FAILURE 29/180 A015243 anthropic/claude-sonnet-4.5: ValueError("no JSON object in response: 'Looking at this sequence, I need to find the pattern by examining differences.\\n\\nFirst differences:\\n-7, -13, -7, 11, 41, 83, 137, 203, 281, 371, 473, 587, 713, 851, 1001, 1163, 1337, 1523, 1721\\n\\nSecond differences:\\n-6, 6, 18, 30, 42, 54, 66,'")
+  29/180 A015243 revising anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+  30/180 A016379 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  31/180 A016814 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  32/180 A024215 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+LOGGED_FAILURE 33/180 A024381 anthropic/claude-sonnet-4.5: ValueError('no JSON object in response: "Looking at this sequence, I\'ll analyze the differences to find a pattern.\\n\\nFirst differences:\\n26-1=25, 107-26=81, 276-107=169, 565-276=289, 1006-565=441, 1631-1006=625, 2472-1631=841, 3561-2472=1089, 4930-3561=1369, 6611-4930=1681, 8636-661"')
+  33/180 A024381 revising anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+  34/180 A026057 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  35/180 A026061 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  36/180 A027656 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  37/180 A028552 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  38/180 A028896 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+LOGGED_FAILURE 39/180 A030533 anthropic/claude-sonnet-4.5: ValueError("no JSON object in response: 'Looking at this sequence, let me analyze the differences and patterns.\\n\\nFirst differences: 0, 4, 1, 9, 4, 16, 9, 25, 16, 36, 25, 49, 36, 64, 49, 81, 64, 100, 81\\n\\nI notice the first differences alternate between perfect squares:\\n- Odd positi'")
+  39/180 A030533 revising anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+  40/180 A034721 revising anthropic/claude-sonnet-4.5 exact=True conf=5 recog=False fail=False
+  41/180 A000030 wilderness anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  42/180 A004721 wilderness anthropic/claude-sonnet-4.5 exact=False conf=5 recog=True fail=False
+  43/180 A005929 wilderness anthropic/claude-sonnet-4.5 exact=True conf=4 recog=False fail=False
+  44/180 A011851 wilderness anthropic/claude-sonnet-4.5 exact=False conf=2 recog=False fail=False
+  45/180 A014912 wilderness anthropic/claude-sonnet-4.5 exact=True conf=4 recog=False fail=False
+  46/180 A017822 wilderness anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  47/180 A017849 wilderness anthropic/claude-sonnet-4.5 exact=False conf=2 recog=False fail=False
+  48/180 A023391 wilderness anthropic/claude-sonnet-4.5 exact=False conf=3 recog=False fail=False
+LOGGED_FAILURE 49/180 A025839 anthropic/claude-sonnet-4.5: JSONDecodeError('Extra data: line 1 column 4 (char 3)')
+  49/180 A025839 wilderness anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+  50/180 A028846 wilderness anthropic/claude-sonnet-4.5 exact=True conf=5 recog=True fail=False
+  51/180 A029419 wilderness anthropic/claude-sonnet-4.5 exact=False conf=2 recog=False fail=False
+LOGGED_FAILURE 52/180 A029446 anthropic/claude-sonnet-4.5: ValueError("no JSON object in response: 'Looking at this sequence, I need to identify the pattern.\\n\\nLet me examine the positions of 1s and 0s:\\n- Position 1: 1\\n- Positions 2-9: 0 (eight 0s)\\n- Positions 10-13: 1 (four 1s)\\n- Positions 14-18: 0 (five 0s)\\n- Positions 19-20: 1 (two 1s s'")
+  52/180 A029446 wilderness anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+  53/180 A031077 wilderness anthropic/claude-sonnet-4.5 exact=True conf=2 recog=False fail=False
+  54/180 A032572 wilderness anthropic/claude-sonnet-4.5 exact=False conf=2 recog=False fail=False
+  55/180 A032846 wilderness anthropic/claude-sonnet-4.5 exact=False conf=4 recog=False fail=False
+LOGGED_FAILURE 56/180 A032886 anthropic/claude-sonnet-4.5: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
+  56/180 A032886 wilderness anthropic/claude-sonnet-4.5 exact=False conf=None recog=None fail=True
+  57/180 A032985 wilderness anthropic/claude-sonnet-4.5 exact=True conf=4 recog=False fail=False
+  58/180 A034402 wilderness anthropic/claude-sonnet-4.5 exact=False conf=2 recog=False fail=False
+  59/180 A035585 wilderness anthropic/claude-sonnet-4.5 exact=False conf=2 recog=False fail=False
+  60/180 A035591 wilderness anthropic/claude-sonnet-4.5 exact=False conf=1 recog=False fail=False
+  61/180 A001641 clean openai/gpt-4o exact=False conf=4 recog=True fail=False
+  62/180 A005004 clean openai/gpt-4o exact=False conf=4 recog=True fail=False
+  63/180 A007179 clean openai/gpt-4o exact=True conf=3 recog=False fail=False
+  64/180 A007204 clean openai/gpt-4o exact=False conf=5 recog=True fail=False
+  65/180 A007589 clean openai/gpt-4o exact=False conf=4 recog=True fail=False
+  66/180 A010851 clean openai/gpt-4o exact=True conf=5 recog=False fail=False
+  67/180 A014616 clean openai/gpt-4o exact=True conf=4 recog=False fail=False
+  68/180 A015221 clean openai/gpt-4o exact=False conf=3 recog=False fail=False
+  69/180 A016934 clean openai/gpt-4o exact=False conf=4 recog=True fail=False
+  70/180 A017437 clean openai/gpt-4o exact=True conf=4 recog=False fail=False
+  71/180 A021226 clean openai/gpt-4o exact=True conf=4 recog=True fail=False
+  72/180 A022119 clean openai/gpt-4o exact=True conf=4 recog=True fail=False
+  73/180 A022353 clean openai/gpt-4o exact=True conf=4 recog=True fail=False
+  74/180 A022851 clean openai/gpt-4o exact=False conf=4 recog=False fail=False
+  75/180 A026385 clean openai/gpt-4o exact=False conf=3 recog=False fail=False
+  76/180 A026950 clean openai/gpt-4o exact=False conf=4 recog=False fail=False
+  77/180 A027903 clean openai/gpt-4o exact=False conf=4 recog=True fail=False
+  78/180 A028346 clean openai/gpt-4o exact=False conf=4 recog=True fail=False
+  79/180 A031711 clean openai/gpt-4o exact=False conf=2 recog=False fail=False
+  80/180 A034525 clean openai/gpt-4o exact=True conf=5 recog=True fail=False
+  81/180 A000574 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  82/180 A004467 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  83/180 A005585 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  84/180 A005920 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  85/180 A005945 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  86/180 A010008 revising openai/gpt-4o exact=True conf=4 recog=False fail=False
+  87/180 A014380 revising openai/gpt-4o exact=True conf=4 recog=False fail=False
+  88/180 A015238 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  89/180 A015243 revising openai/gpt-4o exact=False conf=2 recog=False fail=False
+  90/180 A016379 revising openai/gpt-4o exact=False conf=3 recog=False fail=False
+  91/180 A016814 revising openai/gpt-4o exact=True conf=5 recog=True fail=False
+  92/180 A024215 revising openai/gpt-4o exact=False conf=3 recog=False fail=False
+  93/180 A024381 revising openai/gpt-4o exact=False conf=3 recog=False fail=False
+  94/180 A026057 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  95/180 A026061 revising openai/gpt-4o exact=False conf=4 recog=False fail=False
+  96/180 A027656 revising openai/gpt-4o exact=True conf=4 recog=False fail=False
+  97/180 A028552 revising openai/gpt-4o exact=True conf=4 recog=True fail=False
+  98/180 A028896 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  99/180 A030533 revising openai/gpt-4o exact=False conf=3 recog=False fail=False
+  100/180 A034721 revising openai/gpt-4o exact=False conf=4 recog=True fail=False
+  101/180 A000030 wilderness openai/gpt-4o exact=False conf=3 recog=False fail=False
+  102/180 A004721 wilderness openai/gpt-4o exact=False conf=2 recog=False fail=False
+  103/180 A005929 wilderness openai/gpt-4o exact=True conf=2 recog=False fail=False
+  104/180 A011851 wilderness openai/gpt-4o exact=False conf=3 recog=False fail=False
+  105/180 A014912 wilderness openai/gpt-4o exact=True conf=2 recog=False fail=False
+  106/180 A017822 wilderness openai/gpt-4o exact=False conf=4 recog=True fail=False
+  107/180 A017849 wilderness openai/gpt-4o exact=False conf=2 recog=False fail=False
+  108/180 A023391 wilderness openai/gpt-4o exact=False conf=3 recog=False fail=False
+  109/180 A025839 wilderness openai/gpt-4o exact=True conf=2 recog=False fail=False
+  110/180 A028846 wilderness openai/gpt-4o exact=True conf=3 recog=False fail=False
+  111/180 A029419 wilderness openai/gpt-4o exact=False conf=2 recog=False fail=False
+  112/180 A029446 wilderness openai/gpt-4o exact=False conf=2 recog=False fail=False
+  113/180 A031077 wilderness openai/gpt-4o exact=False conf=2 recog=False fail=False
+  114/180 A032572 wilderness openai/gpt-4o exact=False conf=2 recog=False fail=False
+  115/180 A032846 wilderness openai/gpt-4o exact=True conf=3 recog=False fail=False
+  116/180 A032886 wilderness openai/gpt-4o exact=True conf=2 recog=False fail=False
+  117/180 A032985 wilderness openai/gpt-4o exact=True conf=3 recog=False fail=False
+  118/180 A034402 wilderness openai/gpt-4o exact=False conf=3 recog=False fail=False
+  119/180 A035585 wilderness openai/gpt-4o exact=False conf=2 recog=False fail=False
+  120/180 A035591 wilderness openai/gpt-4o exact=False conf=2 recog=False fail=False
+  121/180 A001641 clean meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  122/180 A005004 clean meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  123/180 A007179 clean meta-llama/llama-3.3-70b-instruct exact=True conf=5 recog=True fail=False
+  124/180 A007204 clean meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=False fail=False
+  125/180 A007589 clean meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=False fail=False
+  126/180 A010851 clean meta-llama/llama-3.3-70b-instruct exact=True conf=5 recog=True fail=False
+  127/180 A014616 clean meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  128/180 A015221 clean meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  129/180 A016934 clean meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=True fail=False
+  130/180 A017437 clean meta-llama/llama-3.3-70b-instruct exact=True conf=5 recog=True fail=False
+  131/180 A021226 clean meta-llama/llama-3.3-70b-instruct exact=True conf=5 recog=True fail=False
+  132/180 A022119 clean meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  133/180 A022353 clean meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  134/180 A022851 clean meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  135/180 A026385 clean meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=False fail=False
+  136/180 A026950 clean meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=False fail=False
+  137/180 A027903 clean meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  138/180 A028346 clean meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  139/180 A031711 clean meta-llama/llama-3.3-70b-instruct exact=False conf=1 recog=False fail=False
+  140/180 A034525 clean meta-llama/llama-3.3-70b-instruct exact=True conf=5 recog=True fail=False
+  141/180 A000574 revising meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  142/180 A004467 revising meta-llama/llama-3.3-70b-instruct exact=False conf=3 recog=False fail=False
+  143/180 A005585 revising meta-llama/llama-3.3-70b-instruct exact=False conf=3 recog=False fail=False
+  144/180 A005920 revising meta-llama/llama-3.3-70b-instruct exact=False conf=3 recog=False fail=False
+  145/180 A005945 revising meta-llama/llama-3.3-70b-instruct exact=False conf=3 recog=False fail=False
+  146/180 A010008 revising meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  147/180 A014380 revising meta-llama/llama-3.3-70b-instruct exact=True conf=5 recog=False fail=False
+  148/180 A015238 revising meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=True fail=False
+LOGGED_FAILURE 149/180 A015243 meta-llama/llama-3.3-70b-instruct: JSONDecodeError("Expecting ',' delimiter: line 1 column 23 (char 22)")
+  149/180 A015243 revising meta-llama/llama-3.3-70b-instruct exact=False conf=None recog=None fail=True
+  150/180 A016379 revising meta-llama/llama-3.3-70b-instruct exact=True conf=4 recog=False fail=False
+  151/180 A016814 revising meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=True fail=False
+  152/180 A024215 revising meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  153/180 A024381 revising meta-llama/llama-3.3-70b-instruct exact=False conf=3 recog=False fail=False
+  154/180 A026057 revising meta-llama/llama-3.3-70b-instruct exact=False conf=3 recog=False fail=False
+  155/180 A026061 revising meta-llama/llama-3.3-70b-instruct exact=False conf=3 recog=False fail=False
+LOGGED_FAILURE 156/180 A027656 meta-llama/llama-3.3-70b-instruct: ValueError("no JSON object in response: 'None'")
+  156/180 A027656 revising meta-llama/llama-3.3-70b-instruct exact=False conf=None recog=None fail=True
+  157/180 A028552 revising meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=True fail=False
+  158/180 A028896 revising meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=True fail=False
+  159/180 A030533 revising meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  160/180 A034721 revising meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=True fail=False
+  161/180 A000030 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=False fail=False
+  162/180 A004721 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  163/180 A005929 wilderness meta-llama/llama-3.3-70b-instruct exact=True conf=4 recog=False fail=False
+  164/180 A011851 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=5 recog=True fail=False
+  165/180 A014912 wilderness meta-llama/llama-3.3-70b-instruct exact=True conf=4 recog=False fail=False
+  166/180 A017822 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  167/180 A017849 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  168/180 A023391 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  169/180 A025839 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=4 recog=False fail=False
+  170/180 A028846 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  171/180 A029419 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  172/180 A029446 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  173/180 A031077 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  174/180 A032572 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  175/180 A032846 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  176/180 A032886 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+  177/180 A032985 wilderness meta-llama/llama-3.3-70b-instruct exact=True conf=2 recog=False fail=False
+  178/180 A034402 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=2 recog=False fail=False
+LOGGED_FAILURE 179/180 A035585 meta-llama/llama-3.3-70b-instruct: ValueError("no JSON object in response: 'None'")
+  179/180 A035585 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=None recog=None fail=True
+  180/180 A035591 wilderness meta-llama/llama-3.3-70b-instruct exact=False conf=1 recog=False fail=False
+
+=== NEGATIVE / CONTAMINATION CHECKS ===
+anthropic/claude-sonnet-4.5: clean exact from recognition: 8/12 (66.6667%)
+anthropic/claude-sonnet-4.5: wilderness hypothesis holds=False hedges=True mean_conf=3.176470588235294 exact=7/17 (41.1765%)
+openai/gpt-4o: clean exact from recognition: 4/8 (50.0000%)
+openai/gpt-4o: wilderness hypothesis holds=False hedges=True mean_conf=2.45 exact=7/20 (35.0000%)
+meta-llama/llama-3.3-70b-instruct: clean exact from recognition: 5/5 (100.0000%)
+meta-llama/llama-3.3-70b-instruct: wilderness hypothesis holds=False hedges=True mean_conf=2.6842105263157894 exact=3/19 (15.7895%)
+
+=== WROTE ===
+results/llm_eval.csv
+results/llm_summary.json
+{
+  "models_used": [
+    "anthropic/claude-sonnet-4.5",
+    "openai/gpt-4o",
+    "meta-llama/llama-3.3-70b-instruct"
+  ],
+  "n_failed": 12
+}

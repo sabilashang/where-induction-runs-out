@@ -1,0 +1,99 @@
+{
+  "n_profiled": 200,
+  "median_s": 0.3544207999948412,
+  "p90_s": 0.8398445000057109,
+  "max_s": 2.913050100003602,
+  "sum_s": 91.00144279998494,
+  "worst10": [
+    {
+      "anum": "A060391",
+      "n_terms": 69,
+      "max_digit_len": 24,
+      "max_abs": "116415321826934814453125",
+      "max_abs_bits": 77,
+      "seconds": 2.913050100003602,
+      "found": false
+    },
+    {
+      "anum": "A191358",
+      "n_terms": 348,
+      "max_digit_len": 2,
+      "max_abs": "90",
+      "max_abs_bits": 7,
+      "seconds": 2.7701142999867443,
+      "found": false
+    },
+    {
+      "anum": "A006296",
+      "n_terms": 36,
+      "max_digit_len": 29,
+      "max_abs": "36567311475673299914222851832",
+      "max_abs_bits": 95,
+      "seconds": 2.4310178000014275,
+      "found": true
+    },
+    {
+      "anum": "A260589",
+      "n_terms": 54,
+      "max_digit_len": 25,
+      "max_abs": "2799473675762179389994681",
+      "max_abs_bits": 82,
+      "seconds": 2.1645713000034448,
+      "found": false
+    },
+    {
+      "anum": "A332211",
+      "n_terms": 70,
+      "max_digit_len": 19,
+      "max_abs": "2305843009213693951",
+      "max_abs_bits": 61,
+      "seconds": 1.445584900007816,
+      "found": false
+    },
+    {
+      "anum": "A395041",
+      "n_terms": 69,
+      "max_digit_len": 22,
+      "max_abs": "1922760350154212639070",
+      "max_abs_bits": 71,
+      "seconds": 1.445353899995098,
+      "found": false
+    },
+    {
+      "anum": "A000397",
+      "n_terms": 76,
+      "max_digit_len": 9,
+      "max_abs": "482931051",
+      "max_abs_bits": 29,
+      "seconds": 1.3989074999990407,
+      "found": false
+    },
+    {
+      "anum": "A242511",
+      "n_terms": 41,
+      "max_digit_len": 16,
+      "max_abs": "1220234181784800",
+      "max_abs_bits": 51,
+      "seconds": 1.3177633000013884,
+      "found": false
+    },
+    {
+      "anum": "A376545",
+      "n_terms": 66,
+      "max_digit_len": 24,
+      "max_abs": "123456789101112131415161",
+      "max_abs_bits": 77,
+      "seconds": 1.2722619000123814,
+      "found": false
+    },
+    {
+      "anum": "A061538",
+      "n_terms": 79,
+      "max_digit_len": 8,
+      "max_abs": "26873856",
+      "max_abs_bits": 25,
+      "seconds": 1.2305394999857526,
+      "found": false
+    }
+  ]
+}

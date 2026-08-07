@@ -1,0 +1,32 @@
+# FROZEN MAX_ORDER=6 MAX_DEGREE=4 SLACK=2 N_MIN=6
+# strict_leading=1 no_truncate=0
+{
+  "MAX_ORDER": 6,
+  "MAX_DEGREE": 4,
+  "SLACK": 2,
+  "N_MIN": 6,
+  "strict_leading": 1,
+  "no_truncate": 0,
+  "min_terms": 30,
+  "terms": 30,
+  "shuffle": null,
+  "limit": 20000,
+  "n_jobs_input": 20000,
+  "out": "results/oeis_fixed30_strict.csv",
+  "n_processed": 20000,
+  "n_holonomic": 1688,
+  "n_prefix_only": 1765,
+  "n_no_fit": 16547,
+  "n_errored": 0,
+  "conservation_sum": 20000,
+  "n_revise": 214,
+  "pct_revise": 12.677725118483412,
+  "exact": 1418,
+  "within1": 1554,
+  "exact_pct": 84.00473933649289,
+  "within1_pct": 92.06161137440758,
+  "mae": 0.48578199052132703,
+  "n_with_singular": 0,
+  "mean_singular": 0.0,
+  "pct_holonomic": 8.44
+}

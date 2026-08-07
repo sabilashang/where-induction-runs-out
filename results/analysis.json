@@ -1,0 +1,37 @@
+{
+ "n_total": 61,
+ "n_fittable": 46,
+ "exact": 41,
+ "within1": 46,
+ "mae_max": 0.10869565217391304,
+ "mae_id": 0.10869565217391304,
+ "mae_x": 3.1956521739130435,
+ "regime_counts": {
+  "identification-limited": 46,
+  "unfittable": 15
+ },
+ "corr_struct": 0.8546821770230112,
+ "corr_growth": -0.007034755775103548,
+ "struct_rev_total": 2,
+ "n_with_revision": 2,
+ "reviser_anums": [
+  "A000578",
+  "A000330"
+ ],
+ "reviser_names": [
+  "cubes",
+  "square pyramidal"
+ ],
+ "mean_nd_by_class": {
+  "POLY": 8.533333333333333,
+  "CFIN": 7.1875,
+  "PREC": 8.733333333333333
+ },
+ "std_nd_by_class": {
+  "POLY": 1.6417180315870612,
+  "CFIN": 0.9810708435174292,
+  "PREC": 1.8695555876298773
+ },
+ "anova_F": 4.702420734821134,
+ "anova_p": 0.014226119320386447
+}

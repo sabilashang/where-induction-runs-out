@@ -1,0 +1,32 @@
+{
+  "name": "oeis_fixed30",
+  "path": "results/oeis_fixed30.csv",
+  "n_processed": 20000,
+  "n_holonomic": 2780,
+  "n_prefix_only": 2725,
+  "n_no_fit": 14495,
+  "n_errored": 0,
+  "conservation_sum": 20000,
+  "conservation_ok": true,
+  "pct_holonomic_str": "2780/20000 (13.9000%)",
+  "pct_prefix_only_str": "2725/20000 (13.6250%)",
+  "pct_no_fit_str": "14495/20000 (72.4750%)",
+  "pct_errored_str": "0/20000 (0.0000%)",
+  "n_revise": 315,
+  "pct_revise_among_true_holonomic_str": "315/2780 (11.3309%)",
+  "exact": 2265,
+  "within1": 2593,
+  "exact_str": "2265/2780 (81.4748%)",
+  "within1_str": "2593/2780 (93.2734%)",
+  "mae": 0.5964028776978417,
+  "mae_revisers": 4.374603174603174,
+  "mae_non_revisers": 0.11359026369168357,
+  "n_revisers_for_mae": 315,
+  "n_non_revisers_for_mae": 2465,
+  "artifacts": {
+    "crosstab": "results/holonomic_denominator_oeis_fixed30_crosstab.csv",
+    "by_nterms": "results/holonomic_denominator_oeis_fixed30_by_nterms.csv",
+    "by_params": "results/holonomic_denominator_oeis_fixed30_by_params.csv",
+    "struct_rev_dist": "results/holonomic_denominator_oeis_fixed30_struct_rev_dist.csv"
+  }
+}

@@ -1,0 +1,707 @@
+{
+  "task4.n": {
+    "value": 1887,
+    "source": "results/truncation_1887_summary.json",
+    "script": "experiments/run_truncation_1887.py"
+  },
+  "task4.i_artifact": {
+    "value": "29/1887 (1.5368%)",
+    "source": "results/truncation_1887_summary.json",
+    "script": "experiments/run_truncation_1887.py"
+  },
+  "task4.ii_genuine_ge40": {
+    "value": "1698/1887 (89.9841%)",
+    "source": "results/truncation_1887_summary.json",
+    "script": "experiments/run_truncation_1887.py"
+  },
+  "task4.iii_undetermined_lt40": {
+    "value": "160/1887 (8.4791%)",
+    "source": "results/truncation_1887_summary.json",
+    "script": "experiments/run_truncation_1887.py"
+  },
+  "task4.conservation": {
+    "value": 1887,
+    "source": "results/truncation_1887_summary.json",
+    "script": "experiments/run_truncation_1887.py"
+  },
+  "task1.n_profiled": {
+    "value": 200,
+    "source": "results/profile_guess_prec_200_baseline.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task1.median_s": {
+    "value": 0.3544207999948412,
+    "source": "results/profile_guess_prec_200_baseline.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task1.p90_s": {
+    "value": 0.8398445000057109,
+    "source": "results/profile_guess_prec_200_baseline.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task1.max_s": {
+    "value": 2.913050100003602,
+    "source": "results/profile_guess_prec_200_baseline.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task1.sum_s": {
+    "value": 91.00144279998494,
+    "source": "results/profile_guess_prec_200_baseline.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task1.worst10": {
+    "value": [
+      {
+        "anum": "A060391",
+        "n_terms": 69,
+        "max_digit_len": 24,
+        "max_abs": "116415321826934814453125",
+        "max_abs_bits": 77,
+        "seconds": 2.913050100003602,
+        "found": false
+      },
+      {
+        "anum": "A191358",
+        "n_terms": 348,
+        "max_digit_len": 2,
+        "max_abs": "90",
+        "max_abs_bits": 7,
+        "seconds": 2.7701142999867443,
+        "found": false
+      },
+      {
+        "anum": "A006296",
+        "n_terms": 36,
+        "max_digit_len": 29,
+        "max_abs": "36567311475673299914222851832",
+        "max_abs_bits": 95,
+        "seconds": 2.4310178000014275,
+        "found": true
+      },
+      {
+        "anum": "A260589",
+        "n_terms": 54,
+        "max_digit_len": 25,
+        "max_abs": "2799473675762179389994681",
+        "max_abs_bits": 82,
+        "seconds": 2.1645713000034448,
+        "found": false
+      },
+      {
+        "anum": "A332211",
+        "n_terms": 70,
+        "max_digit_len": 19,
+        "max_abs": "2305843009213693951",
+        "max_abs_bits": 61,
+        "seconds": 1.445584900007816,
+        "found": false
+      },
+      {
+        "anum": "A395041",
+        "n_terms": 69,
+        "max_digit_len": 22,
+        "max_abs": "1922760350154212639070",
+        "max_abs_bits": 71,
+        "seconds": 1.445353899995098,
+        "found": false
+      },
+      {
+        "anum": "A000397",
+        "n_terms": 76,
+        "max_digit_len": 9,
+        "max_abs": "482931051",
+        "max_abs_bits": 29,
+        "seconds": 1.3989074999990407,
+        "found": false
+      },
+      {
+        "anum": "A242511",
+        "n_terms": 41,
+        "max_digit_len": 16,
+        "max_abs": "1220234181784800",
+        "max_abs_bits": 51,
+        "seconds": 1.3177633000013884,
+        "found": false
+      },
+      {
+        "anum": "A376545",
+        "n_terms": 66,
+        "max_digit_len": 24,
+        "max_abs": "123456789101112131415161",
+        "max_abs_bits": 77,
+        "seconds": 1.2722619000123814,
+        "found": false
+      },
+      {
+        "anum": "A061538",
+        "n_terms": 79,
+        "max_digit_len": 8,
+        "max_abs": "26873856",
+        "max_abs_bits": 25,
+        "seconds": 1.2305394999857526,
+        "found": false
+      }
+    ],
+    "source": "results/profile_guess_prec_200_baseline.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task2.speedup_sum": {
+    "value": 3.060488386540027,
+    "source": "results/profile_speedup_task2a.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task2.speedup_median": {
+    "value": 2.5651902971102722,
+    "source": "results/profile_speedup_task2a.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task2.speedup_p90": {
+    "value": 3.5832188126761118,
+    "source": "results/profile_speedup_task2a.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task2.after_sum_s": {
+    "value": 29.734287899999117,
+    "source": "results/profile_speedup_task2a.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task2.baseline_sum_s": {
+    "value": 91.00144279998494,
+    "source": "results/profile_speedup_task2a.json",
+    "script": "experiments/profile_guess_prec.py"
+  },
+  "task2a.status": {
+    "value": "IMPLEMENTED",
+    "source": "results/task2_optimization_report.json",
+    "script": "revspec/core.py"
+  },
+  "task2a.classical_mismatches_strict": {
+    "value": "0/61",
+    "source": "results/task2_optimization_report.json",
+    "script": "revspec/core.py"
+  },
+  "task2a.classical_mismatches_loose": {
+    "value": "0/61",
+    "source": "results/task2_optimization_report.json",
+    "script": "revspec/core.py"
+  },
+  "task2a.Fibonacci_n_d": {
+    "value": 7,
+    "source": "results/task2_optimization_report.json",
+    "script": "experiments/run_analysis.py"
+  },
+  "task2a.Fibonacci_L_H": {
+    "value": 22,
+    "source": "results/task2_optimization_report.json",
+    "script": "experiments/run_analysis.py"
+  },
+  "task2b.status": {
+    "value": "REVERTED",
+    "source": "results/task2_optimization_report.json",
+    "script": "revspec/core.py"
+  },
+  "task3.strict.status": {
+    "value": "KILLED_INCOMPLETE",
+    "source": "results/oeis_60_timing.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "task3.strict.rows_completed": {
+    "value": 550,
+    "source": "results/oeis_60_timing.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "task3.strict.projected_hours": {
+    "value": 31.97721716161616,
+    "source": "results/oeis_60_timing.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "task3.loose.status": {
+    "value": "NOT_STARTED",
+    "source": "results/oeis_60_timing.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "ref.oeis_fixed30_strict.n_holonomic": {
+    "value": 1688,
+    "source": "results/oeis_fixed30_strict.csv.meta.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "ref.oeis_fixed30_strict.n_revise": {
+    "value": 214,
+    "source": "results/oeis_fixed30_strict.csv.meta.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "ref.oeis_fixed30_strict.conservation_sum": {
+    "value": 20000,
+    "source": "results/oeis_fixed30_strict.csv.meta.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "ref.oeis_fixed30_loose.n_holonomic": {
+    "value": 2077,
+    "source": "results/oeis_fixed30_loose.csv.meta.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "ref.oeis_fixed30_loose.n_revise": {
+    "value": 607,
+    "source": "results/oeis_fixed30_loose.csv.meta.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "ref.oeis_fixed30_loose.conservation_sum": {
+    "value": 20000,
+    "source": "results/oeis_fixed30_loose.csv.meta.json",
+    "script": "experiments/run_oeis.py"
+  },
+  "taskA.oeis_results.n_processed": {
+    "value": 20000,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.n_holonomic": {
+    "value": 4169,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.n_prefix_only": {
+    "value": 2035,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.n_no_fit": {
+    "value": 13796,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.n_errored": {
+    "value": 0,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.conservation_sum": {
+    "value": 20000,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.pct_revise_true_holonomic": {
+    "value": "367/4169 (8.8031%)",
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.exact": {
+    "value": "3655/4169 (87.6709%)",
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.within1": {
+    "value": "3947/4169 (94.6750%)",
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.mae": {
+    "value": 0.39913648356920123,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.mae_revisers": {
+    "value": 3.787465940054496,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_results.mae_non_revisers": {
+    "value": 0.07206733298264072,
+    "source": "results/oeis_results.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.n_processed": {
+    "value": 20000,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.n_holonomic": {
+    "value": 2780,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.n_prefix_only": {
+    "value": 2725,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.n_no_fit": {
+    "value": 14495,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.n_errored": {
+    "value": 0,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.conservation_sum": {
+    "value": 20000,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.pct_revise_true_holonomic": {
+    "value": "315/2780 (11.3309%)",
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.exact": {
+    "value": "2265/2780 (81.4748%)",
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.within1": {
+    "value": "2593/2780 (93.2734%)",
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.mae": {
+    "value": 0.5964028776978417,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.mae_revisers": {
+    "value": 4.374603174603174,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_fixed30.mae_non_revisers": {
+    "value": 0.11359026369168357,
+    "source": "results/oeis_fixed30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.n_processed": {
+    "value": 20000,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.n_holonomic": {
+    "value": 1688,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.n_prefix_only": {
+    "value": 1765,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.n_no_fit": {
+    "value": 16547,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.n_errored": {
+    "value": 0,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.conservation_sum": {
+    "value": 20000,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.pct_revise_true_holonomic": {
+    "value": "214/1688 (12.6777%)",
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.exact": {
+    "value": "1418/1688 (84.0047%)",
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.within1": {
+    "value": "1554/1688 (92.0616%)",
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.mae": {
+    "value": 0.48578199052132703,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.mae_revisers": {
+    "value": 2.957943925233645,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskA.oeis_random30.mae_non_revisers": {
+    "value": 0.12686567164179105,
+    "source": "results/oeis_random30.csv",
+    "script": "experiments/recompute_holonomic_denominator.py"
+  },
+  "taskB.sample_n": {
+    "value": 60,
+    "source": "results/llm_sample.json",
+    "script": "experiments/build_llm_sample.py"
+  },
+  "taskB.sample_n_per_stratum": {
+    "value": 20,
+    "source": "results/llm_sample.json",
+    "script": "experiments/build_llm_sample.py"
+  },
+  "taskB.sample_seed": {
+    "value": 0,
+    "source": "results/llm_sample.json",
+    "script": "experiments/build_llm_sample.py"
+  },
+  "taskB.pool_clean": {
+    "value": 2465,
+    "source": "results/llm_sample.json",
+    "script": "experiments/build_llm_sample.py"
+  },
+  "taskB.pool_revising": {
+    "value": 315,
+    "source": "results/llm_sample.json",
+    "script": "experiments/build_llm_sample.py"
+  },
+  "taskB.pool_wilderness": {
+    "value": 1698,
+    "source": "results/llm_sample.json",
+    "script": "experiments/build_llm_sample.py"
+  },
+  "taskB.llm_status": {
+    "value": "COMPLETE",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llm_reason": {
+    "value": "Neither OPENAI_API_KEY nor ANTHROPIC_API_KEY is set in the environment.",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "limitations.oeis_60_strict.frac": {
+    "value": "550/20000",
+    "source": "results/limitations_facts.json",
+    "script": "experiments/build_limitations_facts.py"
+  },
+  "limitations.oeis_60_strict.projected_h": {
+    "value": 31.977217161616164,
+    "source": "results/limitations_facts.json",
+    "script": "experiments/build_limitations_facts.py"
+  },
+  "limitations.oeis_60_strict.rows_per_hour": {
+    "value": 625.445294345594,
+    "source": "results/limitations_facts.json",
+    "script": "experiments/build_limitations_facts.py"
+  },
+  "limitations.oeis_full_strict.frac": {
+    "value": "250/20000",
+    "source": "results/limitations_facts.json",
+    "script": "experiments/build_limitations_facts.py"
+  },
+  "limitations.oeis_full_strict.projected_h": {
+    "value": 62.687296946843475,
+    "source": "results/limitations_facts.json",
+    "script": "experiments/build_limitations_facts.py"
+  },
+  "limitations.task2a.speedup_sum": {
+    "value": 3.060488386540027,
+    "source": "results/limitations_facts.json",
+    "script": "experiments/build_limitations_facts.py"
+  },
+  "limitations.1887.ii": {
+    "value": "1698/1887",
+    "source": "results/limitations_facts.json",
+    "script": "experiments/build_limitations_facts.py"
+  },
+  "limitations.task2b.status": {
+    "value": "REVERTED",
+    "source": "results/limitations_facts.json",
+    "script": "experiments/build_limitations_facts.py"
+  },
+  "taskB.n_failed_calls": {
+    "value": 12,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.models_used": {
+    "value": [
+      "anthropic/claude-sonnet-4.5",
+      "openai/gpt-4o",
+      "meta-llama/llama-3.3-70b-instruct"
+    ],
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.clean.exact": {
+    "value": "12/17 (70.5882%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.clean.confab": {
+    "value": "3/17 (17.6471%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.clean.mean_conf": {
+    "value": 4.647058823529412,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.revising.exact": {
+    "value": "13/17 (76.4706%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.revising.confab": {
+    "value": "4/17 (23.5294%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.revising.mean_conf": {
+    "value": 5.0,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.wilderness.exact": {
+    "value": "7/17 (41.1765%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.wilderness.confab": {
+    "value": "2/17 (11.7647%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.wilderness.mean_conf": {
+    "value": 3.176470588235294,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.wilderness_hypothesis_holds": {
+    "value": false,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.wilderness_hedges": {
+    "value": true,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.claude-sonnet-4.5.clean_exact_from_recognition": {
+    "value": "8/12 (66.6667%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.clean.exact": {
+    "value": "8/20 (40.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.clean.confab": {
+    "value": "9/20 (45.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.clean.mean_conf": {
+    "value": 3.9,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.revising.exact": {
+    "value": "5/20 (25.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.revising.confab": {
+    "value": "10/20 (50.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.revising.mean_conf": {
+    "value": 3.75,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.wilderness.exact": {
+    "value": "7/20 (35.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.wilderness.confab": {
+    "value": "1/20 (5.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.wilderness.mean_conf": {
+    "value": 2.45,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.wilderness_hypothesis_holds": {
+    "value": false,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.wilderness_hedges": {
+    "value": true,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.gpt-4o.clean_exact_from_recognition": {
+    "value": "4/8 (50.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.clean.exact": {
+    "value": "5/20 (25.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.clean.confab": {
+    "value": "13/20 (65.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.clean.mean_conf": {
+    "value": 4.25,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.revising.exact": {
+    "value": "2/18 (11.1111%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.revising.confab": {
+    "value": "6/18 (33.3333%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.revising.mean_conf": {
+    "value": 3.611111111111111,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.wilderness.exact": {
+    "value": "3/19 (15.7895%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.wilderness.confab": {
+    "value": "4/19 (21.0526%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.wilderness.mean_conf": {
+    "value": 2.6842105263157894,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.wilderness_hypothesis_holds": {
+    "value": false,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.wilderness_hedges": {
+    "value": true,
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  },
+  "taskB.llama-3.3-70b-instruct.clean_exact_from_recognition": {
+    "value": "5/5 (100.0000%)",
+    "source": "results/llm_summary.json",
+    "script": "experiments/run_llm_eval.py"
+  }
+}

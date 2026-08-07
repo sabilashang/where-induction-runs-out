@@ -1,0 +1,12 @@
+{
+  "n_processed": 20000,
+  "n_holonomic": 3453,
+  "pct_holonomic": 17.265,
+  "n_struct_rev": 1979,
+  "pct_struct_rev_among_holonomic": 57.31248189979728,
+  "exact": 1418,
+  "within1": 1554,
+  "exact_pct": 41.06573993628729,
+  "within1_pct": 45.004344048653344,
+  "mae": 0.48578199052132703
+}

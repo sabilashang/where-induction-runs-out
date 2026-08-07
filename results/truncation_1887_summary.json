@@ -1,0 +1,33 @@
+{
+  "n": 1887,
+  "truncation_artifact": 29,
+  "genuine_spurious": 1698,
+  "undetermined": 160,
+  "error": 0,
+  "pct_truncation_artifact": 1.5368309485956544,
+  "pct_genuine_spurious": 89.98410174880763,
+  "pct_undetermined": 8.479067302596714,
+  "terms_dist_by_class": {
+    "truncation_artifact": {
+      "n": 29,
+      "min": 33,
+      "median": 81.0,
+      "mean": 65.51724137931035,
+      "max": 81
+    },
+    "genuine_spurious": {
+      "n": 1698,
+      "min": 40,
+      "median": 67.0,
+      "mean": 68.99469964664311,
+      "max": 136
+    },
+    "undetermined": {
+      "n": 160,
+      "min": 30,
+      "median": 36.0,
+      "mean": 34.9125,
+      "max": 39
+    }
+  }
+}

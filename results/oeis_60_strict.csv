@@ -1,0 +1,551 @@
+anum,n_terms,n_d,order,degree,n_id,L_H,n_singular,full_fit,prefix_only,n_revisions,n_struct_rev,final_lambda,error,name
+A371843,39,9,3,0,9,36,0,True,False,1,0,0.030690537084398978,,a(n) = 5*Fibonacci(n) + (-1)^n.
+A138822,31,,,,,,,False,False,0,0,1.0,,Concatenation of n-th prime and n-th Fibonacci number.
+A259755,53,9,2,1,10,44,0,True,False,2,1,0.048834628190899,,"Numbers that are congruent to {4, 20} mod 24."
+A142699,42,,,,,,,False,False,0,0,1.0,,Primes congruent to 55 mod 57.
+A249738,60,,,,,,,False,False,0,0,1.0,,"a(n) = 0 if n is 1 or a prime, otherwise, when n = A020639(n) * A032742(n), a(n) = the largest k < A032742(n) such that either k = 1 or A020639(k) >= A020639(n), where A020639(n) and A032742(n) are the smallest prime and the largest proper divisor dividing n."
+A333526,56,,,,,,,False,False,0,0,1.0,,Number of edges of the polytope representing the number n.
+A148058,32,,,,,,,False,False,0,0,1.0,,"Number of walks within N^3 (the first octant of Z^3) starting at (0,0,0) and consisting of n steps taken from {(-1, -1, 0), (-1, -1, 1), (-1, 1, 0), (1, 0, -1), (1, 0, 0)}."
+A397229,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of Sum_{k>=1} (-1)^(k+1) * AH(2*k)/k, where AH(k) = A058313(k)/A058312(k) is the k-th alternating harmonic (or skew-harmonic) number."
+A066294,60,,,,,,,False,False,0,0,1.0,,a(n) = A000203(n)^2 - A001157(n) - 2n = sigma(n)^2 - sigma_2(n) - 2n.
+A030787,60,,,,,,,False,False,0,0,1.0,,"The first list after the following procedure: starting with a list [4] and an empty list, repeatedly add the distinct values already in both lists in descending order to the second list and add the corresponding frequencies of those values to the first list."
+A396907,55,,,,,,,False,False,0,0,1.0,,"Triangular array T(n, k) of coefficients of the ""Mish"" activation function that is used in machine learning. Mish(x) = x*tan(log(1+exp(x))) = x*Sum_{n>=0} x^n*Sum_{k=0..n}t^k*T(n, k)/(k!*2^k), where t = tan(log(2))."
+A395955,38,,,,,,,False,False,0,0,1.0,,Numerator of the n-th moment of the probability distribution of distances from the center of a unit disk to a line passing through two points independently and uniformly selected at random in the disk.
+A098495,60,,,,,,,False,False,0,0,1.0,,"Array T(r,c) read by antidiagonals: values of triangle A098493 interpreted as polynomials, r >= 0."
+A248519,60,,,,,,,False,False,0,0,1.0,,"Number of partitions of n into distinct parts > 0 without 1 as digit, cf. A052383."
+A197207,50,,,,,,,False,False,0,0,1.0,,"T(n,k)=Number of nXk 0..4 arrays with each element x equal to the number of its horizontal and vertical neighbors equal to 4,2,1,0,3 for x=0,1,2,3,4."
+A382661,50,,,,,,,False,False,0,0,1.0,,The unitary Jordan totient function applied to the exponentially odd numbers (A268335).
+A362826,60,6,,,,,,False,True,1,1,1.0,,"Array read by antidiagonals: T(n,k) is the number of k-tuples of permutations of [n] which commute, divided by n!, n >= 0, k >= 1."
+A055703,41,,,,,,,False,False,0,0,1.0,,Numbers k such that k | sigma_9(k) - phi(k)^9.
+A194121,58,,,,,,,False,False,0,0,1.0,,"Triangular array:  T(n,k)=C(n+2,k)+C(n+2,k+1)+C(n+2,k+2), 0<=k<=n."
+A020374,39,,,,,,,False,False,0,0,1.0,,Numbers k such that the continued fraction for sqrt(k) has period 35.
+A266954,45,,,,,,,False,False,0,0,1.0,,Primes of the form p = a^2 + b^2 where neither |a+b| nor |a-b| is prime.
+A172373,55,,,,,,,False,False,0,0,1.0,,"Triangle T(n, k) = A010048(n, k)*A010048(n, k-1)/Fibonacci(n), read by rows."
+A248342,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of product_{n>=1} (n/(n+1))^((-1)^t(n)), a probabilistic counting constant, where t(n) = A010060(n) is the Thue-Morse sequence."
+A091769,51,,,,,,,False,False,0,0,1.0,,PoincarÃ© series [or Poincare series] (or Molien series) for a certain six-fold wreath product P_6.
+A044734,39,13,,,,,,False,True,2,1,1.0,,"Numbers n such that string 2,1 occurs in the base 10 representation of n but not of n+1."
+A327861,60,,,,,,,False,False,0,0,1.0,,"Number of divisors d of n for which A003415(d)*d is equal to n, where A003415(x) gives the arithmetic derivative of x."
+A224237,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of speed of light in miles per second.
+A170012,32,7,2,0,7,24,0,True,False,1,0,0.022408963585434174,,Number of reduced words of length n in Coxeter group on 3 generators S_i with relations (S_i)^2 = (S_i S_j)^36 = I.
+A123503,60,,,,,,,False,False,0,0,1.0,,"An involution of nonnegative integers: signature permutation of a nonrecursive Catalan automorphism, row 253 of table A089840."
+A256650,39,10,4,0,11,64,0,True,False,2,1,0.0579185520361991,,30-gonal pyramidal numbers: a(n) = n*(n+1)*(28*n-25)/6.
+A059739,60,,,,,,,False,False,0,0,1.0,,"Triangle T(n,k), n >= 1, giving number of prime unoriented alternating links with n crossings and k components."
+A082839,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of Kempner series Sum_{k >= 1, k has no digit 0 in base 10} 1/k."
+A015863,36,,,,,,,False,False,0,0,1.0,,Numbers k such that sigma(k) = sigma(k+4).
+A302753,51,,,,,,,False,False,0,0,1.0,,"Prime-additive numbers: numbers m with at least 2 distinct prime factors, that can be represented as m = Sum_{p|m} p^e_p, with e_p > 0."
+A065813,56,,,,,,,False,False,0,0,1.0,,"Least m such that (p^(2*m+1)-1)/(p-1) is a prime, where p = prime(n)."
+A116612,56,,,,,,,False,False,0,0,1.0,,"Values of n such that p(2n+1) mod 12 = 1, where p(j) denotes the j-th prime."
+A021178,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of 1/174.
+A228623,60,,,,,,,False,False,0,0,1.0,,"Determinant of the n X n matrix with (i,j)-entry (i,j = 0,...,n-1) equal to 1 or 0 according as n + i - j and n - i + j are both prime or not."
+A316845,60,,,,,,,False,False,0,0,1.0,,Column 3 of table A316841.
+A008174,48,,,,,,,False,False,0,0,1.0,,Coordination sequence T2 for Zeolite Code MFS.
+A381247,33,,,,,,,False,False,0,0,1.0,,Positive integers m such that  m * (m+1) contains at least 8 decimal digits that are in neither m nor m+1.
+A318355,30,,,,,,,False,False,0,0,1.0,,"E.g.f. satisfies y'' + y' - x^3*y = 0 with y(0)=1, y'(0)=0."
+A246316,60,,,,,,,False,False,0,0,1.0,,"Total number of ON cells at stage n of two-dimensional 5-neighbor outer totalistic cellular automaton defined by ""Rule 452""."
+A011417,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of 13th root of 19.
+A043675,60,9,,,,,,False,True,2,1,1.0,,Numbers whose base-16 representation has exactly 2 runs.
+A242260,54,,,,,,,False,False,0,0,1.0,,Primes p such that p^2-2 is semiprime.
+A207005,60,,,,,,,False,False,0,0,1.0,,Numbers k such that omega(k) = omega(k - omega(k)) where omega(k) is the number of distinct primes dividing k.
+A265313,60,,,,,,,False,False,0,0,1.0,,"Square array read by ascending antidiagonals, complementary Bell numbers iterated by the Bell transform."
+A131247,55,,,,,,,False,False,0,0,1.0,,2*A052509 - A000012.
+A005900,44,10,2,1,10,36,0,True,False,1,0,0.033930254476908575,,Octahedral numbers: a(n) = n*(2*n^2 + 1)/3.
+A386317,60,,,,,,,False,False,0,0,1.0,,Integers t which satisfy 3/2 <= abundancy(t) < 2 but which are not k-deficient-perfect numbers A331627.
+A230407,60,,,,,,,False,False,0,0,1.0,,"Absolute value of a(n) tells the size of the n-th side-tree (""tendril"", A230430(n)) in the factorial beanstalk; the sign tells on which side of the infinite trunk (A219666) it is."
+A286387,60,,,,,,,False,False,0,0,1.0,,a(n) = A002487(n^2).
+A113565,60,,,,,,,False,False,0,0,1.0,,a(0) = 1; then skip 2^n digits in the concatenation of natural numbers. 1234567891011121314151617181920212223242526... 1 3 6 0 1 3...
+A361203,59,9,,,,,,False,True,2,1,1.0,,a(n) = n*A010888(n).
+A359765,60,,,,,,,False,False,0,0,1.0,,"Positions of odd terms in A359763, where A359763 is the Dirichlet inverse of characteristic function of the numbers with an even number of prime factors (counted with multiplicity)."
+A168284,60,9,3,0,9,36,0,True,False,1,0,0.04657179818887452,,a(n) = (10*n + 5*(-1)^n - 5)/4.
+A290428,60,,,,,,,False,False,0,0,1.0,,"Array read by antidiagonals: T(n,k) is the number of graphs with n edges and k vertices, allowing loops and multi-edges."
+A005188,37,7,,,,,,False,True,2,1,1.0,,"Armstrong (or pluperfect, or Plus Perfect, or narcissistic) numbers: m-digit nonnegative numbers equal to sum of the m-th powers of their digits."
+A392248,55,,,,,,,False,False,0,0,1.0,,"Array read by antidiagonals: A(n, k) is the maximum number of whole unit squares under the polygonal path (i, h_k'(v_i)), associated with a k-dimensional balanced ballot path, n >= 1, k >= 2."
+A118080,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of inflection point of the Einstein function E_1(x).
+A381949,34,,,,,,,False,False,0,0,1.0,,a(n) is the smallest integer k greater than 1 and not a perfect power satisfying A373387(k^n) = n.
+A347573,50,,,,,,,False,False,0,0,1.0,,Number of partitions of n into 6 or more distinct parts.
+A210845,60,7,,,,,,False,True,2,1,1.0,,Values n for which A055034(n) is squarefree.
+A139098,46,9,2,1,10,46,0,True,False,2,1,0.04271123491179202,,a(n) = 8*n^2.
+A365428,60,,,,,,,False,False,0,0,1.0,,Dirichlet inverse of A102283.
+A242769,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of the positive solution to the equation x/(1-x) = 1+log(1/(1-x)), an auxiliary constant associated with the problem of enumeration of trees by inversions."
+A212021,46,,,,,,,False,False,0,0,1.0,,"Number of (w,x,y,z) with all terms in {1,...,n} and 2w*x=3*y*z."
+A281034,55,6,,,,,,False,True,1,1,1.0,,"T(n,k)=Number of nXk 0..1 arrays with no element equal to more than three of its king-move neighbors, with the exception of exactly one element, and with new values introduced in order 0 sequentially upwards."
+A055651,60,,,,,,,False,False,0,0,1.0,,"Table T(m,k)=m^k-k^m (with 0^0 taken to be 1) as square array read by antidiagonals."
+A110289,43,,,,,,,False,False,0,0,1.0,,7-almost primes p*q*r*s*t*u*v relatively prime to p+q+r+s+t+u+v.
+A157676,54,,,,,,,False,False,0,0,1.0,,Numbers n such that n + (product of digits of n) is prime.
+A231626,54,,,,,,,False,False,0,0,1.0,,Smallest sets of 5 consecutive deficient numbers in arithmetic progression. The initial deficient number is listed.
+A334954,60,,,,,,,False,False,0,0,1.0,,a(n) is 1 plus the number of divisors of n.
+A392867,60,,,,,,,False,False,0,0,1.0,,"Numbers k such that A276086(A003415(k)) <= k, where A003415 is the arithmetic derivative and A276086 is the primorial base exp-function."
+A142679,43,,,,,,,False,False,0,0,1.0,,Primes congruent to 23 mod 57.
+A325350,54,,,,,,,False,False,0,0,1.0,,Number of integer partitions of n whose augmented differences are weakly decreasing.
+A187683,60,,,,,,,False,False,0,0,1.0,,Rank transform of the sequence floor(2n/3); complement of A187683.
+A113167,60,,,,,,,False,False,0,0,1.0,,Triangle read by rows; n-th row begins with n and contains n primes greater than n and not already used.
+A052241,31,,,,,,,False,False,0,0,1.0,,McKay-Thompson series of class 8C for Monster.
+A244256,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of exp(gamma)/sqrt(2)*Product_{n>=1} ((2n+1)/(2n))^((-1)^t(n)), a probabilistic counting constant, where gamma is Euler's constant and t(n) = A010060(n) the Thue-Morse sequence."
+A198862,49,11,4,0,11,38,0,True,False,1,0,0.060995184590690206,,Sum of the n-th antidiagonal in the triangle A192011.
+A265424,50,13,5,0,13,80,0,True,False,1,0,0.08519701810436635,,a(n) = ((-1)^n - 1)/2 + 25*floor(3*n/2) - 50*floor(n/4).
+A214047,50,,,,,,,False,False,0,0,1.0,,Least m>0 such that n! <= (3/2)^m.
+A191120,60,,,,,,,False,False,0,0,1.0,,"Increasing sequence generated by these rules:  a(1)=1, and if x is in a then 3x-1 and 4x-2 are in a."
+A074236,55,,,,,,,False,False,0,0,1.0,,Numbers that are the long leg of some integer right triangle and the hypotenuse of some other integer right triangle.
+A227784,60,,,,,,,False,False,0,0,1.0,,Least number of fourth powers which add to -1 mod n.
+A049203,33,,,,,,,False,False,0,0,1.0,,Primes for which A049076(p) >= 5.
+A285784,55,,,,,,,False,False,0,0,1.0,,Possible nonprime residues of k > p# modulo p# for some primorial p# in A002110.
+A176740,54,,,,,,,False,False,0,0,1.0,,Inversion of e.g.f. formal power series. Partition array in Abramowitz-Stegun (A-St) order.
+A064217,47,,,,,,,False,False,0,0,1.0,,Least k such that k*7^n +/- 1 are twin primes.
+A174342,60,,,,,,,False,False,0,0,1.0,,Denominator of ( A164555(n)/A027642(n) +  1/(n+1) ).
+A274284,57,,,,,,,False,False,0,0,1.0,,Numbers that are a product of distinct numbers in A006355.
+A241494,60,7,,,,,,False,True,2,1,1.0,,"Pyramid Top Numbers: write the decimal digits of 'n' (a nonnegative integer) and take successive absolute differences (""pyramidalization""). The number at the top of the pyramid is 'a(n)'."
+A308638,60,,,,,,,False,False,0,0,1.0,,"a(n) is the number of k > 0 such that n-1-2*k > 0 and the points (n-1-2*k, a(n-1-2*k)), (n-1-k, a(n-1-k)) and (n-1, a(n-1)) are aligned."
+A055946,60,,,,,,,False,False,0,0,1.0,,n + reversal of base 3 digits of n (written in base 10).
+A253240,60,,,,,,,False,False,0,0,1.0,,"Square array read by antidiagonals: T(m, n) = Phi_m(n), the m-th cyclotomic polynomial at x=n."
+A058875,41,,,,,,,False,False,0,0,1.0,,"Triangle T(n,k) = C_n(k)/2^(k*(k-1)/2) where C_n(k) = number of k-colored labeled graphs with n nodes (n >= 1, 1 <= k <= n)."
+A263490,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of the generalized hypergeometric function 3F2(1/2,1/2,1/2 ; 1,1; x) at x=1/4."
+A043171,43,,,,,,,False,False,0,0,1.0,,Numbers k such that 3 and 5 occur juxtaposed in the base-8 representation of k but not of k-1.
+A235119,36,,,,,,,False,False,0,0,1.0,,Prime numbers whose central digit equals the sum of the other digits.
+A126135,38,,,,,,,False,False,0,0,1.0,,"Take the base-3 representation of n, render that in decimal notation and take the base-3 representation of n again."
+A198758,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of x>0 satisfying x^2+2*cos(x)=3.
+A165827,50,,,,,,,False,False,0,0,1.0,,Totally multiplicative sequence with a(p) = 6.
+A075221,30,,,,,,,False,False,0,0,1.0,,Number of polyiamonds with n cells that tile the plane by translation or by 180-degree rotation (Conway criterion).
+A086249,60,6,,,,,,False,True,1,1,1.0,,"Number of base-2 Fermat pseudoprimes x that have ord(2,x) = n."
+A336771,40,,,,,,,False,False,0,0,1.0,,Total sum of the left-to-right maxima in all compositions of n into distinct parts.
+A035287,34,13,2,2,13,58,0,True,False,1,0,0.055290753098188754,,Number of ways to place a non-attacking white and black rook on n X n chessboard.
+A027694,51,9,1,2,9,48,0,True,False,1,0,0.050261780104712044,,a(n) = n^2 + n + 9.
+A311240,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.20.5 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A316460,57,,,,,,,False,False,0,0,1.0,,Even integers not of the form prime(prime(x)) + prime(prime(y)) with x > y > 0.
+A110769,60,,,,,,,False,False,0,0,1.0,,The r-th term of the n-th row of the following triangle contains sum of r successive numbers in decreasing order beginning from T(n)-T(r-1) where T(n) is the n-th triangular number. 1 3 3 6 9 6 10 17 18 10 15 27 33 30 15 ... Sequence contains the triangle by rows.
+A066839,60,,,,,,,False,False,0,0,1.0,,a(n) = sum of positive divisors k of n with k <= sqrt(n).
+A063616,51,,,,,,,False,False,0,0,1.0,,Smallest k >= 0 such that 8^k has exactly n 0's in its decimal representation.
+A109826,60,,,,,,,False,False,0,0,1.0,,Final terms of groups in the partition of the sequence of natural numbers A109411.
+A111698,60,,,,,,,False,False,0,0,1.0,,"a(1)=1. Skipping over integers occurring earlier in the sequence, count down a composite from a(n) to get a(n+1) so that a(n+1) is the smallest possible positive integer arrived at this way. If there are no positive integers at a distance of a composite number of yet unused integers, instead count up from a(n) 4 (the lowest composite positive integer) positions (skipping already occurring integers) to get a(n+1)."
+A311341,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.176.6 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A236176,48,,,,,,,False,False,0,0,1.0,,Prime gap pattern of compacting Eratosthenes sieve for prime(5) = 11.
+A026380,30,22,6,1,22,172,0,True,False,1,0,0.17251755265797392,,"a(n) = T(n,[ n/2 ]), where T is the array in A026374."
+A091512,60,,,,,,,False,False,0,0,1.0,,"a(n) is the largest integer m such that 2^m divides (2*n)^n, i.e., the exponent of 2 in (2*n)^n."
+A362922,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of cos(2*Pi/7) = sin(3*Pi/14) = A255249/2.
+A314465,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.466.6 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A392743,60,,,,,,,False,False,0,0,1.0,,a(n) = A392736(2*n + 1 - A392736(n)).
+A305876,30,,,,,,,False,False,0,0,1.0,,a(n) = Fibbinary(2^n).
+A140327,50,,,,,,,False,False,0,0,1.0,,"a(0)=1. For n >=1, a(n) is the smallest prime that is > a(n-1) and equals n*k -1, for some positive integer k."
+A245635,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of Integral_{x>=0} (1 / Gamma''(x)) dx.
+A368912,60,7,,,,,,False,True,2,1,1.0,,"a(n) = 1 if A342001(n) is squarefree, and 0 otherwise."
+A056728,32,,,,,,,False,False,0,0,1.0,,Palindromic primes using only two distinct digits and only the exterior digit is different.
+A335856,60,,,,,,,False,False,0,0,1.0,,Squares visited by a chess king on a spirally numbered infinite board where the king moves to the adjacent unvisited square containing the lowest prime number. If no such square is available it chooses the lowest-numbered adjacent unvisited square.
+A092939,49,,,,,,,False,False,0,0,1.0,,Index of the first occurrence of prime(n) in A092938.
+A339190,45,,,,,,,False,False,0,0,1.0,,"Square array T(n,k), n >= 2, k >= 2, read by antidiagonals, where T(n,k) is the number of (undirected) Hamiltonian cycles on the n X k king graph."
+A275927,60,,,,,,,False,False,0,0,1.0,,Lengths of successive runs in A275926.
+A263327,60,7,,,,,,False,True,2,1,1.0,,"A permutation of {0, 1, ..., 1023} corresponding to lexicographical ordering A262557 of numbers with decreasing digits A009995."
+A144489,60,,,,,,,False,False,0,0,1.0,,Partial sums of A087624.
+A172523,34,,,,,,,False,False,0,0,1.0,,Partial sums of primes in which no digit is a prime A061372.
+A022354,30,7,2,0,7,28,0,True,False,1,0,0.033775633293124246,,"Fibonacci sequence beginning 0, 20."
+A329687,55,16,4,1,16,72,0,True,False,1,0,0.07079646017699115,,"Number of excursions of length n with Motzkin-steps avoiding the consecutive steps UU, UD, HH and DH."
+A126846,60,,,,,,,False,False,0,0,1.0,,Ramanujan numbers (A000594) read mod 23^2.
+A143656,60,,,,,,,False,False,0,0,1.0,,"Triangle T(n, k) = A045545(k) if gcd(n,k) = 1, 0 otherwise, read by rows."
+A373408,60,,,,,,,False,False,0,0,1.0,,Minimum of the n-th maximal antirun of squarefree numbers differing by more than one.
+A279593,60,7,,,,,,False,True,2,1,1.0,,"Coefficients in the expansion of 1/([r] + [2r]x + [3r]x^2 + ...); [ ] = floor, r = sqrt(5)/2."
+A345310,60,,,,,,,False,False,0,0,1.0,,"a(n) = Sum_{p|n, p prime} p^gcd(p,n/p)."
+A259506,60,7,,,,,,False,True,2,1,1.0,,a(n) = floor((LogGamma(n/2+1) - n*log(Pi)/2)/Pi).
+A304879,60,,,,,,,False,False,0,0,1.0,,a(n) = denominator(min{r with r in R}) and R = {0 <= r rational <= 1 and [r*k] = n}. Here k = 10^(floor(log_10(n))+1) and [x] = floor(x+1/2) + ceiling((2*x-1)/4) - floor((2*x-1)/4) - 1.
+A301710,56,13,5,0,13,66,0,True,False,1,0,0.07942238267148015,,"Coordination sequence for node of type V2 in ""krc"" 2-D tiling (or net)."
+A369379,50,,,,,,,False,False,0,0,1.0,,Number of Dabbaghian-Wu pandiagonal Latin squares of order 2n+1 with the first row in order.
+A038956,45,,,,,,,False,False,0,0,1.0,,Primes p such that 71 is not a square mod p.
+A099636,60,,,,,,,False,False,0,0,1.0,,"a(n) = gcd(sum of distinct prime factors of n, product of distinct prime factors of n)."
+A034291,42,,,,,,,False,False,0,0,1.0,,Triangular numbers that have some nontrivial permutation of digits which is also triangular.
+A215461,60,,,,,,,False,False,0,0,1.0,,Number of decompositions of 2n into ordered sums of one prime and one nonprime.
+A005929,60,7,,,,,,False,True,2,1,1.0,,Theta series of hexagonal net with respect to midpoint of edge.
+A060133,50,,,,,,,False,False,0,0,1.0,,"Positions of the permutations which have the same rank in A055089 and A060118, i.e., the fixed points of permutations A060120 and A060127."
+A006955,55,,,,,,,False,False,0,0,1.0,,"Denominator of (2n+1) B_{2n}, where B_n are the Bernoulli numbers."
+A345147,60,,,,,,,False,False,0,0,1.0,,"a(1)=1. If a(n) is a novel term, a(n+1) = A000005(a(n)). If a(n) is a repeat term, a(n+1) = a(n)+m, where m is the least prior term (which once used in this way is not used again)."
+A047594,60,,,,,,,False,False,0,0,1.0,,"Numbers that are congruent to {0, 2, 3, 4, 5, 6, 7} mod 8."
+A255872,42,,,,,,,False,False,0,0,1.0,,"Smallest Rhonda number to base b = n-th composite number, A002808(n)."
+A311323,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.181.6 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A251176,32,,,,,,,False,False,0,0,1.0,,G.f. A(x) satisfies A(x) = 1 + x/(1-9*x^3)^(1/3) * A( x/sqrt(1-9*x^3)^(1/3) ).
+A128978,60,,,,,,,False,False,0,0,1.0,,"a(1) = 1, a(2) = 1 and a(n) = number of terms among (a(1),a(2),...a(n-1)) which divide (a(n-1)+a(n-2))."
+A091700,55,,,,,,,False,False,0,0,1.0,,Matrix square of triangle A063967.
+A371894,60,,,,,,,False,False,0,0,1.0,,Integers k such that the number of multiplications to compute the k-th power by the Chandah-sutra method (A014701) is larger than the length of the shortest addition chain for k (A003313).
+A258250,32,,,,,,,False,False,0,0,1.0,,Primitive weird numbers (pwn) (A002975) whose abundance (A033880) is a power of 2 (A000079).
+A329544,60,,,,,,,False,False,0,0,1.0,,"Add the odd terms and subtract the even ones, the result must always be a palindrome. This is the lexicographically earliest sequence of distinct positive integers with this property."
+A085264,49,,,,,,,False,False,0,0,1.0,,Smallest number with exactly n representations as sum of a squarefree number (A005117) and a square (A000290).
+A096729,33,,,,,,,False,False,0,0,1.0,,Where records occur in A096287.
+A117370,60,6,,,,,,False,True,1,1,1.0,,Number of primes between smallest prime divisor of n and largest prime divisor of n.
+A290332,58,,,,,,,False,False,0,0,1.0,,"a(n) is the smallest j which satisfies (j^2 + k)/(j + k^2) = n where j,k are integers and j >= k > 0."
+A195311,56,,,,,,,False,False,0,0,1.0,,Row sums of A195310.
+A175060,60,,,,,,,False,False,0,0,1.0,,Inverse permutation to A175059.
+A182042,55,,,,,,,False,False,0,0,1.0,,"Triangle T(n,k), read by rows, given by (0, 2, -1/2, 1/2, 0, 0, 0, 0, 0, 0, 0, ...) DELTA (3, 0, -3/2, 3/2, 0, 0, 0, 0, 0, 0, 0, ...) where DELTA is the operator defined in A084938."
+A382129,60,,,,,,,False,False,0,0,1.0,,Fractalization of the prime numbers.
+A047366,60,13,5,0,13,56,0,True,False,1,0,0.07788595271210014,,"Numbers that are congruent to {1, 3, 4, 5} mod 7."
+A040180,40,,,,,,,False,False,0,0,1.0,,Primes p such that x^5 = 11 has no solution mod p.
+A090815,60,,,,,,,False,False,0,0,1.0,,a(n)=denominator(B(2*prime(n))) where prime(n)=n-th prime and B(k) denotes the k-th Bernoulli number.
+A216223,52,,,,,,,False,False,0,0,1.0,,Distance from Fibonacci(n) to the next perfect square.
+A350733,60,6,,,,,,False,True,1,1,1.0,,"Triangle read by rows: T(n,k) is the number of oriented graphs on n unlabeled nodes with k arcs, n >= 0, k = 0..n*(n-1)/2."
+A383715,55,,,,,,,False,False,0,0,1.0,,"Triangle T(n,k), n >= 0, 0 <= k <= n, read by rows, where T(n,k) = (-1)^floor((k+1)/2) * A099927(n,k)."
+A094966,39,11,4,0,11,40,0,True,False,1,0,0.038872691933916424,,Left-hand neighbors of Fibonacci numbers in Stern's diatomic series.
+A080105,42,,,,,,,False,False,0,0,1.0,,a(n) = round(113*phi^n).
+A393047,58,,,,,,,False,False,0,0,1.0,,Numbers such that the least prime not dividing their arithmetic derivative is 7.
+A167586,31,10,4,0,11,108,0,True,False,2,1,0.10495626822157435,,The fourth row of the ED4 array A167584.
+A281793,58,,,,,,,False,False,0,0,1.0,,The largest prime factor of (1+n)*(1+n^2).
+A032243,43,,,,,,,False,False,0,0,1.0,,"""DHK"" (bracelet, identity, unlabeled) transform of 1,0,1,0,... (odd)."
+A073824,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of number with continued fraction expansion 0, 1, 4, 9, ... (the squares)."
+A097965,31,,,,,,,False,False,0,0,1.0,,"Number of compositions (ordered partitions) of n into n parts, allowing zeros, with distinct nonzero parts."
+A240164,58,,,,,,,False,False,0,0,1.0,,Numbers m such that (k! + m)/k and (k! - m)/k are prime for some k.
+A180457,38,,,,,,,False,False,0,0,1.0,,Central term of nine successive primes whose average is a prime.
+A361127,57,,,,,,,False,False,0,0,1.0,,"Let p = n-th odd prime; a(n) = index where 2*p appears in A360519, or -1 if 2*p never appears."
+A293771,60,,,,,,,False,False,0,0,1.0,,"Minimum number of steps needed to compute n using a machine that can read, write and add starting with the number 1."
+A175798,51,,,,,,,False,False,0,0,1.0,,Expansion of ( -3+x+4*x^2-3*x^3+3*x^5-x^7-3*x^4+x^6 ) / ( (1+x) *(x^5-x^4-x^3+x^2-1) *(x-1)^2 ).
+A039681,57,,,,,,,False,False,0,0,1.0,,Odd Fibonacci-lucky numbers.
+A338195,56,,,,,,,False,False,0,0,1.0,,Numbers k such that 3/k = 1/x + 1/y has a solution with 0 < x < y < k.
+A160159,60,,,,,,,False,False,0,0,1.0,,First differences of A160158.
+A128633,46,,,,,,,False,False,0,0,1.0,,McKay-Thompson series of class 6E for the Monster group with a(0) = 4.
+A321001,36,,,,,,,False,False,0,0,1.0,,Primes which contain the fax number of the beast (667).
+A031194,55,,,,,,,False,False,0,0,1.0,,Numbers having period-28 5-digitized sequences.
+A348784,60,,,,,,,False,False,0,0,1.0,,Indices of primes in A347113.
+A316906,33,,,,,,,False,False,0,0,1.0,,Numbers k such that 2^(k-1) == 1 (mod k) and lpf(k)-1 does not divide k-1.
+A103368,60,11,4,0,11,38,0,True,False,1,0,0.18009478672985782,,"Period 6: repeat [1, 1, -1, -1, 0, 0]."
+A302279,32,13,5,0,13,64,0,True,False,1,0,0.059757236227824466,,"Number of 2 X n 0..1 arrays with every element equal to 1, 2 or 4 horizontally, diagonally or antidiagonally adjacent elements, with upper left element zero."
+A248913,60,,,,,,,False,False,0,0,1.0,,A248614(n+1) - A248614(n).
+A078809,60,,,,,,,False,False,0,0,1.0,,Number of divisors of the average of consecutive odd primes.
+A099759,55,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,0)=1, T(n,n)=1, T(n, k) = 2*(n-k)*T(n-1, k-1) + 2*k*T(n-1, k)."
+A343826,53,,,,,,,False,False,0,0,1.0,,Numbers which are the product of two S-primes (A057948) in exactly one way.
+A247300,31,25,6,2,29,304,0,True,False,2,1,0.2591645353793691,,Number of h- and H-steps at level 0 in all lattice paths in B(n).
+A112968,60,,,,,,,False,False,0,0,1.0,,"a(n) = Sum_{i+j=n} mu(i)*Omega(j), with mu=A008683 and Omega=A001222."
+A118054,60,,,,,,,False,False,0,0,1.0,,Inverse Euler transform of A118052.
+A368992,60,6,,,,,,False,True,1,1,1.0,,a(n) = A336546(A005940(1+n)).
+A019707,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of sqrt(Pi)/5.
+A379845,45,,,,,,,False,False,0,0,1.0,,Even squarefree numbers x such that the product of prime indices of x is a multiple of the sum of prime indices of x.
+A253397,53,,,,,,,False,False,0,0,1.0,,"T(n,k) = Number of (n+1) X (k+1) 0..1 arrays with every 2 X 2 subblock antidiagonal maximum minus diagonal minimum nondecreasing horizontally and diagonal maximum minus antidiagonal minimum nondecreasing vertically."
+A100079,60,,,,,,,False,False,0,0,1.0,,"Starting from n = 0, a(n) = position of first occurrence of n in decimal places of Catalan's constant."
+A369901,54,,,,,,,False,False,0,0,1.0,,"Proth numbers h*2^k+1, with odd h < 2^k, ordered first by k then by h."
+A265639,34,,,,,,,False,False,0,0,1.0,,Number of binary strings of length n that cannot be written as the concatenation of nontrivial powers of other strings.
+A168096,55,7,6,2,29,132,0,True,False,3,2,0.29398663697104677,,a(n) = number of natural numbers m such that n - 6 <= m <= n + 6.
+A261699,60,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,k), n >= 1, k >= 1, in which column k lists positive terms interleaved with k-1 zeros, starting in row k(k+1)/2. If k is odd the positive terms of column k are k's, otherwise if k is even the positive terms of column k are the odd numbers greater than k in increasing order."
+A224214,51,,,,,,,False,False,0,0,1.0,,Number of nonnegative solutions to x^3 + y^3 <= n^3.
+A184871,60,,,,,,,False,False,0,0,1.0,,"n+floor(ns/r)+floor(nt/r), where r=log(2), s=log(3), t=log(5)."
+A088572,60,,,,,,,False,False,0,0,1.0,,Numbers n such that (2n+1)^2 - 2 is prime.
+A315071,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.3.46.3 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A141560,58,,,,,,,False,False,0,0,1.0,,"Nonprimes of form (prime(n)-r(n)), where A141468(n)=r(n)=n-th nonprime and prime(n)=n-th prime."
+A036062,30,,,,,,,False,False,0,0,1.0,,Increasing gaps among twin primes: the smallest prime of the second twin pair.
+A348160,46,,,,,,,False,False,0,0,1.0,,Odd numbers not appearing in A348158.
+A295827,60,,,,,,,False,False,0,0,1.0,,"a(n) = least odd k > 1 such that n and n*k have the same Hamming weight, or -1 if no such k exists."
+A061087,37,,,,,,,False,False,0,0,1.0,,a(n) = A061086(n) / n.
+A340077,60,,,,,,,False,False,0,0,1.0,,Odd numbers k for which k-1 is a multiple of A053575(k) [the odd part of phi(k)].
+A311425,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.5.52.3 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A382585,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of Sum_{p prime} 1/((p - 1)^2*p^2*(p + 1)).
+A014821,60,7,,,,,,False,True,2,1,1.0,,Inverse of 812th cyclotomic polynomial.
+A175808,60,,,,,,,False,False,0,0,1.0,,n-th term is the length of a shortest common superstring of the binary representations of all natural numbers from 1 to n.
+A222414,60,,,,,,,False,False,0,0,1.0,,a(n) = A001175(A222413(n)).
+A188216,48,,,,,,,False,False,0,0,1.0,,Expansion of 1 + Sum_{n>=1} (x^(n^2) / Product_{k>=n} (1 - x^k)).
+A151782,57,,,,,,,False,False,0,0,1.0,,"a(1)=1; for n > 1, a(n)=8*7^{wt(n-1)-1}."
+A156610,55,,,,,,,False,False,0,0,1.0,,"Triangle T(n, k, m) = round( t(n,m)/(t(k,m)*t(n-k,m)) ), with T(0, k, m) = 1, where t(n, k) = Product_{j=1..n} A129862(k+1, j), t(n, 0) = n!, and m = 4, read by rows."
+A349306,50,,,,,,,False,False,0,0,1.0,,Numbers k that divide A092694(k).
+A019346,57,,,,,,,False,False,0,0,1.0,,Primes with primitive root 19.
+A240982,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of the limit of a recursive sequence connected to the Plastic constant (A060006).
+A131436,60,,,,,,,False,False,0,0,1.0,,"Triangle read by rows, (n-1) zeros followed by 2^n - 1."
+A279364,50,,,,,,,False,False,0,0,1.0,,Sum of 5th powers of proper divisors of n.
+A330933,33,,,,,,,False,False,0,0,1.0,,Starts of runs of 4 consecutive Niven numbers in base 2 (A049445).
+A313489,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.609.2 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A353489,60,15,,,,,,False,True,2,1,1.0,,"If A276086(n) is of the form 4k+3, then a(n) = 1, otherwise a(n) = 0."
+A389501,55,,,,,,,False,False,0,0,1.0,,Numbers whose coreful divisors have a noninteger arithmetic mean.
+A027623,32,,,,,,,False,False,0,0,1.0,,"a(0) = 1; for n > 0, a(n) = number of rings with n elements."
+A377030,60,19,,,,,,False,True,2,1,1.0,,"Period 19: repeat [0, 3, 6, 9, 7, 4, 1, 2, 5, 8, 8, 5, 2, 1, 4, 7, 9, 6, 3]."
+A232598,45,,,,,,,False,False,0,0,1.0,,"T(n,k) = Stirling2(n,k) * OrderedBell(k)."
+A118733,60,,,,,,,False,False,0,0,1.0,,Numbers k such that 3^k has even digit sum.
+A142459,45,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,k) = (4n-4k+1) * T(n-1,k-1) + (4k-3) * T(n-1,k)."
+A238533,33,,,,,,,False,False,0,0,1.0,,"Number of solutions to gcd(x^2 + y^2 + z^2 + t^2 + h^2, n) = 1 with x,y,z,t,h in [0,n-1]."
+A137750,56,,,,,,,False,False,0,0,1.0,,Number of distinct residues in the Fibonacci sequence mod the n-th prime.
+A073705,38,,,,,,,False,False,0,0,1.0,,a(n) = Sum_{ d divides n } (n/d)^(2d).
+A018082,36,13,,,,,,False,True,2,1,1.0,,Powers of fourth root of 13 rounded to nearest integer.
+A180590,40,,,,,,,False,False,0,0,1.0,,Numbers k such that k! is the sum of two triangular numbers.
+A142919,43,,,,,,,False,False,0,0,1.0,,Primes congruent to 53 mod 63.
+A133214,55,,,,,,,False,False,0,0,1.0,,Delannoy paths counted by number of weak peaks.
+A078029,60,9,3,0,9,28,0,True,False,1,0,0.03128491620111732,,Expansion of (1-x)/(1-2*x^3).
+A294863,55,,,,,,,False,False,0,0,1.0,,"Solution of the complementary equation a(n) = a(n-2) + b(n-2) + 3, where a(0) = 1, a(1) = 2, b(0) = 3, and (a(n)) and (b(n)) are increasing complementary sequences."
+A245886,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of Gamma(-3/2), where Gamma is Euler's gamma function."
+A093797,60,,,,,,,False,False,0,0,1.0,,"In the sequence of prime powers (A000961), replace perfect powers with their repeating factors."
+A102422,60,,,,,,,False,False,0,0,1.0,,Number of partitions of n with k <= 5 parts and each part p <= 5.
+A068356,45,,,,,,,False,False,0,0,1.0,,Numbers k such that bigomega(k) = tau(prime(k)+1) where tau(k) = A000005(k).
+A186071,60,7,,,,,,False,True,2,1,1.0,,"Irregular triangle, read by rows, of primes with suffix n and digits ""3"" prepended , otherwise 0."
+A143268,43,,,,,,,False,False,0,0,1.0,,"a(n) = phi(n)*T(n), where phi(n) is Euler's totient function (A000010) and T(n) = n*(n+1)/2 is the n-th triangular number (A000217)."
+A007959,54,7,,,,,,False,True,2,1,1.0,,Some nontrivial permutation of digits is an odd number.
+A322149,49,,,,,,,False,False,0,0,1.0,,"In the binary representation of n, replace each run of k 0's (or 1's) with k^2 0's (or 1's)."
+A308797,46,,,,,,,False,False,0,0,1.0,,Primes p such that A001177(p) = (p-1)/4.
+A096982,60,,,,,,,False,False,0,0,1.0,,"Define a(1)=0. Then define b(1)=1, b(2)=1 and for k > 2, b(k) = (b(k-2) + b(k-1)) (mod n). This gives for each n a cyclic repetitive sequence; a(n) is the least k > 1 for the first 1 of the sequence 1,1,...."
+A134217,47,,,,,,,False,False,0,0,1.0,,Positions of 17 after decimal point in decimal expansion of Pi.
+A163238,60,,,,,,,False,False,0,0,1.0,,Inverse permutation to A163237.
+A361852,50,,,,,,,False,False,0,0,1.0,,Number of integer partitions of n such that (length) * (maximum) < 2n.
+A079714,60,,,,,,,False,False,0,0,1.0,,Number of 2's in n!.
+A244054,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of the maximal circumradius of a planar convex set containing no lattice point except for the origin where it has its circumcenter, and not protruding in opposite directions outside the square max(|x|,|y|) < 1 unless it protrudes significantly elsewhere, too."
+A383799,53,6,,,,,,False,True,1,1,1.0,,"Irregular triangle: T(n,k) gives the number of k-polysticks on edges of the n-cube up to rotational symmetries of the n-cube, with 0 <= k <= A001787(n)."
+A016463,60,,,,,,,False,False,0,0,1.0,,Continued fraction for log(35).
+A033238,35,,,,,,,False,False,0,0,1.0,,Primes of form x^2+59*y^2.
+A019743,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of e/6.
+A290481,60,,,,,,,False,False,0,0,1.0,,The number of 3-Carmichael numbers that are divisible by the n-th odd prime.
+A136854,30,7,,,,,,False,True,2,1,1.0,,"Numbers k such that k and k^2 use only the digits 0, 1, 4 and 5."
+A353954,60,,,,,,,False,False,0,0,1.0,,a(0) = 1; a(n) = A019565(A109812(n)).
+A153161,60,,,,,,,False,False,0,0,1.0,,Numerators of Stern-Brocot tree hanging between 1/3 and 2/3; denominators=A153162.
+A306114,51,,,,,,,False,False,0,0,1.0,,"Largest k such that 4^k has exactly n digits 0 (in base 10), conjectured."
+A208613,56,,,,,,,False,False,0,0,1.0,,"Triangle of coefficients of polynomials v(n,x) jointly generated with A208612; see the Formula section."
+A365787,60,,,,,,,False,False,0,0,1.0,,a(n) = A286708(n) divided by its squarefree kernel.
+A284199,48,,,,,,,False,False,0,0,1.0,,"T(n,k) = Number of n X k 0..1 arrays with the number of 1's horizontally, antidiagonally or vertically adjacent to some 0 equal to the number of 0's adjacent to some 1, with top left element zero."
+A077624,43,,,,,,,False,False,0,0,1.0,,Largest term in periodic part of continued fraction expansion of square root of 2^n + 1 or 0 if 2^n + 1 is a square.
+A026788,30,,,,,,,False,False,0,0,1.0,,"a(n) = Sum_{k=0..floor(n/2)} T(n,k), T given by A026780."
+A211015,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of Pi - e + gamma, where gamma is Euler's constant (or the Euler-Mascheroni constant)."
+A234859,60,13,,,,,,False,True,2,1,1.0,,Number of totally symmetric 5-dimensional partitions of n.
+A211381,42,19,6,1,22,228,0,True,False,2,1,0.21489161168708765,,Number of pairs of intersecting diagonals in the exterior of a regular n-gon.
+A303668,42,,,,,,,False,False,0,0,1.0,,"Expansion of 1/((1 - x)*(2 - theta_2(sqrt(x))/(2*x^(1/8)))), where theta_2() is the Jacobi theta function."
+A301002,47,,,,,,,False,False,0,0,1.0,,Coordination sequence T3 for Zeolite Code BEC.
+A299620,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of W(1) + W(3), where w is the Lambert W function (or PowerLog); see Comments."
+A286752,60,,,,,,,False,False,0,0,1.0,,{010010->null}-transform of the infinite Fibonacci word A003849.
+A164960,60,,,,,,,False,False,0,0,1.0,,"The minimum number of steps needed to generate prime(n) under the map x -> A060264(x) starting from any x taken from {2,3} or from A164333."
+A131854,60,,,,,,,False,False,0,0,1.0,,Numbers m such that A131851(m) = 0.
+A080730,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of the infinite product of zeta functions for odd arguments >= 3.
+A022172,36,,,,,,,False,False,0,0,1.0,,"Triangle of Gaussian binomial coefficients [ n,k ] for q = 8."
+A110494,45,,,,,,,False,False,0,0,1.0,,"Least k such that prime(n)^2 divides binomial(2k,k)."
+A273955,36,,,,,,,False,False,0,0,1.0,,G.f. A(x) satisfies: A( x*A(x) - A(x)^2 ) = -x^3.
+A003371,39,,,,,,,False,False,0,0,1.0,,Numbers that are the sum of 4 positive 7th powers.
+A382656,30,11,4,0,11,70,0,True,False,1,0,0.05388760585065435,,a(n) = L(2*n+1)+4*n+2.
+A260947,60,,,,,,,False,False,0,0,1.0,,"Least positive integer k < prime(n) such that k = i + j for some 0 < i < j for which i,j,k and i*j*k are all primitive roots modulo prime(n), or 0 if no such k exists."
+A226166,60,,,,,,,False,False,0,0,1.0,,One half of the length of the period of the principal indefinite quadratic binary form of discriminant D(n) = A079896(n).
+A020665,60,,,,,,,False,False,0,0,1.0,,a(n) is the (conjectured) maximal exponent k such that n^k does not contain a digit zero in its decimal expansion.
+A266436,33,13,5,0,13,68,0,True,False,1,0,0.05991189427312775,,"Decimal representation of the n-th iteration of the ""Rule 23"" elementary cellular automaton starting with a single ON (black) cell."
+A158140,44,,,,,,,False,False,0,0,1.0,,Number of nondecreasing integer sequences of length 6 with sum zero and sum of absolute values 2n.
+A264714,40,,,,,,,False,False,0,0,1.0,,"T(n,k)=Number of nXk arrays of permutations of 0..n*k-1 with rows nondecreasing modulo 5 and columns nondecreasing modulo 6."
+A260808,45,,,,,,,False,False,0,0,1.0,,Primes p such that p = q^2 - 12*r^2 where q and r are also primes.
+A208974,31,,,,,,,False,False,0,0,1.0,,"Number of 7-bead necklaces labeled with numbers -n..n allowing reversal, with sum zero and first and second differences in -n..n."
+A338854,60,,,,,,,False,False,0,0,1.0,,Product of the nonzero digits of (n written in base 4).
+A045365,46,,,,,,,False,False,0,0,1.0,,"Primes congruent to {2, 5, 6} mod 7."
+A035987,45,,,,,,,False,False,0,0,1.0,,"Number of partitions of n into parts not of the form 21k, 21k+9 or 21k-9. Also number of partitions with at most 8 parts of size 1 and differences between parts at distance 9 are greater than 1."
+A121461,60,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,k) is the number of nondecreasing Dyck paths of semilength n, having last ascent of length k (1 <= k <= n)."
+A086285,55,,,,,,,False,False,0,0,1.0,,Numbers k such that 1 + 2k + 3k^2 is prime.
+A385165,43,,,,,,,False,False,0,0,1.0,,Let p = A002145(n) be the n-th prime == 3 (mod 4); a(n) is the multiplicative order of 2+-i modulo p in Gaussian integers.
+A289615,30,25,3,4,25,754,0,True,False,1,0,0.5321100917431193,,"A246604 (Catalan(n)-n) with initial terms 1,0,0,2 changed to 1,1,1,3."
+A386838,60,,,,,,,False,False,0,0,1.0,,"Minimum number of unit squares that a straight line drawn from (0,0) to (x,y) passes through on the square lattice where x^2 + y^2 = A001481(n). If A001481(n) can be written as a sum of two squares in two or more ways, x and y are chosen such that a(n) is the least value."
+A167384,52,,,,,,,False,False,0,0,1.0,,Irregular table with the left half of the array described in A167381.
+A328720,60,,,,,,,False,False,0,0,1.0,,The position function the fractalization of which yields A328719.
+A348358,59,,,,,,,False,False,0,0,1.0,,Primes which are not the concatenation of smaller primes (in base 10 and allowing leading 0's).
+A380477,60,,,,,,,False,False,0,0,1.0,,"a(n) = 1 if n is not a prime, and A380459(n) has no divisors of form p^p, otherwise 0."
+A077318,38,,,,,,,False,False,0,0,1.0,,Sum of terms in n-th row of A077316.
+A008039,48,,,,,,,False,False,0,0,1.0,,Coordination sequence T2 for Zeolite Code ATS.
+A074871,60,,,,,,,False,False,0,0,1.0,,"Start with n and repeatedly apply the map k -> T(k) = A053837(k) + A171765(k); a(n) is the number of steps (at least one) until a prime is reached, or 0 if no prime is ever reached."
+A386224,47,,,,,,,False,False,0,0,1.0,,"Nonsquarefree weak numbers k that are not products of primorials, whose squarefree kernel is a primorial."
+A124670,34,,,,,,,False,False,0,0,1.0,,(Product of successive primes minus 2) divided by 3 is prime.
+A211274,56,,,,,,,False,False,0,0,1.0,,"Number of integer pairs (x,y) such that 0 < x <= y <= n and x*y <= 3n."
+A231932,60,,,,,,,False,False,0,0,1.0,,"Working in base 9: a(0)=0, thereafter a(n+1) is the smallest number not already in the sequence such that the bits of a(n) and a(n+1) together can be rearranged to form a palindrome."
+A088637,53,,,,,,,False,False,0,0,1.0,,"a(1) = 1, a(n+1) = a(n) + smallest prime not added earlier if a(n) is noncomposite else a(n+1) = a(n) + the smallest composite number not added earlier."
+A369995,36,6,,,,,,False,True,1,1,1.0,,"Irregular triangle read by rows: T(n,k) is the number of induced k-vertex subgraphs, up to isomorphism, of the hypercube graph of dimension n >= 0, 0 <= k <= 2^n."
+A057128,60,,,,,,,False,False,0,0,1.0,,Numbers n such that -3 is a square mod n.
+A281639,34,,,,,,,False,False,0,0,1.0,,"Decimal representation of the x-axis, from the origin to the right edge, of the n-th stage of growth of the two-dimensional cellular automaton defined by ""Rule 382"", based on the 5-celled von Neumann neighborhood."
+A281590,55,,,,,,,False,False,0,0,1.0,,Indices k such that A284896(k-1) and A284896(k) have a different sign.
+A122821,60,,,,,,,False,False,0,0,1.0,,Number of ways n can be represented as the arithmetic mean of consecutive primes.
+A333369,60,,,,,,,False,False,0,0,1.0,,"Positive integers in which any odd digit, if present, occurs an odd number of times, and any even digit, if present, occurs an even number of times."
+A066567,47,,,,,,,False,False,0,0,1.0,,Numbers that when incremented by the product of their digits produce a square.
+A280469,55,,,,,,,False,False,0,0,1.0,,Numbers n such that n-1 and n+1 are squarefree and have the same number of prime factors.
+A111910,55,,,,,,,False,False,0,0,1.0,,"Square array read by antidiagonals: S(p,q) = (p+q+1)!(2p+2q+1)!/((p+1)!(2p+1)!(q+1)!(2q+1)!) (p,q>=0)."
+A185169,57,,,,,,,False,False,0,0,1.0,,"Cantor's ordering of positive rational numbers, where a(n) is the balanced ternary representation of the ""factorization"" of the positive rational number into terms of A186285."
+A088341,59,,,,,,,False,False,0,0,1.0,,Numbers n such that frac(x^n)=frac(x^2*frac(x^(n-2))) where x=3/2 and frac(x) denotes the fractional part of x.
+A165959,60,,,,,,,False,False,0,0,1.0,,"Size of the range of the Ramanujan Prime Corollary, 2*A168421(n) - A104272(n)."
+A204849,60,,,,,,,False,False,0,0,1.0,,A Motzkin triangle by rows.
+A095297,33,,,,,,,False,False,0,0,1.0,,"Number of A095287-primes in range ]2^n,2^(n+1)]."
+A285530,60,,,,,,,False,False,0,0,1.0,,"0-limiting word of the morphism 0->11, 1-> 0100."
+A394962,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of Sum_{k>=1} Pi/(sqrt(k)*sinh(Pi*sqrt(k))).
+A395738,43,,,,,,,False,False,0,0,1.0,,Index of first occurrence of n in A057853.
+A304775,57,,,,,,,False,False,0,0,1.0,,"T(n,k)=Number of nXk 0..1 arrays with every element unequal to 0, 1, 2, 3 or 7 king-move adjacent elements, with upper left element zero."
+A114313,60,,,,,,,False,False,0,0,1.0,,Difference between first odd semiprime >= 5^n and 5^n.
+A136154,36,,,,,,,False,False,0,0,1.0,,"Composites one larger than a prime, with exactly five distinct prime factors."
+A131909,60,,,,,,,False,False,0,0,1.0,,"Triangle, read by rows, where T(n,k) = T(n-1,k-2) + T(n-1,k-1) for n>=k>1, with T(0,0)=1 and T(n,0) = T(n+1,1) = T(n-1,n-1) for n>0."
+A309574,59,,,,,,,False,False,0,0,1.0,,n-th prime minus its ternary (base 3) reversal.
+A051531,42,23,6,1,22,388,0,True,False,1,0,0.4212812160694897,,"Molien series for group H_{1,3}^{8} of order 2304."
+A350044,48,11,,,,,,False,True,2,1,1.0,,"Loop starting at 187 in the Collatz-like map {x -> 3x+5 if x is odd, x/2 otherwise}."
+A103241,33,,,,,,,False,False,0,0,1.0,,"Unreduced numerators of the elements T(n,k)/(n-k)!, read by rows, of the triangular matrix P^-1, which is the inverse of the matrix defined by P(n,k) = (-k^3)^(n-k)/(n-k)! for n >= k >= 1."
+A311191,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.217.2 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A390691,60,,,,,,,False,False,0,0,1.0,,The largest divisor of n that is a Loeschian number (A003136).
+A262282,54,,,,,,,False,False,0,0,1.0,,"a(1)=11. For n>1, let s denote the digit-string of a(n-1) with the first digit omitted. Then a(n) is the smallest prime not yet present which starts with s."
+A122716,34,,,,,,,False,False,0,0,1.0,,Primes of the form p^2 + q^10 where p and q are primes.
+A118819,60,15,6,0,15,84,0,True,False,1,0,0.10619469026548672,,Start with 1 and repeatedly place the first digit at the end of the number and add 6.
+A338572,60,,,,,,,False,False,0,0,1.0,,Number of integers less than n with the same number of factorizations into prime powers as n.
+A087869,60,,,,,,,False,False,0,0,1.0,,a[n] =Abs[Abs[Prime[n]-a[n-1]]+Abs[Prime[n]-a[n-2]]+Abs[Prime[n]-a[n-3]]-Abs[Prime[n]-a[n-4]]-Abs[Prime[n]-a[n-5]]].
+A062506,60,,,,,,,False,False,0,0,1.0,,Numbers divisible by at least one twin prime (A001097).
+A293712,40,,,,,,,False,False,0,0,1.0,,"Numbers k such that psi(phi(k))/k > psi(phi(m))/m for all m < k, where phi is Euler's totient function (A000010) and psi is the Dedekind psi function (A001615)."
+A141989,44,,,,,,,False,False,0,0,1.0,,Primes congruent to 13 mod 29.
+A159781,39,,,,,,,False,False,0,0,1.0,,"Values of hypotenuse of primitive Pythagorean triples which can have exactly four different shapes (that is, four different sets of ""legs"")."
+A101249,35,,,,,,,False,False,0,0,1.0,,"Primes that are a concatenation of 5, 7 and a prime."
+A363016,33,,,,,,,False,False,0,0,1.0,,"a(n) is the least integer k such that the k-th, (k+1)-th, ..., (k+n-1)-th primes are congruent to 1 mod 4."
+A296128,60,,,,,,,False,False,0,0,1.0,,"T(n,k)=Number of nXk 0..1 arrays with each 1 adjacent to 2 or 5 king-move neighboring 1s."
+A040781,60,,,,,,,False,False,0,0,1.0,,Continued fraction for sqrt(810).
+A201456,60,,,,,,,False,False,0,0,1.0,,Least k such that (7^n + k)*7^n + 1 is a prime number.
+A352140,56,,,,,,,False,False,0,0,1.0,,Numbers whose prime factorization has all even prime indices and all odd exponents.
+A075354,57,10,,,,,,False,True,2,1,1.0,,Final term of n-th group in A075352.
+A317932,60,,,,,,,False,False,0,0,1.0,,"Denominators of certain ""Dirichlet Square Root"" sequences: a(n) = A046644(n)/(2^A007949(n))."
+A363723,60,,,,,,,False,False,0,0,1.0,,"Number of integer partitions of n having a unique mode equal to the mean, i.e., partitions whose mean appears more times than each of the other parts."
+A111349,42,,,,,,,False,False,0,0,1.0,,Numbers k such that the result of swapping the 4th digit and the digit 3 positions from the last digit is prime.
+A018804,60,,,,,,,False,False,0,0,1.0,,"Pillai's arithmetical function: Sum_{k=1..n} gcd(k, n)."
+A071804,60,,,,,,,False,False,0,0,1.0,,"Number of pairs (x,y) such that tau(x^y) = x+y, 1<=x<=n, 1<=y<=n."
+A331942,30,,,,,,,False,False,0,0,1.0,,"a(n) = number of primes of the form P(k) = k^2 + 1 <= 10^n as predicted by the Hardy and Littlewood Conjecture F, rounded to nearest integer. The actual number of primes is A083844(n)."
+A287158,60,,,,,,,False,False,0,0,1.0,,Positions of 1 in A287156.
+A351836,60,6,,,,,,False,True,1,1,1.0,,Smallest evil number k (member of A001969) such that k*n is also evil.
+A033622,32,13,5,0,13,88,0,True,False,1,0,0.07242798353909465,,Good sequence of increments for Shell sort (best on big values).
+A119565,53,,,,,,,False,False,0,0,1.0,,"a(0)=1, a(1)=2, a(2)=3, a(3)=5, a(4)=7, a(5)=10; a(n) = floor(a(n-1) + 1 + a(n-2)/6) for n>=6."
+A020143,39,,,,,,,False,False,0,0,1.0,,Pseudoprimes to base 15.
+A366161,60,,,,,,,False,False,0,0,1.0,,The number of ways to express n^n in the form a^b for integers a and b.
+A372119,60,,,,,,,False,False,0,0,1.0,,Numbers k such that the k-th composition in standard order is not biquanimous.
+A173043,36,,,,,,,False,False,0,0,1.0,,"Triangle T(n, k, q) = binomial(n, k) - 1 + q^(n*binomial(n-2, k-1)) with T(n, 0, q) = T(n, n, q) = 1 and q = 2, read by rows."
+A120898,58,,,,,,,False,False,0,0,1.0,,"Cascadence of 1+2x+x^2; a triangle, read by rows of 2n+1 terms, that retains its original form upon convolving each row with [1,2,1] and then letting excess terms spill over from each row into the initial positions of the next row such that only 2n+1 terms remain in row n for n>=0."
+A207536,58,,,,,,,False,False,0,0,1.0,,"Triangle of coefficients of polynomials u(n,x) jointly generated with A105070; see Formula section."
+A226691,60,,,,,,,False,False,0,0,1.0,,"Irregular table read by rows: T(m,n) = Denominators of minimal distance between m elements of the Farey sequence F_n."
+A010067,57,,,,,,,False,False,0,0,1.0,,Base 6 self or Colombian numbers (not of form k + sum of base 6 digits of k).
+A085998,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of the prime zeta modulo function at 9 for primes of the form 4k+3.
+A253223,60,,,,,,,False,False,0,0,1.0,,"T(n,k) = number of n X k nonnegative integer arrays with upper left 0 and lower right its king-move distance away minus 2 and every value within 2 of its king move distance from the upper left and every value increasing by 0 or 1 with every step right, diagonally se or down."
+A353057,39,,,,,,,False,False,0,0,1.0,,"Numbers N of the form m^k in ascending order having the property that for any choice of m and k such that N = m^k, the sets of distinct digits of m, k, and m^k are pairwise disjoint."
+A096796,35,,,,,,,False,False,0,0,1.0,,"a(n) = n for n <= 2; for n > 2, a(n) = 2a(n-1) - a(n - floor( 1/2 + sqrt(2n) ))."
+A280197,49,,,,,,,False,False,0,0,1.0,,"Expansion of 1/(1 - Sum_{k>=2} mu(k)^2*x^k), where mu(k) is the Moebius function (A008683)."
+A397007,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of Sum_{k>=1} H(k)/k^9, where H(k) = A001008(k)/A002805(k) is the k-th harmonic number."
+A320912,60,,,,,,,False,False,0,0,1.0,,Numbers with an even number of prime factors (counted with multiplicity) that can be factored into distinct semiprimes.
+A305466,60,,,,,,,False,False,0,0,1.0,,"Square array A(n,k), n >= 0, k >= 0, read by antidiagonals, where A(n,k) is Sum_{j=0..floor(n/2)} ((n-j)!/j!)*binomial(n-j,j)*k^(n-2*j)*(-1)^j."
+A163810,60,9,3,0,9,32,0,True,False,1,0,0.15023474178403756,,Expansion of (1 - x) * (1 - x^2) * (1 - x^3) / (1 - x^6) in powers of x.
+A292673,60,,,,,,,False,False,0,0,1.0,,Least number of symbols required to fill a grid of size n X n row by row in the greedy way such that in any row or column or rectangular 3 X 3 block no symbol occurs twice.
+A312885,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.460.4 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A031218,60,,,,,,,False,False,0,0,1.0,,Largest prime power <= n.
+A079952,60,,,,,,,False,False,0,0,1.0,,Number of primes less than prime(n)/2.
+A256699,60,,,,,,,False,False,0,0,1.0,,Numbers with negative triangular trace.
+A080906,41,,,,,,,False,False,0,0,1.0,,Primes with an even number of digits such that the first half of the digits and the second half of the digits are both primes.
+A312897,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.192.4 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A035326,32,,,,,,,False,False,0,0,1.0,,Beginning of last prime pattern of length n to appear among positive integers.
+A381019,60,,,,,,,False,False,0,0,1.0,,"a(n) is the smallest positive integer not yet in the sequence such that a(n) is relatively prime to a(n-i) for all 1 <= i <= min(a(n), n-1)."
+A225447,60,,,,,,,False,False,0,0,1.0,,10-adic integer x such that x^7 = -3.
+A200928,47,,,,,,,False,False,0,0,1.0,,Number of partitions of n such that the number of parts and the smallest part are coprime.
+A276931,60,,,,,,,False,False,0,0,1.0,,Row 2 of A276616: a(n) = A276932(n)/2.
+A383226,42,,,,,,,False,False,0,0,1.0,,"Number of winning positions for the next player (a, b, c) where 1 <= a, b, c <= n in ""Divisor Nim"" (see comments)."
+A064440,44,,,,,,,False,False,0,0,1.0,,Numbers k such that A048138(k) is a prime and sets a new record for such primes.
+A177947,55,,,,,,,False,False,0,0,1.0,,"A symmetrical triangle sequence based on the beta function inverse and the spotlight tile A051601 as antidiagonal: t(n,m) = 1/Integrate[(-1 + t)^n/t^(m + n + 2), {t, 1, Infinity}] - (-2 Binomial[m + n, m] + Binomial[2 + m + n, 1 + m])."
+A131866,60,,,,,,,False,False,0,0,1.0,,Distance of n-th semiprime to nearest square.
+A371503,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of Sum_{k>=0} 1/(k^2 + k + 1)!.
+A140958,42,,,,,,,False,False,0,0,1.0,,A090801(2n-1)+A090801(2n).
+A045046,37,,,,,,,False,False,0,0,1.0,,Numbers whose base-4 representation contains exactly one 0 and four 2's.
+A126315,60,,,,,,,False,False,0,0,1.0,,Signature-permutation of a Catalan automorphism: composition of A069771 and A125976.
+A276913,30,,,,,,,False,False,0,0,1.0,,E.g.f. A(x) satisfies: Series_Reversion( A(x)*exp(x) ) = A(x)*exp(-x).
+A327288,39,,,,,,,False,False,0,0,1.0,,"Number of partitions of n into colored blocks of equal parts, such that all colors from a set of size five are used and the colors are introduced in increasing order."
+A335075,59,,,,,,,False,False,0,0,1.0,,"Positions of 1's when Kolakoski sequence is grouped into four independent numbers as 1, 2, 11, 22."
+A254340,60,,,,,,,False,False,0,0,1.0,,Sum of the distinct prime factors of n plus n+1: a(n) = A008472(n) + n + 1.
+A228324,46,,,,,,,False,False,0,0,1.0,,Primes arising from A228323 in order of their appearance.
+A140525,43,,,,,,,False,False,0,0,1.0,,"a(1)=2. For n >=2, a(n) = the least integer >= a(n-1) that is not coprime to both a(n-1)+1 and a(n-1)."
+A377591,38,,,,,,,False,False,0,0,1.0,,"Powerful numbers k that are not prime powers such that there exist no numbers m such that rad(m) | k and Omega(m) > Omega(k), where rad = A007947 and Omega = A001222."
+A352244,32,,,,,,,False,False,0,0,1.0,,Positive integers that can be expressed in at least two ways as (x-y)*(x^3-y^3).
+A300284,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of the probability that a bullet, shot randomly at a cube that is thrown into the air, will pass through the opposite side."
+A302690,60,,,,,,,False,False,0,0,1.0,,a(n) is the smallest integer m such that m*n is a sum of two squares but not one.
+A044407,39,7,,,,,,False,True,2,1,1.0,,"Numbers n such that string 7,5 occurs in the base 10 representation of n but not of n-1."
+A171697,52,,,,,,,False,False,0,0,1.0,,"1 together with pairs of composites of the form (6n-1, 6n+1)."
+A292114,31,,,,,,,False,False,0,0,1.0,,List of numbers n such that A039655(n) reaches a new record high.
+A165077,60,24,,,,,,False,True,2,1,1.0,,Length of cycle mentioned in A165076.
+A343728,36,,,,,,,False,False,0,0,1.0,,Numbers with all digits even whose squares have all but one digit odd.
+A313523,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.502.5 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A318577,60,7,,,,,,False,True,2,1,1.0,,Number of complete multimin tree-factorizations of n.
+A294628,60,,,,,,,False,False,0,0,1.0,,a(n) = 8*(sigma(n) - n + (1/2)).
+A198369,60,,,,,,,False,False,0,0,1.0,,"Decimal expansion of least x having 4*x^2+4x=cos(x), negated."
+A148320,31,,,,,,,False,False,0,0,1.0,,"Number of walks within N^3 (the first octant of Z^3) starting at (0,0,0) and consisting of n steps taken from {(-1, 0, 0), (0, -1, 0), (0, 0, 1), (1, 1, -1)}."
+A156722,45,,,,,,,False,False,0,0,1.0,,"Triangle T(n, k, m) = t(n,m)/( t(k,m) * t(n-k,m) ) with T(n, 0, m) = T(n, n, m) = 1, where t(n, m) = Product_{j=1..n} Product_{i=1..j-1} ( 1 - (m+1)*(3*i-2) ) and m = 1, read by rows."
+A394629,60,,,,,,,False,False,0,0,1.0,,"Number of pairs of primes (p, q) such that n! = q^2 - p^2."
+A281068,60,,,,,,,False,False,0,0,1.0,,"a(1) = 1. a(n) is the smallest natural number that is not already in the sequence such that the name of a(n) in English starts with the letter a(n-1) ends with, and a(n) makes the sequence extendable."
+A176514,60,15,6,0,15,52,0,True,False,1,0,0.17869415807560138,,"Period 6: repeat [3, 1, 1, 3, 2, 1]."
+A133488,44,,,,,,,False,False,0,0,1.0,,"a(1) = 1. a(n) = a(n-1) + a(m), where m is the largest term of the sequence {a(k)} which is less than n."
+A272784,42,,,,,,,False,False,0,0,1.0,,"Partial sums of the number of active (ON, black) cells in n-th stage of growth of two-dimensional cellular automaton defined by ""Rule 533"", based on the 5-celled von Neumann neighborhood."
+A213056,60,,,,,,,False,False,0,0,1.0,,"Expansion of chi(x) * f(x^3)^3 in powers of x where chi(), f() are Ramanujan theta functions."
+A253443,60,19,,,,,,False,True,2,1,1.0,,Smallest missing number within the first n terms in A109890.
+A117505,51,,,,,,,False,False,0,0,1.0,,"Triangle of coefficients for polynomials used for the column g.f.s of triangle A116880, called CM(1,2)."
+A394021,60,,,,,,,False,False,0,0,1.0,,"Number of partitions p of n with multiplicity of each part at most 2, satisfying max(p) <= 2 * min(p)."
+A078802,60,,,,,,,False,False,0,0,1.0,,"Triangular array T given by T(n,k) = number of 01-words of length n containing k 1's, no three of which are consecutive."
+A315994,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.4.124.4 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A004544,60,,,,,,,False,False,0,0,1.0,,Expansion of sqrt(2) in base 7.
+A287865,60,,,,,,,False,False,0,0,1.0,,"a(n) = gpf(2*a(n-1)+1), with a(1)=1, where gpf = A006530."
+A206026,47,,,,,,,False,False,0,0,1.0,,a(n) = smallest number m such that sigma(k) = m has at least n positive solutions k.
+A148441,30,,,,,,,False,False,0,0,1.0,,"Number of walks within N^3 (the first octant of Z^3) starting at (0,0,0) and consisting of n steps taken from {(-1, -1, 0), (-1, -1, 1), (-1, 1, 0), (0, 1, 1), (1, 0, -1)}."
+A331893,49,,,,,,,False,False,0,0,1.0,,Positive numbers k such that both k and -k are a palindromes in negabinary representation.
+A187303,31,,,,,,,False,False,0,0,1.0,,"Number of 8-step one space leftwards or up, two space rightwards or down asymmetric rook's tours on an n X n board summed over all starting positions."
+A359227,60,,,,,,,False,False,0,0,1.0,,Number of divisors of 4*n-3 of form 4*k+1.
+A328383,60,,,,,,,False,False,0,0,1.0,,"a(n) gives the number of iterations of x -> A003415(x) needed to reach the first number which is either a divisor or multiple of n, but not both at the same time. If no such number can ever be reached, a(n) is 0 (when either n is of the form p^p, or if the iteration would never stop). When the number reached is a divisor of n, a(n) is -1 * iteration count."
+A079131,55,,,,,,,False,False,0,0,1.0,,Primes such that iterated sum-of-digits (A038194) is odd.
+A178620,60,,,,,,,False,False,0,0,1.0,,Sum of binary digits ( = sum of ternary digits ) of terms in A037301.
+A191387,60,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,k) is the number of dispersed Dyck paths of length n with k valleys at level 0."
+A193900,50,,,,,,,False,False,0,0,1.0,,Mirror of the triangle A193899.
+A347455,55,,,,,,,False,False,0,0,1.0,,Heinz numbers of integer partitions with non-integer alternating product.
+A180194,43,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,k) is the number of permutations of [n] having k blocks of even length."
+A275446,57,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,k) is the number of compositions of n with parts in {2,1,3,5,7,9,...} and having asymmetry degree equal to k (n>=0; 0<=k<=floor(n/3))."
+A102001,30,9,3,0,9,42,0,True,False,1,0,0.034970857618651124,,"A weighted tribonacci, (1,2,4)."
+A080702,60,,,,,,,False,False,0,0,1.0,,"a(1)=3; for n>1, a(n) = smallest number > a(n-1) such that the condition ""if n is in the sequence then a(n) is even"" is satisfied."
+A374590,55,,,,,,,False,False,0,0,1.0,,Numbers whose maximum exponent in their prime factorization is an evil number (A001969).
+A283595,60,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,k) is the number of Motzkin prefixes (i.e., left factors of Motzkin paths) of length n and height k."
+A179531,60,,,,,,,False,False,0,0,1.0,,"a(0)= 0, a(1)= 1; for n>1, a(n) = a(n-2) - min{a(n-1),n} if that number is positive, otherwise a(n) = a(n-2) + max{a(n-1),n}."
+A138674,60,,,,,,,False,False,0,0,1.0,,a(n) = prime(n)^5 mod prime(n-1).
+A236423,48,,,,,,,False,False,0,0,1.0,,Numbers k such that m^2 + k^2/m^2 is prime for every m|k.
+A383705,60,,,,,,,False,False,0,0,1.0,,Numerator of Dirichlet g.f.: Sum_{n>=1} a(n)/n^s = zeta(s)^(2/3).
+A335152,60,,,,,,,False,False,0,0,1.0,,Number of vertices in polytope representing the number n.
+A264977,60,,,,,,,False,False,0,0,1.0,,"a(0) = 0, a(1) = 1, a(2*n) = 2*a(n), a(2*n+1) = a(n) XOR a(n+1)."
+A260589,54,,,,,,,False,False,0,0,1.0,,"Irregular table read by rows: n-th row lists the prime factors of A173426(n), with repetition."
+A164876,44,,,,,,,False,False,0,0,1.0,,Record differences for n^2 - phi(n)*sigma(n).
+A273464,43,,,,,,,False,False,0,0,1.0,,"The number of tilings of an equilateral triangle of side length n with k lozenges and n^2 - 2*k unit triangles. Triangle T(n, k) with n >= 1 and 0 <= k <= n*(n + 1)/2, read by rows."
+A381606,55,,,,,,,False,False,0,0,1.0,,a(n) is the smallest prime number greater than n that contains n as a substring of its digits.
+A190032,34,,,,,,,False,False,0,0,1.0,,Number of (n+2) X 10 binary arrays with every 3 X 3 subblock commuting with each horizontal and vertical neighbor 3 X 3 subblock.
+A044843,53,,,,,,,False,False,0,0,1.0,,Positive integers having no fewer base-2 runs of even length than odd.
+A070304,60,,,,,,,False,False,0,0,1.0,,"a(n) = number of times n^2*k^2/(n^2+k^2) is an integer as k ranges over 0, 1, 2, ..."
+A285808,60,,,,,,,False,False,0,0,1.0,,a(n) = smallest k such that (6*k-3)*2^n-1 is prime.
+A072106,60,,,,,,,False,False,0,0,1.0,,The number of nontotients (even and odd) in the reduced residue system of n.
+A332931,60,,,,,,,False,False,0,0,1.0,,Sum of round(sqrt(d)) where d runs through the divisors of n.
+A082568,60,,,,,,,False,False,0,0,1.0,,"First nontrivial square root of unity mod A033949(n); i.e., smallest x > 1 such that x^2 == 1 mod A033949(n)."
+A022298,60,,,,,,,False,False,0,0,1.0,,Exactly half of first n terms of A006928 are 1's (not known to be infinite).
+A165567,39,,,,,,,False,False,0,0,1.0,,"Primes of the form (p^2 - 1)/8 - p, where p is also a prime."
+A139931,42,,,,,,,False,False,0,0,1.0,,Primes of the form 6x^2+55y^2.
+A138711,60,,,,,,,False,False,0,0,1.0,,"n-th run has length n-th positive triangular number, with digits 0 and 1 only, starting with 1."
+A240179,48,,,,,,,False,False,0,0,1.0,,Number of partitions of n such that (least part) <= (multiplicity of greatest part).
+A290326,60,,,,,,,False,False,0,0,1.0,,"Triangle read by rows: T(n,k) is the number of c-nets with n+1 faces and k+1 vertices."
+A112789,45,,,,,,,False,False,0,0,1.0,,Primes such that the sum of the predecessor and successor primes is divisible by 11.
+A383095,60,,,,,,,False,False,0,0,1.0,,Number of integer partitions of n having exactly one permutation with all equal run-sums.
+A054402,41,,,,,,,False,False,0,0,1.0,,Numbers that are the sum of a positive square and a positive cube in more than one way.
+A086112,60,15,6,0,15,56,0,True,False,1,0,0.1275626423690205,,Denominator of the mean deviation of a discrete uniform distribution on n elements.
+A267764,45,,,,,,,False,False,0,0,1.0,,Numbers whose base-4 representation is a square when read in base 10.
+A211006,60,,,,,,,False,False,0,0,1.0,,"Pair (n,p) where n is the sum of adjacent nonprimes and p is the sum of adjacent primes."
+A081735,60,,,,,,,False,False,0,0,1.0,,Numbers k such that the k-th Motzkin number == 1 (mod k).
+A130125,60,,,,,,,False,False,0,0,1.0,,"Triangle defined by A128174 * A130123, read by rows."
+A169916,60,,,,,,,False,False,0,0,1.0,,Squares in carryless arithmetic mod 10 with addition and multiplication of digits both defined to be addition mod 10.
+A277160,60,6,,,,,,False,True,1,1,1.0,,Lexicographically least sequence of nonnegative integers that avoids 13/8-powers.
+A031967,45,,,,,,,False,False,0,0,1.0,,Numbers with exactly four distinct base-8 digits.
+A317083,60,,,,,,,False,False,0,0,1.0,,a(n) is the first term less than the initial 2n+1 in the reduced Collatz trajectory.
+A201906,60,,,,,,,False,False,0,0,1.0,,Decimal expansion of the x nearest 0 that satisfies x^2 + 4*x + 2 = e^x.
+A220160,31,,,,,,,False,False,0,0,1.0,,Numbers n for which phi(n) = phi(n-1) - phi(n+1).
+A311604,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.300.1 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A112594,60,,,,,,,False,False,0,0,1.0,,Natural function used for generating x^2 and sqrt(x) only using iteration and Q(x) (the characteristic function of sqrt).
+A158874,33,10,2,1,10,44,0,True,False,1,0,0.03802938634399308,,a(n) = (n + 4)*(n + 3)*(n + 2)*(n + 1)*n / 5 = 24*A000389(n+4).
+A331362,60,,,,,,,False,False,0,0,1.0,,"a(n) is the greatest value of the form s_1 + ... + s_k such that the concatenation of the binary representations of s_1^2, ..., s_k^2 equals the binary representation of n."
+A259307,43,,,,,,,False,False,0,0,1.0,,Numbers that belong to at least one amicable multiset.
+A176112,49,,,,,,,False,False,0,0,1.0,,Primes that take a prime number of steps to reach 1 under the Collatz function.
+A072621,60,,,,,,,False,False,0,0,1.0,,Permutation of natural numbers obtained from the permutation A072088 (one-based).
+A351860,50,31,6,1,22,522,0,True,False,1,0,0.49572649572649574,,Number of minimum cyclic edge cuts in the complete graph K_n.
+A066478,41,,,,,,,False,False,0,0,1.0,,Numbers having exactly twelve anti-divisors.
+A302921,46,,,,,,,False,False,0,0,1.0,,"Values of A000010(m) where gcd(A000010(m), m) equals the number of solutions of A000010(m) = A000010(x), and m is the least solution."
+A350579,38,,,,,,,False,False,0,0,1.0,,The first number in A350578 to appear n times.
+A309286,60,,,,,,,False,False,0,0,1.0,,"a(0) = 0, a(1) = 1, and for any n > 1, a(n) = Sum_{k > 1} (-1)^k * a(floor(n/k^2))."
+A364286,60,,,,,,,False,False,0,0,1.0,,Composite numbers k for which A324644(k)/A324198(k) = 2.
+A024308,60,,,,,,,False,False,0,0,1.0,,"a(n) = s(1)t(n) + s(2)t(n-1) + ... + s(k)t(n+1-k), where k=[ (n+1)/2 ], s = (natural numbers >= 2), t = A023532."
+A141587,59,,,,,,,False,False,0,0,1.0,,"Nonprimes of the form c(c(c(i)-3)-3)-3, where A002808(i)=c(i)=i-th composite."
+A142031,44,,,,,,,False,False,0,0,1.0,,Primes congruent to 27 mod 31.
+A216170,33,,,,,,,False,False,0,0,1.0,,Fermat pseudoprimes to base 2 of the form (n^2 + 2*n)/3.
+A294582,60,,,,,,,False,False,0,0,1.0,,"Square array A(n,k), n >= 0, k >= 0, read by antidiagonals, where column k is the expansion of Product_{j>=1} 1/(1 - j^k*x^j)^j."
+A246955,60,,,,,,,False,False,0,0,1.0,,"Numbers j for which the symmetric representation of sigma(j) has two parts, each of width one."
+A158592,36,9,1,2,9,64,0,True,False,1,0,0.05409974640743871,,a(n) = 361*n^2 + 19.
+A173012,60,9,3,0,9,30,0,True,False,1,0,0.2158273381294964,,"a(1) = 1, for n >= 2; a(n) = the smallest number h such that sigma(h) = A000203(h) = a(n-1) + 2, a(n) = 0 if no such number exists."
+A312385,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.4.87.2 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A329647,60,,,,,,,False,False,0,0,1.0,,"Bitwise-XOR of exponents of prime factors of A108951(n), where A108951 is fully multiplicative with a(prime(i)) = prime(i)# = Product_{i=1..i} A000040(i)."
+A233999,60,11,,,,,,False,True,2,1,1.0,,"Values of n such that numbers of the form x^2+n*y^2 for some integers x, y cannot have prime factor of 7 raised to an odd power."
+A031864,36,,,,,,,False,False,0,0,1.0,,Numbers k such that the period of the continued fraction for sqrt(k) contains exactly 96 ones.
+A394735,54,,,,,,,False,False,0,0,1.0,,Primes prime(k) such that prime(k+1) - prime(k) is a perfect power.
+A162866,30,,,,,,,False,False,0,0,1.0,,Initial prime of exactly nine consecutive primes congruent to 3 modulo 4.
+A331995,60,7,,,,,,False,True,2,1,1.0,,Numbers with at most one distinct prime prime index.
+A311597,50,,,,,,,False,False,0,0,1.0,,Coordination sequence Gal.6.293.1 where Gal.u.t.v denotes the coordination sequence for a vertex of type v in tiling number t in the Galebach list of u-uniform tilings.
+A330312,60,,,,,,,False,False,0,0,1.0,,Gaps between palindromes in base 3: first differences of A014190.
+A215604,60,15,,,,,,False,True,2,1,1.0,,"a(0)=0, a(n) = (n + a(floor(n/2))) mod 3."
+A073047,60,,,,,,,False,False,0,0,1.0,,Least k such that x(k)=0 where x(1)=n and x(k)=k*floor(x(k-1)/k).
+A071441,60,,,,,,,False,False,0,0,1.0,,Sprague-Grundy values for octal game .1113337.
+A085936,56,,,,,,,False,False,0,0,1.0,,"Numbers k such that the number resulting from sorting the digits of k in ascending order + the sum of the squares of the digits of k is a palindrome. Or, sortdigits(k) + digitsumsquare(k) is a palindrome."
+A152214,60,,,,,,,False,False,0,0,1.0,,"The digits of Pi from BBP modulo 4 as symbols {0,1,2,3} interpreted as groups of symbols {a,b,c} in a 4^3==64 symbol set."
+A069527,60,,,,,,,False,False,0,0,1.0,,"Smallest multiple of n with digit sum = 8, or 0 if no such number exists, e.g. a(3k)= 0."
+A331464,43,,,,,,,False,False,0,0,1.0,,Numbers k such that k and k + 1 are both binary Smith numbers (A278909).
+A386156,43,,,,,,,False,False,0,0,1.0,,"Primes having only {2, 4, 6, 9} as digits."
+A240305,50,,,,,,,False,False,0,0,1.0,,Number of partitions p of n such that (maximal multiplicity of the parts of p) < (number of distinct parts of p).
+A153146,54,,,,,,,False,False,0,0,1.0,,Numbers n such that 2*n + 19 and 2*n - 19 are prime.
+A211899,39,13,3,1,13,64,0,True,False,1,0,0.060320452403393024,,"Number of triangular n X n X n arrays colored with integers 0 upwards introduced in row major order, with no element equal to any neighbor, and containing the value n(n+1)/2-2."
+A171492,60,,,,,,,False,False,0,0,1.0,,Numbers that are not divisible by each of their nonzero decimal digits.
+A330455,34,,,,,,,False,False,0,0,1.0,,Number of sets of nonempty multisets of nonempty sets of positive integers with total sum n.

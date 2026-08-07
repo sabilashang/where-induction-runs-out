@@ -1,0 +1,128 @@
+{
+  "config": {
+    "label": "oeis_60_strict_calibration",
+    "terms": 60,
+    "min_terms": 30,
+    "strict_leading": 1,
+    "shuffle": 0,
+    "limit": 500,
+    "anums_file": "results/sample_anums_seed0.txt",
+    "anums_slice": "first 500 of sample_anums_seed0.txt",
+    "MAX_ORDER": 6,
+    "MAX_DEGREE": 4,
+    "SLACK": 2,
+    "N_MIN": 6,
+    "prevent_sleep": true
+  },
+  "n_sequences": 500,
+  "n_jobs": 8,
+  "cpu_count": 8,
+  "wall_seconds": 1116.5567138999995,
+  "cpu_seconds_sum_workers": 3006.171875,
+  "per_sequence_wall_s": {
+    "median": 16.31720310000037,
+    "p90": 28.942854999999327,
+    "max": 103.95915779999996,
+    "min": 0.5321163999997225,
+    "sum": 8520.322653199999
+  },
+  "per_sequence_cpu_s": {
+    "median": 6.5,
+    "p90": 9.171875,
+    "max": 30.796875,
+    "min": 0.25,
+    "sum": 3006.171875
+  },
+  "rows_per_hour_wall": 1612.0990341035292,
+  "rows_per_hour_cpu": 598.7681592556979,
+  "projected_hours_wall_20000": 12.406185709999995,
+  "projected_hours_cpu_20000": 33.40190972222222,
+  "projected_hours_arithmetic_wall": "rows_per_hour_wall = 500 / (1116.5567138999995/3600) = 1612.0990341035292; projected_hours_wall_20000 = 20000 / rows_per_hour_wall = 12.406185709999995",
+  "projected_hours_arithmetic_cpu": "rows_per_hour_cpu = 500 / (3006.171875/3600) = 598.7681592556979; projected_hours_cpu_20000 = 20000 / rows_per_hour_cpu = 33.40190972222222",
+  "interpretation": {
+    "wall_projection": "Expected wall-clock hours for a full 20000-seq run at this parallelism (n_jobs=8).",
+    "cpu_projection": "Aggregate worker CPU-hours for 20000 sequences (single-core-equivalent compute), independent of sleep/throttling on the parent wall clock.",
+    "under_4h_wall": false,
+    "still_20h_plus_wall": false
+  },
+  "slowest10": [
+    {
+      "anum": "A372119",
+      "n_terms": 60,
+      "max_digit_len": 2,
+      "wall_s": 103.95915779999996,
+      "cpu_s": 27.71875
+    },
+    {
+      "anum": "A253443",
+      "n_terms": 60,
+      "max_digit_len": 2,
+      "wall_s": 100.91773480000029,
+      "cpu_s": 30.796875
+    },
+    {
+      "anum": "A043675",
+      "n_terms": 60,
+      "max_digit_len": 2,
+      "wall_s": 86.86971660000017,
+      "cpu_s": 27.859375
+    },
+    {
+      "anum": "A075354",
+      "n_terms": 57,
+      "max_digit_len": 3,
+      "wall_s": 86.49808519999988,
+      "cpu_s": 23.09375
+    },
+    {
+      "anum": "A165077",
+      "n_terms": 60,
+      "max_digit_len": 2,
+      "wall_s": 73.88822509999954,
+      "cpu_s": 21.953125
+    },
+    {
+      "anum": "A111698",
+      "n_terms": 60,
+      "max_digit_len": 2,
+      "wall_s": 73.7780745,
+      "cpu_s": 28.90625
+    },
+    {
+      "anum": "A369901",
+      "n_terms": 54,
+      "max_digit_len": 4,
+      "wall_s": 57.84058410000034,
+      "cpu_s": 19.515625
+    },
+    {
+      "anum": "A071804",
+      "n_terms": 60,
+      "max_digit_len": 1,
+      "wall_s": 45.20116490000055,
+      "cpu_s": 10.0625
+    },
+    {
+      "anum": "A102422",
+      "n_terms": 60,
+      "max_digit_len": 2,
+      "wall_s": 44.42465579999953,
+      "cpu_s": 16.90625
+    },
+    {
+      "anum": "A018804",
+      "n_terms": 60,
+      "max_digit_len": 3,
+      "wall_s": 43.763995299999806,
+      "cpu_s": 9.890625
+    }
+  ],
+  "earlier_timing_discarded": {
+    "source": "results/oeis_60_timing.json",
+    "reason": "Machine sleep inflated wall elapsed; unreliable.",
+    "old_rows_completed": 550,
+    "old_wall_minutes": 52.762408316666665,
+    "old_projected_hours": 31.97721716161616
+  },
+  "finished_utc": "2026-08-02T07:55:19.286985+00:00"
+}

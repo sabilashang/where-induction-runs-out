@@ -1,0 +1,29 @@
+{
+  "script": "experiments/profile_guess_prec.py",
+  "selection": "top 200 from sample_anums_seed0.txt by (n_terms * max_digit_len), full OEIS terms",
+  "n_profiled": 200,
+  "baseline_before_task2": {
+    "median_s": 0.3544207999948412,
+    "p90_s": 0.8398445000057109,
+    "max_s": 2.913050100003602,
+    "sum_s": 91.00144279998494,
+    "source": "results/profile_guess_prec_200_baseline.json"
+  },
+  "worst10_baseline": [
+    {"anum": "A060391", "n_terms": 69, "max_digit_len": 24, "max_abs_bits": 77, "seconds": 2.9131, "found": false},
+    {"anum": "A191358", "n_terms": 348, "max_digit_len": 2, "max_abs_bits": 7, "seconds": 2.7701, "found": false},
+    {"anum": "A006296", "n_terms": 36, "max_digit_len": 29, "max_abs_bits": 95, "seconds": 2.4310, "found": true},
+    {"anum": "A260589", "n_terms": 54, "max_digit_len": 25, "max_abs_bits": 82, "seconds": 2.1646, "found": false},
+    {"anum": "A332211", "n_terms": 70, "max_digit_len": 19, "max_abs_bits": 61, "seconds": 1.4456, "found": false},
+    {"anum": "A395041", "n_terms": 69, "max_digit_len": 22, "max_abs_bits": 71, "seconds": 1.4454, "found": false},
+    {"anum": "A000397", "n_terms": 76, "max_digit_len": 9, "max_abs_bits": 29, "seconds": 1.3989, "found": false},
+    {"anum": "A242511", "n_terms": 41, "max_digit_len": 16, "max_abs_bits": 51, "seconds": 1.3178, "found": false},
+    {"anum": "A376545", "n_terms": 66, "max_digit_len": 24, "max_abs_bits": 77, "seconds": 1.2723, "found": false},
+    {"anum": "A061538", "n_terms": 79, "max_digit_len": 8, "max_abs_bits": 25, "seconds": 1.2305, "found": false}
+  ],
+  "diagnosis": {
+    "guess_prec_bigint_blowup_on_this_set": "PARTIALLY REFUTED as sole primary wall on this 200-set: median 0.35s, max 2.91s, sum 91s before Task2a. Exact Q still costly on some large-digit fits, but not multi-minute.",
+    "length_matters_without_huge_digits": "CONFIRMED: A191358 (348 terms, max_abs=90) is 2nd worst",
+    "revision_spectrum_prefix_rescan": "CONFIRMED as OEIS scale killer: O(n) full re-solves dominate Task3 (60-term 20k projected ~32h)"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "baseline_median_s": 0.3544207999948412,
+  "baseline_p90_s": 0.8398445000057109,
+  "baseline_max_s": 2.913050100003602,
+  "baseline_sum_s": 91.00144279998494,
+  "after_median_s": 0.13816549999978633,
+  "after_p90_s": 0.2343826999999692,
+  "after_max_s": 0.7813384999999471,
+  "after_sum_s": 29.734287899999117,
+  "speedup_sum": 3.060488386540027,
+  "speedup_median": 2.5651902971102722,
+  "speedup_p90": 3.5832188126761118,
+  "note": "Task2a: mod-p + Wang rational reconstruction; Task2b spectrum-skip REVERTED",
+  "after_worst10": [
+    {
+      "anum": "A060391",
+      "n_terms": 69,
+      "max_digit_len": 24,
+      "max_abs": "116415321826934814453125",
+      "max_abs_bits": 77,
+      "seconds": 0.7813384999999471,
+      "found": false
+    },
+    {
+      "anum": "A324300",
+      "n_terms": 121,
+      "max_digit_len": 8,
+      "max_abs": "15721720",
+      "max_abs_bits": 24,
+      "seconds": 0.7372196999999687,
+      "found": false
+    },
+    {
+      "anum": "A191358",
+      "n_terms": 348,
+      "max_digit_len": 2,
+      "max_abs": "90",
+      "max_abs_bits": 7,
+      "seconds": 0.7132208000000446,
+      "found": false
+    },
+    {
+      "anum": "A006296",
+      "n_terms": 36,
+      "max_digit_len": 29,
+      "max_abs": "36567311475673299914222851832",
+      "max_abs_bits": 95,
+      "seconds": 0.5873807000000397,
+      "found": true
+    },
+    {
+      "anum": "A242511",
+      "n_terms": 41,
+      "max_digit_len": 16,
+      "max_abs": "1220234181784800",
+      "max_abs_bits": 51,
+      "seconds": 0.46193859999993947,
+      "found": false
+    },
+    {
+      "anum": "A008302",
+      "n_terms": 129,
+      "max_digit_len": 5,
+      "max_abs": "29228",
+      "max_abs_bits": 15,
+      "seconds": 0.3189058999998906,
+      "found": false
+    },
+    {
+      "anum": "A376545",
+      "n_terms": 66,
+      "max_digit_len": 24,
+      "max_abs": "123456789101112131415161",
+      "max_abs_bits": 77,
+      "seconds": 0.3139545999999882,
+      "found": false
+    },
+    {
+      "anum": "A320571",
+      "n_terms": 77,
+      "max_digit_len": 19,
+      "max_abs": "8223519074965787731",
+      "max_abs_bits": 63,
+      "seconds": 0.3123195000000578,
+      "found": false
+    },
+    {
+      "anum": "A120455",
+      "n_terms": 55,
+      "max_digit_len": 57,
+      "max_abs": "431504180604995178786476739454249921717325183597033134416",
+      "max_abs_bits": 189,
+      "seconds": 0.28859609999994973,
+      "found": false
+    },
+    {
+      "anum": "A338641",
+      "n_terms": 108,
+      "max_digit_len": 9,
+      "max_abs": "349186750",
+      "max_abs_bits": 29,
+      "seconds": 0.28701950000004217,
+      "found": false
+    }
+  ]
+}

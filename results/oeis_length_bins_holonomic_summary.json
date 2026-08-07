@@ -1,0 +1,57 @@
+{
+  "source": "results/oeis_results.csv",
+  "denominator": "true_holonomic (order/degree/n_id non-null)",
+  "n_holonomic_total": 4169,
+  "n_revise_total": 367,
+  "weighted_mean_pct": 8.8031,
+  "fixed30_headline_pct": 11.3309,
+  "consistent_with_fixed30_11_3": false,
+  "note": "Bins from mixed-length oeis_results.csv (a different population from the fixed 30-term headline 315/2780 in oeis_fixed30.csv / holonomic_denominator_oeis_fixed30.json).",
+  "bins": [
+    {
+      "bin_lo": 20,
+      "bin_hi": 22,
+      "n_revise": 35,
+      "n_holonomic": 838,
+      "rev_rate": 0.041766109785202864,
+      "pct_str": "35/838 (4.1766%)",
+      "pct_1dp": 4.2
+    },
+    {
+      "bin_lo": 23,
+      "bin_hi": 25,
+      "n_revise": 34,
+      "n_holonomic": 558,
+      "rev_rate": 0.06093189964157706,
+      "pct_str": "34/558 (6.0932%)",
+      "pct_1dp": 6.1
+    },
+    {
+      "bin_lo": 26,
+      "bin_hi": 28,
+      "n_revise": 43,
+      "n_holonomic": 461,
+      "rev_rate": 0.09327548806941431,
+      "pct_str": "43/461 (9.3275%)",
+      "pct_1dp": 9.3
+    },
+    {
+      "bin_lo": 29,
+      "bin_hi": 31,
+      "n_revise": 20,
+      "n_holonomic": 353,
+      "rev_rate": 0.056657223796033995,
+      "pct_str": "20/353 (5.6657%)",
+      "pct_1dp": 5.7
+    },
+    {
+      "bin_lo": 32,
+      "bin_hi": 34,
+      "n_revise": 235,
+      "n_holonomic": 1959,
+      "rev_rate": 0.11995916283818274,
+      "pct_str": "235/1959 (11.9959%)",
+      "pct_1dp": 12.0
+    }
+  ]
+}

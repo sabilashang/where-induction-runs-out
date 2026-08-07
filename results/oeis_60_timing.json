@@ -1,0 +1,32 @@
+{
+  "config": {
+    "terms": 60,
+    "min_terms": 30,
+    "shuffle": 0,
+    "limit": 20000,
+    "MAX_ORDER": 6,
+    "MAX_DEGREE": 4,
+    "SLACK": 2,
+    "N_MIN": 6,
+    "anums_file": "results/sample_anums_seed0.txt"
+  },
+  "oeis_60_strict": {
+    "status": "KILLED_INCOMPLETE",
+    "reason": "projected wall time >> 2 hours",
+    "rows_completed": 550,
+    "rows_target": 20000,
+    "frac": "550/20000",
+    "wall_seconds_observed": 3165.744499,
+    "wall_minutes_observed": 52.762408316666665,
+    "created": "2026-08-02T03:36:28",
+    "last_write": "2026-08-02T04:29:13",
+    "rate_seq_per_sec": 0.17373480398488722,
+    "projected_hours_for_20000": 31.97721716161616,
+    "conservation_20000": false,
+    "note": "CSV is partial; do not use for headline rates. Loose not started (same cost class)."
+  },
+  "oeis_60_loose": {
+    "status": "NOT_STARTED",
+    "reason": "strict already projects >> 2h; kill rule applies"
+  }
+}
