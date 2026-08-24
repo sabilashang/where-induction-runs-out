@@ -31,6 +31,11 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,
             urlcolor=blue!50!black]{hyperref}
+\ifanon
+  \hypersetup{pdfauthor={}, pdfcreator={LaTeX}, pdfproducer={pdfTeX}}
+\else
+  \hypersetup{pdfauthor={Sabilashan Ganeshan}, pdfcreator={LaTeX}, pdfproducer={pdfTeX}}
+\fi
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
@@ -70,11 +75,12 @@ and the Memorisation Gap in Integer-Sequence Benchmarks}
 \maketitle
 
 \begin{abstract}
-Integer sequences from the OEIS are increasingly used to benchmark
-mathematical reasoning in language models. We ask what such benchmarks
-actually measure, using an exactly computable reference learner: two-part
-minimum description length (MDL) over the class of P-recursive (holonomic)
-recurrences, evaluated on every prefix of a sequence as terms arrive.
+Integer sequences from the On-Line Encyclopedia of Integer Sequences (OEIS)
+are increasingly used to benchmark mathematical reasoning in language models.
+We ask what such benchmarks actually measure, using an exactly computable
+reference learner: two-part minimum description length (MDL) over the class of
+P-recursive (holonomic) recurrences, evaluated on every prefix of a sequence as
+terms arrive.
 
 Three findings follow. First, MDL difficulty is a \emph{parameter count}. The
 discovery point $\nd$, the first prefix length at which a symbolic hypothesis
@@ -97,8 +103,12 @@ where MDL reports no theory, but hedge appropriately. Confident errors are
 tracks recognition of the sequence rather than induction of its rule.
 OEIS-derived benchmarks therefore substantially measure memorisation, and
 MDL supplies a cheap, contamination-free difficulty signal they currently lack.
+\ifanon
+Code and data will be released upon acceptance.
+\else
 Code, data and all model responses are released at
 \url{https://github.com/sabilashang/where-induction-runs-out}.
+\fi
 \end{abstract}
 
 % ===========================================================================
@@ -115,10 +125,9 @@ the rule is pinned down.
 
 This paper answers that question with an exactly computable reference learner,
 then uses the answer to audit what the benchmark measures. The learner is
-two-part minimum description length \citep{rissanen1978,grunwald2007} over the
-class of P-recursive (holonomic) recurrences, applied to every prefix of a
-sequence as terms arrive one at a time. We choose the class because its
-minimum-description-length hypothesis is exactly computable by linear algebra
+two-part MDL \citep{rissanen1978,grunwald2007} over holonomic recurrences,
+applied to every prefix of a sequence as terms arrive one at a time. We choose
+the class because its MDL hypothesis is exactly computable by linear algebra
 over $\mathbb{Q}$ (no search heuristic confounds the measurement), and because
 it is the natural symbolic class for integer sequences
 \citep{stanley1980,zeilberger1990,kauers2009}.
@@ -149,8 +158,8 @@ explains and is never selected. At OEIS scale the rate rises to
 discovery point is predicted by the identifiability bound
 $\nid = (r{+}1)(d{+}1) + s + r$, a combinatorial function of the selected
 operator's order and degree alone---exactly in $89\%$ of a labelled classical
-corpus and within $\pm1$ in $100\%$, against MAE $3.20$ for a compression-based
-predictor.
+corpus and within $\pm1$ in $100\%$, against mean absolute error (MAE) $3.20$
+for a compression-based predictor.
 
 \item \textbf{Growth is irrelevant} (\S\ref{sec:growth}). A controlled scaling
 experiment over twelve orders of magnitude leaves $\nd$ exactly unchanged,
@@ -170,8 +179,8 @@ recognition rather than induction.
 \end{enumerate}
 
 We regard the last of these as the practical contribution. MDL difficulty is
-cheap to compute, independent of term magnitude, and---unlike accuracy on a
-public dataset---cannot be inflated by memorisation.
+cheap to compute, independent of term magnitude, and (unlike accuracy on a
+public dataset) cannot be inflated by memorisation.
 
 % ===========================================================================
 \section{Related work}
@@ -180,22 +189,22 @@ public dataset---cannot be inflated by memorisation.
 
 \paragraph{Linear complexity profiles.} The closest quantitative relative of
 the revision spectrum comes from cryptography, not machine learning. The
-linear complexity profile $L(s,N)$ of a binary sequence is the length of the
-shortest LFSR generating its first $N$ terms, computed by the Berlekamp--Massey
-algorithm \citep{massey1969}; its \emph{jumps} as $N$ increases have been
-studied in depth \citep{rueppel1986,niederreiter1990,wangmassey1986}. This is
-precisely a revision spectrum for the special case of linear recurrences over a
-finite field. We differ in three ways that matter. First, our hypothesis class
-is holonomic rather than $\mathbb{F}_q$-linear, admitting polynomial
-coefficients and hence factorials, binomials and Catalan-type sequences.
-Second, our metric is a codelength in bits under a two-part MDL objective
-rather than a register length, so hypotheses of different shapes are directly
-comparable. Third, the domain and the goal are inverted: the cryptographic
-literature studies pseudorandom keystreams and wants profiles to be irregular,
-whereas we study structured mathematical sequences and ask what their
-regularity implies. We report the LCP as a baseline in
-Appendix~\ref{sec:lcp}; it separates holonomic from non-holonomic sequences but
-cannot distinguish the classes within.
+linear complexity profile (LCP) $L(s,N)$ of a binary sequence is the length of
+the shortest LFSR generating its first $N$ terms, computed by the
+Berlekamp--Massey algorithm \citep{massey1969}; its \emph{jumps} as $N$
+increases have been studied in depth
+\citep{rueppel1986,niederreiter1990,wangmassey1986}. This is precisely a
+revision spectrum for the special case of linear recurrences over a finite
+field. We differ in three ways that matter. First, our hypothesis class is
+holonomic rather than $\mathbb{F}_q$-linear, admitting polynomial coefficients
+and hence factorials, binomials and Catalan-type sequences. Second, our metric
+is a codelength in bits under a two-part MDL objective rather than a register
+length, so hypotheses of different shapes are directly comparable. Third, the
+domain and the goal are inverted: the cryptographic literature studies
+pseudorandom keystreams and wants profiles to be irregular, whereas we study
+structured mathematical sequences and ask what their regularity implies. We
+report the LCP as a baseline in Appendix~\ref{sec:lcp}; it separates holonomic
+from non-holonomic sequences but cannot distinguish the classes within.
 
 \paragraph{Mind-change complexity.} Formal learning theory quantifies how
 often a learner changes its conjecture before converging in the limit
@@ -232,6 +241,34 @@ studying the trajectory, but do not compute one.
 \section{Setup}
 % ===========================================================================
 
+Table~\ref{tab:notation} lists the symbols used below.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{ll}
+\toprule
+symbol & meaning \\
+\midrule
+$n$ & prefix length \\
+$r$ & operator order \\
+$d$ & degree of the coefficient polynomials \\
+$s$ & over-determination slack \\
+$c_{ij}$ & integer coefficient of $n^j$ in $p_i$ \\
+$L(n)$ & MDL codelength of the prefix of length $n$ \\
+$\Llit$ & verbatim (literal) cost of a prefix \\
+$L(H)$ & description length of hypothesis $H$ \\
+$\rho(n)$ & normalized revision at prefix length $n$ \\
+$\nd$ & discovery point \\
+$\nid$ & identifiability bound \\
+$\nx$ & profitability (compression) threshold \\
+$\lambda$ & compression ratio $L(N)/\Llit(N)$ \\
+\bottomrule
+\end{tabular}
+\caption{Notation used throughout.}
+\label{tab:notation}
+\end{table}
+
 \subsection{Codes}
 
 All description lengths are in bits under prefix-free codes, so the two-part
@@ -248,7 +285,7 @@ every sequence including those with no recurrence at all.
 
 \subsection{Hypothesis class}
 
-Our class $\Prec$ consists of P-recursive (holonomic) operators
+Our class $\Prec$ consists of holonomic operators
 \begin{equation}
 \sum_{i=0}^{r} p_i(n)\, s_{n+i} \;=\; 0,
 \qquad p_i(n) = \sum_{j=0}^{d} c_{ij}\, n^{j},
@@ -262,11 +299,15 @@ L(H) \;=\; \ell(r) + \ell(d) + \sum_{i,j} \ell_{\pm}(c_{ij})
            + \sum_{k=1}^{r} \ell_{\pm}(s_k).
 \label{eq:LH}
 \end{equation}
-We admit $H$ only if it annihilates every available term and its leading
-polynomial $p_r$ is nonvanishing on the range used, so that $H$ genuinely
-determines the sequence and is therefore a legitimate code for it. Because
-$H$ reproduces the data exactly, $L(D\mid H) = 0$ and the two-part objective
-reduces to \eqref{eq:LH}.
+For Fibonacci, $r=2$, $d=0$, the coefficients are $(1,1,-1)$ (encoding
+$s_n + s_{n+1} - s_{n+2} = 0$), and the initial terms are $(0,1)$. Then
+$\ell(r)=3$, $\ell(d)=1$, each of the three coefficients costs $4$ bits, and
+the two initials cost $2$ and $4$ bits, so $L(H)=22$. We admit $H$ only if it
+annihilates every available term and its leading polynomial $p_r$ is
+nonvanishing on the range used, so that $H$ genuinely determines the sequence
+and is therefore a legitimate code for it. Because $H$ reproduces the data
+exactly, $L(D\mid H) = 0$ and the two-part objective reduces to
+\eqref{eq:LH}.
 
 The MDL codelength of a prefix is then
 \begin{equation}
@@ -284,6 +325,9 @@ of $s = 2$ equations---the standard guard in computer-algebra guessing
 \citep{kauers2009}. \S\ref{sec:revfree} shows this guard is nearly redundant.
 
 \subsection{The revision spectrum}
+
+A revision spectrum records, term by term, whether the next integer was
+predicted, merely stored, or forced the learner to change its hypothesis.
 
 \begin{definition}[Revision spectrum]
 For a sequence $s$ with $N$ terms, the \emph{raw revision} at $n$ is
@@ -346,6 +390,9 @@ is class-agnostic and runs unchanged on the OEIS \texttt{stripped} dump; see
 \label{sec:revfree}
 % ===========================================================================
 
+On labelled classical sequences the learner almost never changes its
+hypothesis.
+
 Across the corpus, \textbf{$2$ of $61$ sequences} exhibit any structural
 revision (the cubes A000578 and the square pyramidal numbers A000330, one
 each). Every other sequence either finds its operator once and holds it
@@ -390,8 +437,8 @@ conflating the two inflates the revision rate roughly fivefold.
 Second, binning the mixed-length run (\texttt{oeis\_results.csv}; a different population) by available terms gives true-holonomic revision rates
 $4.2\%$ ($20$--$22$), $6.1\%$ ($23$--$25$), $9.3\%$ ($26$--$28$),
 $5.7\%$ ($29$--$31$) and $12.0\%$ ($32$--$34$).
-The dependence is real but modest---far milder than an $n_d$-present
-denominator suggested---so any single headline figure remains somewhat
+The dependence is real but modest (far milder than an $n_d$-present
+denominator suggested), so any single headline figure remains somewhat
 budget-dependent. Cross-study comparisons must fix the term budget. A fully
 controlled sweep at fixed length is left to future work for the reasons given
 in \S\ref{sec:limitations}.
@@ -403,6 +450,9 @@ sequences that revise at all, the modal and near-universal count is one.
 \section{Discovery is identification-limited}
 \label{sec:idlimited}
 % ===========================================================================
+
+Where a formula is found is a count of free parameters, not a race against
+verbatim cost.
 
 If the trajectory is a single jump, the informative statistic is where the jump
 occurs. Two thresholds could in principle govern $\nd$:
@@ -459,22 +509,23 @@ the law is near-perfect on non-revisers and fails completely on revisers.}
 
 Among non-revisers the identifiability law holds as tightly as on the classical
 corpus ($91.9\%$ exact; MAE $0.11$, matching to two decimals). Among revisers
-it fails completely: the pooled figure is dilution, not decay. Identifiability
-predicts discovery exactly, with one named exception---a deceptive prefix,
-which the revision spectrum itself detects.
+it fails completely. Identifiability predicts discovery exactly, with one named
+exception---a deceptive prefix, which the revision spectrum itself detects.
 
 Consequently $\nd$ is determined by the pair $(r,d)$ and nothing else. It
 correlates with structural size at $r = +0.85$ and with growth rate at
 $r = -0.007$ (Figure~\ref{fig:ident}a,b). Mean $\nd$ is $7.19 \pm 0.98$ for
 \textsc{cfin}, $8.73 \pm 1.87$ for \textsc{prec} and $8.53 \pm 1.64$ for
-\textsc{poly} (one-way ANOVA $F = 4.70$, $p = 0.014$); the separation is
+\textsc{poly} (one-way analysis of variance (ANOVA) $F = 4.70$, $p = 0.014$); the
+separation is
 driven mainly by \textsc{cfin}, and \textsc{poly} and \textsc{prec} overlap
 substantially. Fittability itself separates the hierarchy perfectly: all $46$
 holonomic sequences are fitted and all $15$ non-holonomic ones are not.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_identification.pdf}
+\includegraphics[width=\textwidth]{figures/fig_identification}
+
 \caption{(a) The discovery point lies on the identity line against the
 identifiability bound. (b) It is uncorrelated with growth rate.
 (c) Control A: scaling Fibonacci's initial condition over twelve orders of
@@ -486,6 +537,8 @@ magnitude leaves $\nd$ and the compression ratio $\lambda$ exactly unchanged.}
 \section{Growth invariance}
 \label{sec:growth}
 % ===========================================================================
+
+Larger terms do not make a sequence easier to discover.
 
 That growth does not matter---already suggested by the near-zero correlation
 $r = -0.007$ above---is initially surprising: storing the first $34$
@@ -529,6 +582,9 @@ wins by the additive slack.
 \label{sec:deception}
 % ===========================================================================
 
+A structural revision occurs when a cheap wrong hypothesis fits a prefix of a
+more expensive truth.
+
 \begin{definition}[Deceptive prefix]
 A sequence has a \emph{deceptive prefix} of depth $m$ if its first $m$ terms
 are consistent with a strictly cheaper hypothesis than the one governing the
@@ -556,7 +612,7 @@ $n = 17$) followed by permanent stability ($\rho \equiv 0$).
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/fig_anatomy.pdf}
+\includegraphics[width=0.92\textwidth]{figures/fig_anatomy}
 \caption{The five phases of a revision spectrum on the planted deceptive
 sequence $D_3$ (true period $7$). Top: MDL codelength $L(n)$ against the
 verbatim cost $\Llit(n)$, shaded by the phase holding at $n$---literal (grey),
@@ -586,7 +642,7 @@ more room for a simpler one to fit a prefix by chance.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_deception.pdf}
+\includegraphics[width=\textwidth]{figures/fig_deception}
 \caption{Deceptive prefixes in the planted family $D_j$ and in random periodic
 sequences. (a) The three landmarks---spurious fit, refutation, and recovery of
 the true operator---scale exactly with the true period $p$. (b) Peak revision
@@ -602,6 +658,9 @@ sequences exhibiting a structural revision, by period.}
 \section{The wilderness}
 \label{sec:wilderness}
 % ===========================================================================
+
+Most sequences that fit a recurrence on a short prefix have no recurrence at
+full length.
 
 The classical corpus contains sequences that are fitted and sequences that are
 never fitted. At OEIS scale a third category dominates: sequences that fit a
@@ -659,13 +718,16 @@ answer is available early and no right answer is available at all.
 \label{sec:llm}
 % ===========================================================================
 
+Large language models (LLMs) err confidently on easy sequences and hedge on
+hard ones.
+
 The preceding sections give a difficulty measure that is cheap, exact, and
 independent of term magnitude. We now use it to audit the benchmark. We
-stratified $60$ sequences into three MDL regimes---\emph{clean} (holonomic, no
+stratified $60$ sequences into three MDL regimes: \emph{clean} (holonomic, no
 revisions), \emph{revising} (holonomic, $\ge 1$ structural revision), and
 \emph{wilderness} (prefix fit only, $\ge 40$ terms), sketched in
-Figure~\ref{fig:strata}---and evaluated three
-language models: Claude Sonnet 4.5, GPT-4o and Llama 3.3 70B. Each model saw
+Figure~\ref{fig:strata}, and evaluated three
+LLMs: Claude Sonnet 4.5, GPT-4o and Llama 3.3 70B. Each model saw
 the first $20$ terms and was asked, in JSON, for the next three terms, a closed
 form or the token \texttt{NO\_FORMULA\_FOUND}, a confidence rating $1$--$5$, and
 whether it recognised the sequence. Temperature $0$, one call per
@@ -674,7 +736,7 @@ rather than imputed. All responses are released.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_strata.pdf}
+\includegraphics[width=\textwidth]{figures/fig_strata}
 \caption{The three MDL strata used to stratify the language-model evaluation.
 In each panel the solid line is the MDL codelength $L(n)$ and the dashed line
 the verbatim cost $\Llit(n)$; the dotted vertical marks the discovery point
@@ -683,7 +745,7 @@ is found once and held, so $L$ drops at $\nd$ and stays flat. \emph{Revising}:
 the operator is later refuted and replaced by a costlier one, so $L$ returns
 towards the verbatim cost and then settles at a new, higher level.
 \emph{Wilderness}: the prefix fit is refuted and nothing replaces it, so $L$
-rejoins $\Llit$ and never leaves it again---the learner is left permanently
+rejoins $\Llit$ and never leaves it again: the learner is left permanently
 without a theory despite ample data. The curves are schematic, drawn to show
 the characteristic shapes rather than any measured sequence; the axes are
 therefore unticked.}
@@ -691,7 +753,7 @@ therefore unticked.}
 \end{figure}
 
 \paragraph{Our hypothesis was refuted.} We predicted that models would be
-confidently wrong in the wilderness---that they would supply a formula where
+confidently wrong in the wilderness: that they would supply a formula where
 MDL correctly reports that no theory exists. They do not. All three hedge
 appropriately: abstention in the wilderness is $64.7\%$ (Claude, $11/17$),
 $95.0\%$ (GPT-4o, $19/20$) and $89.5\%$ (Llama, $17/19$), with mean stated
@@ -715,8 +777,8 @@ GPT-4o            & $9/20$ \ ($45.0\%$) & $1/20$ \ ($5.0\%$) \\
 Llama 3.3 70B     & $13/20$ \ ($65.0\%$) & $4/19$ \ ($21.1\%$) \\
 \bottomrule
 \end{tabular}
-\caption{Confabulation rate---stated confidence $\ge 4$ together with a wrong
-continuation---on the clean stratum, where a closed form exists, against the
+\caption{Confabulation rate (stated confidence $\ge 4$ together with a wrong
+continuation) on the clean stratum, where a closed form exists, against the
 wilderness, where none does. For all three models the rate is higher where the
 task is easier. Denominators differ because failed calls are reported, not
 imputed.}
@@ -740,26 +802,24 @@ Llama 3.3 70B     & $5/20$ \ ($25.0\%$)  & $5/6$ \ ($83.3\%$)  & $0/14$ \ ($0.0\
 \bottomrule
 \end{tabular}
 \caption{Clean-stratum exact accuracy split by self-reported recognition.
-Llama's performance is entirely recall---$5/6$ on sequences it recognises and
-$0/14$ on those it does not---while Claude retains accuracy without recognition
+Llama's performance is entirely recall ($5/6$ on sequences it recognises and
+$0/14$ on those it does not), while Claude retains accuracy without recognition
 and GPT-4o is essentially unaffected. Recognition is self-reported and may be
 unreliable.}
 \label{tab:recognition}
 \end{table}
 
-Llama's clean-stratum performance is \emph{entirely} recall: $5/6$ on sequences
-it recognises and $0/14$ on those it does not. It is not inferring recurrences;
-it is retrieving OEIS entries, and it is most confident exactly where retrieval
-is available. Claude retains non-trivial accuracy without recognition
+Llama is not inferring recurrences; it is retrieving OEIS entries, and it is
+most confident exactly where retrieval is available. Claude retains non-trivial accuracy without recognition
 ($4/7$), and GPT-4o's accuracy is essentially unchanged by recognition, so the
-effect varies substantially by model---but the direction of the confabulation
+effect varies substantially by model, but the direction of the confabulation
 inversion does not (Figure~\ref{fig:llm}).
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_llm.pdf}
-\caption{Language-model behaviour by MDL stratum. (a) Confabulation rate---
-stated confidence $\ge 4$ with a wrong continuation---on the clean stratum
+\includegraphics[width=\textwidth]{figures/fig_llm}
+\caption{LLM behaviour by MDL stratum. (a) Confabulation rate
+(stated confidence $\ge 4$ with a wrong continuation) on the clean stratum
 (orange) against the wilderness (light blue): confident errors concentrate on
 the easy stratum, not the hard one. (b) Clean-stratum exact accuracy split by
 whether the model reported recognising the sequence (blue) or not (grey);
@@ -876,7 +936,7 @@ third regime appears that the curated corpus could not produce once. Roughly
 nine in ten sequences that fit a recurrence on some prefix fit none at full
 length---the learner acquires a theory, loses it, and never recovers.
 
-The same instrument, turned on language models, refuted our hypothesis and
+The same instrument, turned on LLMs, refuted our hypothesis and
 replaced it with a better one. Models do not confabulate where no theory
 exists; they hedge, and correctly. They confabulate where a theory does exist,
 because on that stratum they are retrieving rather than inducing, and retrieval
@@ -886,16 +946,25 @@ Description length offers a difficulty signal that does not: exactly
 computable, independent of term magnitude, and immune to having seen the answer
 before.
 
-\paragraph{Reproducibility.} All code, the corpus generator, every model
+\paragraph{Reproducibility.}
+\ifanon
+Code and data will be released upon acceptance.
+The classical pipeline runs in under two minutes on a laptop with no GPU.
+\else
+All code, the corpus generator, every model
 response, and scripts regenerating each number, table and figure are released at
 \url{https://github.com/sabilashang/where-induction-runs-out}.
 An archived release is deposited at Zenodo,
 \url{https://doi.org/10.5281/zenodo.21830332}.
 The classical pipeline runs in under two minutes on a laptop with no GPU.
+\fi
 
+\ifanon
+\else
 \paragraph{Acknowledgements.} AI assistance (Claude, Cursor) was used for
 implementation, experiment execution, and drafting. All experimental design
 decisions, verification of results, and final claims are the author's.
+\fi
 
 \small
 \bibliographystyle{plainnat}
@@ -921,7 +990,7 @@ compression ratio, and ``revisions'' the total structural revisions.}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_atlas.pdf}
+\includegraphics[width=\textwidth]{figures/fig_atlas}
 \caption{MDL curves for representative sequences, three per ground-truth class.
 Solid: the MDL codelength $L(n)$. Dashed: the verbatim cost $\Llit(n)$. Dotted
 vertical: the discovery point $\nd$. The vertical axis is logarithmic.
