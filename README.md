@@ -1,6 +1,6 @@
 # Where Induction Runs Out
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830332.svg)](https://doi.org/10.5281/zenodo.21830332)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830331.svg)](https://doi.org/10.5281/zenodo.21830331)
 [![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830532.svg)](https://doi.org/10.5281/zenodo.21830532)
 
 Code, classical/OEIS results, and paper source for *Where Induction Runs Out:
@@ -16,6 +16,11 @@ models by those MDL regimes. Discovery is identification-limited on the
 classical corpus; at OEIS scale a wilderness regime (prefix fit, no
 full-length operator) dominates; models hedge in the wilderness and
 confabulate on easy sequences mainly via recognition.
+
+Paper versions: v1.0 (`10.5281/zenodo.21830332`) initial release; v1.1
+(`10.5281/zenodo.22084529`) readability pass, notation table, worked example,
+CITATION.cff DOI fix (see the Zenodo record for full notes). The concept DOI
+`10.5281/zenodo.21830331` always resolves to the latest version.
 
 ## Headline numbers
 
@@ -144,7 +149,7 @@ Ganeshan, S. (2026). Where Induction Runs Out: Description-Length
 Difficulty and the Memorisation Gap in Integer-Sequence Benchmarks.
 Zenodo.
 
-- Paper: https://doi.org/10.5281/zenodo.21830332
+- Paper: https://doi.org/10.5281/zenodo.21830331
 - Software: https://doi.org/10.5281/zenodo.21830532
 
 ```bibtex
@@ -154,8 +159,8 @@ Zenodo.
   author = {Ganeshan, Sabilashan},
   year = {2026},
   publisher = {Zenodo},
-  doi = {10.5281/zenodo.21830332},
-  url = {https://doi.org/10.5281/zenodo.21830332},
+  doi = {10.5281/zenodo.21830331},
+  url = {https://doi.org/10.5281/zenodo.21830331},
 }
 ```
 

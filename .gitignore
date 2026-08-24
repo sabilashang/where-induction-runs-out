@@ -11,3 +11,5 @@ paper/*.blg
 paper/*.bbl
 paper/*.synctex.gz
 *_backup.tex
+
+arxiv-submission.tar.gz
