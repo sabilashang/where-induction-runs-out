@@ -10,6 +10,9 @@ doi: 10.5281/zenodo.21830532
 identifiers:
   - type: doi
     value: 10.5281/zenodo.21830532
+  - type: url
+    value: "https://arxiv.org/abs/2608.29411"
+    description: "arXiv preprint (arXiv:2608.29411)"
 version: "1.0.0"
 date-released: "2026-08-02"
 license: MIT

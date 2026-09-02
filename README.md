@@ -2,6 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830331.svg)](https://doi.org/10.5281/zenodo.21830331)
 [![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830532.svg)](https://doi.org/10.5281/zenodo.21830532)
+[![arXiv](https://img.shields.io/badge/arXiv-2608.29411-b31b1b.svg)](https://arxiv.org/abs/2608.29411)
 
 Code, classical/OEIS results, and paper source for *Where Induction Runs Out:
 Description-Length Difficulty and the Memorisation Gap in Integer-Sequence
